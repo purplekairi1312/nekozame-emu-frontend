@@ -2,6 +2,8 @@
 
 **Note:** This document is intended as a quick start guide as well as a reference for the user interface settings and functionality. For more in-depth information and details on how to compile ES-DE and perform more advanced configuration, please refer to [INSTALL.md](INSTALL.md).
 
+Also note that this document is only relevant for the latest stable ES-DE release, if you would like to see the user guide for the current development version, refer to [USERGUIDE-DEV.md](USERGUIDE-DEV.md) instead.
+
 Table of contents:
 
 [[_TOC_]]
@@ -40,7 +42,7 @@ The following operating systems have been tested (all for the x86 architecture):
 * FreeBSD 12.2
 * NetBSD 9.1
 * OpenBSD 6.8 (limited testing only)
-* macOS 11 "Big Sur" (limited testing only)
+* macOS 11 "Big Sur"
 * macOS 10.15 "Catalina" (limited testing only)
 * macOS 10.11 "El Capitan"
 * Windows 10
@@ -416,8 +418,6 @@ Apart from this, DOS games should work the same as any other system. The game fo
 
 #### Ports
 
-**Note: On Unix/Linux, if you get a white screen in ES-DE after returning from a game that switches screen resolution then refer to the Known issues section in [CHANGELOG.md](CHANGELOG.md#known-issues) for a workaround.**
-
 Ports are not really executed using emulators, but are rather applications running natively in the operating system. The easiest way to handle these is to add a simple shell script or batch file where you can customize the exact launch parameters for the game.
 
 It's of course possible to add these as single files to the root folder, but normally it's recommended to setup a separate folder per game as there may be more than a single file available per game. You very often want to have easy access to the game setup utility for instance.
@@ -467,8 +467,6 @@ darkplaces -basedir ~/Games/Ports/GameData/Quake
 You don't need to set execution permissions for these scripts, ES-DE will run them anyway.
 
 #### Lutris
-
-**Note: If you get a white screen in ES-DE after returning from a game that switches screen resolution then refer to the Known issues section in [CHANGELOG.md](CHANGELOG.md#known-issues) for a workaround.**
 
 Lutris runs only on Unix so it's only present as a placeholder in the es_systems.cfg templates for macOS and Windows.
 
@@ -1058,7 +1056,7 @@ This setting defines the directory for the game media, i.e. game images and vide
 
 **Emulator core path**
 
-This setting defines the path for which to search for emulator cores. This is used by the variable %COREPATH% which can be included in the systems configuration file es_systems.cfg. By default this variable and corresponding setting is only used on Unix. For macOS and Windows the %COREPATH% variable is not included in the es_systems.cfg template and the default core path value is therefore set to blank. If required for special setups it can be used for these operating systems, but the primary use is on Unix where the core path may vary depending on the operating system, how the emulator was packaged etc. For example the default RetroArch core directory is ~/.config/retroarch/cores if compiled from source code but if installed as a Snap package or as part of the OS repository the cores could be stored elsewhere. The setting is primarily intended for RetroArch but it can be used for any emulator that utilizes discrete emulator cores. When attempting to launch a game, the core for the game system will be searched in each of the defined directories until the first match occurs. Multiple directories can be defined by separating them using colons on Unix and macOS and by semicolons on Windows. Please see [INSTALL.md](INSTALL.md#es_systemscfg) for more information about this.
+This setting defines the path for which to search for emulator cores. This is used by the variable %COREPATH% which can be included in the systems configuration file es_systems.cfg. By default this variable and corresponding setting is used on all operating systems except Windows. For Windows the %COREPATH% variable is not included in the es_systems.cfg template and the default core path value is therefore set to blank. If required for special setups it can be used for this operating system, but the primary use is on Unix where the core path may vary depending on the operating system, how the emulator was packaged etc. For example the default RetroArch core directory is ~/.config/retroarch/cores if compiled from source code but if installed as a Snap package or as part of the OS repository the cores could be stored elsewhere. The setting is primarily intended for RetroArch but it can be used for any emulator that utilizes discrete emulator cores. When attempting to launch a game, the core for the game system will be searched in each of the defined directories until the first match occurs. Multiple directories can be defined by separating them using colons on Unix and macOS and by semicolons on Windows. Please see [INSTALL.md](INSTALL.md#es_systemscfg) for more information about this.
 
 **Hide taskbar (requires restart)** _(Windows only)_
 

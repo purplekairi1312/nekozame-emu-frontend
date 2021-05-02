@@ -1,6 +1,8 @@
 # EmulationStation Desktop Edition (ES-DE) - Building and advanced configuration
 
-**Note:** This is a quite technical document intended for those that are interested in compiling ES-DE from source code, or would like to customize the configuration. If you just want to start using the software, check out the [User guide](USERGUIDE.md) instead.
+**Note:** This is a quite technical document intended for those that are interested in compiling ES-DE from source code, or would like to customize the configuration. If you just want to start using the software, check out [USERGUIDE.md](USERGUIDE.md) instead.
+
+Also note that this document is only relevant for the latest stable ES-DE release, if you would like to see the documentation for the current development version, refer to [INSTALL-DEV.md](INSTALL-DEV.md) instead.
 
 Table of contents:
 
@@ -10,7 +12,7 @@ Table of contents:
 
 ES-DE is developed and compiled using Clang/LLVM and GCC on Unix, Clang/LLVM on macOS and MSVC and GCC (MinGW) on Windows.
 
-CMake is the build system for all the supported operating systems, used in conjunction with `make` on Unix and macOS and `nmake` and `make` on Windows. Xcode on macOS or Visual Studio on Windows are not required for building ES-DE and they have not been used during the development.
+CMake is the build system for all the supported operating systems, used in conjunction with `make` on Unix and macOS and `nmake` and `make` on Windows. Xcode on macOS or Visual Studio on Windows are not required for building ES-DE and they have not been used during the development. The only exception is notarization of codesigned macOS packages which require the `altool` and `stapler` binaries that come bundled with Xcode.
 
 Any code editor can be used of course, but I recommend [VSCode](https://code.visualstudio.com).
 
@@ -420,7 +422,7 @@ After building ES-DE and trying to execute the application, there could be issue
 export DYLD_LIBRARY_PATH=/Applications/VLC.app/Contents/MacOS/lib
 ```
 
-**Note:** According to the SDL documentation, there could be issues with attempting to run ES-DE from the build directory when using a High DPI display as the required NSHighResolutionCapable key is not set as there is no Info.plist file available. In this case, doing a 'make install' and running from the installation folder would solve the problem. I've been unable to verify if this is really required though.
+**Note:** Running ES-DE from the build directory may be a bit flaky as there is no Info.plist file available which is required for setting the proper window mode and such. It's therefore recommended to run the application from the installation directory for any more in-depth testing. But normal debugging can of course be done from the build directory.
 
 Be aware that the approach taken for macOS has the limitation that you can't build for previous operating system versions. You can certainly set CMAKE_OSX_DEPLOYMENT_TARGET to whatever version you like, but the problem is that the Homebrew libraries will most likely not work on earlier macOS versions. In theory this can be worked around by building all these libraries yourself with a lower deployment target, but it's hardly worth the effort. It's better to build on the lowest OS version that should be supported and rely on forward compatibility.
 
@@ -1256,9 +1258,8 @@ Below is an overview of the file layout with various examples. For a real system
         info about this below. Spaces are not allowed in the core file names. -->
         <command>retroarch -L %COREPATH%/snes9x_libretro.so %ROM%</command>
 
-        <!-- This is an example for macOS. It uses the %EMUPATH% variable to point to the RetroArch cores relative to the emulator binary.
-        As there is a somehow standardized installation structure for this operating system, an absolute path is defined for the emulator. -->
-        <command>/Applications/RetroArch.app/Contents/MacOS/RetroArch -L %EMUPATH%/../Resources/cores/snes9x_libretro.dylib %ROM%</command>
+        <!-- This is an example for macOS, which is very similar to the Unix example above. -->
+        <command>/Applications/RetroArch.app/Contents/MacOS/RetroArch -L %COREPATH%/snes9x_libretro.dylib %ROM%</command>
 
         <!-- This is an example for Windows. The .exe extension is optional and both forward slashes and backslashes are allowed as
         directory separators. As there is no standardized installation directory structure for this operating system, the %EMUPATH%
@@ -1306,7 +1307,7 @@ The following variables are expanded for the `command` tag:
 
 `%ESPATH%` - Replaced with the path to the ES-DE binary. Mostly useful for portable emulator installations, for example on a USB memory stick.
 
-`%COREPATH%` - The core file defined after this variable will be searched in each of the directories listed in the setting EmulatorCorePath in es_settings.cfg. This is done until the first match occurs, or until the directories are exhausted and no core file was found. This makes it possible to create a more general es_systems.cfg file but still support the variation between different operating systems and different types of emulator installations (e.g. installed via the OS repository, via Snap, compiled from source etc.). This is primarily intended for Unix using RetroArch but it can also be used on macOS and Windows and for other emulators that utilize discrete emulator cores. For macOS and Windows the EmulatorCorePath setting is blank by default, and for Unix it's set to the following value: `~/.config/retroarch/cores:~/snap/retroarch/current/.config/retroarch/cores:/usr/lib/x86_64-linux-gnu/libretro:/usr/lib64/libretro:/usr/lib/libretro:/usr/local/lib/libretro:/usr/pkg/lib/libretro`. Note that colons are used to separate the directories on Unix and macOS and that semicolons are used on Windows. This path setting can be changed from within the GUI, as described in the [User guide](USERGUIDE.md#other-settings-1). Never use quotation marks around the directories for this setting. It's strongly adviced to not add spaces to directory names, but if still done, ES-DE will handle this automatically by adding the appropriate quotation marks to the launch command. You can also use the %EMUPATH% and %ESPATH% variables within the EmulatorCorePath setting, which leads to quite flexible configuration options.
+`%COREPATH%` - The core file defined after this variable will be searched in each of the directories listed in the setting EmulatorCorePath in es_settings.cfg. This is done until the first match occurs, or until the directories are exhausted and no core file was found. This makes it possible to create a more general es_systems.cfg file but still support the variation between different operating systems and different types of emulator installations (e.g. installed via the OS repository, via Snap, compiled from source etc.). This is primarily intended for RetroArch on Unix but it's also used on macOS due to the change in the RetroArch directory structure as of v1.9.2. It could also be used for special situations and for other emulators that utilize discrete emulator cores. For Windows the EmulatorCorePath setting is blank by default, for macOS it's set to `~/Library/Application Support/RetroArch/cores:/Applications/RetroArch.app/Contents/Resources/cores` and for Unix it's set to `~/.config/retroarch/cores:~/snap/retroarch/current/.config/retroarch/cores:/usr/lib/x86_64-linux-gnu/libretro:/usr/lib64/libretro:/usr/lib/libretro:/usr/local/lib/libretro:/usr/pkg/lib/libretro`. Note that colons are used to separate the directories on Unix and macOS and that semicolons are used on Windows. This path setting can be changed from within the GUI, as described in the [User guide](USERGUIDE.md#other-settings-1). Never use quotation marks around the directories for this setting. It's adviced to not add spaces to directory names, but if still done, ES-DE will handle this automatically by adding the appropriate quotation marks to the launch command. You can also use the %EMUPATH% and %ESPATH% variables within the EmulatorCorePath setting, which leads to quite flexible configuration options.
 
 Here are some additional real world examples of system entries, the first one for Unix:
 
@@ -1331,13 +1332,13 @@ Then one for macOS:
     <fullname>Nintendo Entertainment System</fullname>
     <path>%ROMPATH%/nes</path>
     <extension>.nes .NES .unf .UNF .unif .UNIF .7z .7Z .zip .ZIP</extension>
-    <command>/Applications/RetroArch.app/Contents/MacOS/RetroArch -L %EMUPATH%/../Resources/cores/nestopia_libretro.dylib %ROM%</command>
+    <command>/Applications/RetroArch.app/Contents/MacOS/RetroArch -L %COREPATH%/nestopia_libretro.dylib %ROM%</command>
     <platform>nes</platform>
     <theme>nes</theme>
   </system>
 ```
 
-And one for Windows:
+And finally one for Windows:
 
 ```xml
   <system>
