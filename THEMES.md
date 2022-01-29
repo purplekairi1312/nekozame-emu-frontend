@@ -119,7 +119,7 @@ Or you can create your own elements by adding `extra="true"`, as was done for th
 
 ## Advanced features
 
-If you are writing a theme it's recommended to launch ES-DE with the `--debug` flag from a terminal window. If on Unix you can also pass the `--windowed` and `--resolution` flags to avoid having the application window fill the entire screen. On macOS and Windows you only need to pass the `--resolution` flag to accomplish this. By doing so, you can read error messages directly in the terminal window without having to open the log file.  You can also reload the current gamelist view and system view with `Ctrl-R` if the `--debug` flag has been set.
+If you are writing a theme it's recommended to launch ES-DE with the `--debug` flag from a terminal window. You can also pass the `--resolution` flag to avoid having the application window fill the entire screen. By doing so, you can read error messages directly in the terminal window without having to open the log file.  You can also reload the current gamelist view and system view with `Ctrl-R` if the `--debug` flag has been set.
 
 ### The \<include\> tag
 
