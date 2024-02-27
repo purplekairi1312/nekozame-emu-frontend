@@ -1,8 +1,14 @@
-# ES-DE (EmulationStation Desktop Edition) v3.0 - Android documentation
+# ES-DE (EmulationStation Desktop Edition) 3.0 - Android documentation
 
-This document contains information specific to the Android release, for more general ES-DE documentation refer to the [User guide](USERGUIDE.md).
+This document contains information specific to the Android release, for more general ES-DE documentation refer to the [User guide](USERGUIDE.md) as well as the general [FAQ](FAQ.md).
 
 It's also generally recommended to read the [Frequently Asked Questions (FAQ) for Android](FAQ-ANDROID.md) document prior to diving into the information in this document.
+
+The official Amazon store listing for ES-DE:\
+https://www.amazon.com/dp/B0CVXRHWTT
+
+Use the Amazon Appstore app to install it on your device:\
+https://www.amazon.com/gp/mas/get-appstore/android
 
 Table of contents:
 
@@ -98,6 +104,8 @@ There are also some issues with sound quality on the Odin 2, such as large fluct
 
 In addition to the issues specific to the Ayn Odin 2 there are a couple of other problems that will hopefully be resolved in the near future:
 
+* Plugging in a controller connected via USB will display a popup with the text _Allow ES-DE to access Controller?_ Pressing OK here will cause problems with input in some emulators. Pressing CANCEL will however resolve this issue and the controller will still work correctly in ES-DE.
+* Setting ES-DE as the home app/launcher will sometimes display the configurator after rebooting the device. This happens because Android starts ES-DE before it has mounted the external storage, for example your SD card. Just press/swipe _back_ when the configurator is displayed and ES-DE should start normally.
 * Poor performance/low frame rate after startup on some devices, which seems to happen randomly and is usually resolved by itself within 10 to 30 seconds.
 * The Android soft keyboard causes rendering issues when navigating using a controller or physical keyboard, as such the ES-DE built-in keyboard is enabled by default for the time being. For testing purposes the Android soft keyboard can be enabled via the _Enable virtual keyboard_ option in the _UI settings_ menu. If only using touch input the issue is not present. This problem is believed to be caused by a bug in the SDL library so it probably needs to be resolved there.
 
@@ -107,7 +115,7 @@ Below are specific instructions and considerations for all supported emulators.
 
 ### RetroArch
 
-The RetroArch release in the Play Store is not very good and is therefore not recommended. To get access to all cores make sure to instead manually download and install the 64-bit/aarch64 APK from their website.
+The RetroArch release in the Play store is problematic. It does not contain all emulator cores and a number of people have reported issues launching games from ES-DE (apparently it doesn't work at all on some specific devices). For these reasons it's strongly recommended to use the 64-bit release from the RetroArch website instead.
 
 https://retroarch.com/
 
@@ -149,7 +157,13 @@ https://play.google.com/store/apps/details?id=org.dolphinemu.dolphinemu \
 https://f-droid.org/en/packages/org.dolphinemu.dolphinemu \
 https://dolphin-emu.org/download/
 
-In the past there were multiple unofficial ports, but these are not really recommended any longer as most of them don't seem to have been updated in a long time and are likely to have been surpassed by the official Dolphin release.
+### Dolphin MMJR and MMJR2
+
+Although it's not normally recommended to use the unofficial Dolphin forks because they are mostly ancient and have been surpassed by the mainline Dolphin releases, there could still be situations where it's useful. For example on weaker devices where the older release would work better.
+
+There are multiple MMJR forks in existence, but the ones supported by ES-DE are `Dolphin.MMJR.v11505.apk` and `MMJR.v2.0-17878.apk` which can be downloaded from here:
+
+https://archive.org/details/dolphin-and-citra-fork-backup
 
 ### DraStic
 
@@ -224,7 +238,7 @@ https://play.google.com/store/apps/details?id=com.fms.ines.free
 
 ### MAME4droid 2024 and MAME4droid
 
-These emulators can be installed from the Play store. It's strongly recommended to go for the _MAME4droid 2024_ version as this is updated with a frequent MAME release while the older _MAME4droid_ is using an ancient MAME release.
+These emulators can be installed from the Play store. It's strongly recommended to go for the _MAME4droid 2024_ version as this is updated with a recent MAME release while the older _MAME4droid_ is using an ancient MAME release.
 
 https://play.google.com/store/apps/details?id=com.seleuco.mame4d2024 \
 https://play.google.com/store/apps/details?id=com.seleuco.mame4droid
@@ -237,7 +251,7 @@ https://play.google.com/store/apps/details?id=com.fms.mg
 
 ### melonDS
 
-This emulator can be installed from the Play store but it's quite buggy. Every time you add a new game to the ROM directory you need to start the emulator and manually refresh the game list or you won't be able to launch the game from ES-DE. Filenames containing parentheses also don't work and need to be renamed or they can't be launched from ES-DE. The same is probably true for a number of additional characters.
+This emulator can be installed from the Play store but it's quite buggy. Every time you add a new game to the ROM directory you need to start the emulator and manually refresh the game list or you won't be able to launch the game from ES-DE.
 
 https://play.google.com/store/apps/details?id=me.magnum.melonds
 
@@ -311,6 +325,13 @@ http://www.arts-union.ru/node/23
 This emulator can be installed for free from the Play store and can later be upgraded to the Premium version from inside the application.
 
 https://play.google.com/store/apps/details?id=io.recompiled.redream
+
+
+### Skyline
+
+This emulator is not in active development any longer, but the latest release can be found on archive.org.
+
+https://archive.org/details/skyline-edge-all-versions
 
 ### Speccy
 
@@ -407,7 +428,7 @@ The **@** symbol indicates that the emulator is _deprecated_ and will be removed
 | gb                    | Nintendo Game Boy                              | Gambatte                          | SameBoy,<br>Gearboy,<br>TGB Dual,<br>DoubleCherryGB,<br>Mesen-S,<br>bsnes,<br>mGBA,<br>VBA-M,<br>GBC.emu **(Standalone)**,<br>My OldBoy! **(Standalone**),<br>Pizza Boy GBC **(Standalone)** | No           | Single archive or ROM file |
 | gba                   | Nintendo Game Boy Advance                      | mGBA                              | VBA-M,<br>VBA Next,<br>gpSP,<br>GBA.emu **(Standalone)**,<br>My Boy! **(Standalone)**,<br>Pizza Boy GBA **(Standalone)** | No          | Single archive or ROM file |
 | gbc                   | Nintendo Game Boy Color                        | Gambatte                          | SameBoy,<br>Gearboy,<br>TGB Dual,<br>DoubleCherryGB,<br>Mesen-S,<br>bsnes,<br>mGBA,<br>VBA-M,<br>GBC.emu **(Standalone)**,<br>My OldBoy! **(Standalone**),<br>Pizza Boy GBC **(Standalone)** | No           | Single archive or ROM file |
-| gc                    | Nintendo GameCube                              | Dolphin                           | Dolphin **(Standalone)**          | No           | Disc image file for single-disc games, .m3u playlist for multi-disc games |
+| gc                    | Nintendo GameCube                              | Dolphin                           | Dolphin **(Standalone)**,<br>Dolphin MMJR **(Standalone)**,<br>Dolphin MMJR2 **(Standalone)** | No           | Disc image file for single-disc games, .m3u playlist for multi-disc games |
 | genesis               | Sega Genesis                                   | Genesis Plus GX                   | Genesis Plus GX Wide,<br>PicoDrive,<br>MD.emu **(Standalone)** | No           | Single archive or ROM file |
 | gmaster               | Hartung Game Master                            | _Placeholder_                     |                                   |              |                                      |
 | gx4000                | Amstrad GX4000                                 | Caprice32                         | CrocoDS                           | No           | Single archive or ROM file           |
@@ -444,7 +465,7 @@ The **@** symbol indicates that the emulator is _deprecated_ and will be removed
 | n3ds                  | Nintendo 3DS                                   | Citra                             | Citra **(Standalone)** [Play store version or Nightly],<br>Citra Canary **(Standalone)**,<br>Citra MMJ **(Standalone)** | No           | Single ROM file       |
 | n64                   | Nintendo 64                                    | Mupen64Plus-Next                  | M64Plus FZ **(Standalone)**,<br>ParaLLEl N64 | No           | Single archive or ROM file |
 | n64dd                 | Nintendo 64DD                                  | Mupen64Plus-Next                  | M64Plus FZ **(Standalone)**,<br>ParaLLEl N64 | Yes          |                                      |
-| nds                   | Nintendo DS                                    | melonDS DS                        | melonDS **(Standalone)**,<br>DeSmuME,<br>DeSmuME 2015,<br>DraStic **(Standalone)** | No           | Single archive or ROM file |
+| nds                   | Nintendo DS                                    | melonDS DS                        | melonDS **(Standalone)**,<br>melonDS Nightly **(Standalone)**,<br>DeSmuME,<br>DeSmuME 2015,<br>DraStic **(Standalone)** | No           | Single archive or ROM file |
 | neogeo                | SNK Neo Geo                                    | FinalBurn Neo                     | NEO.emu **(Standalone)**,<br>MAME4droid 2024 **(Standalone)**,<br>MAME4droid **(Standalone)** | Yes          | Single archive or ROM file |
 | neogeocd              | SNK Neo Geo CD                                 | NeoCD                             | FinalBurn Neo                     | Yes          |                                      |
 | neogeocdjp            | SNK Neo Geo CD [Japan]                         | NeoCD                             | FinalBurn Neo                     | Yes          |                                      |
@@ -498,7 +519,7 @@ The **@** symbol indicates that the emulator is _deprecated_ and will be removed
 | supergrafx            | NEC SuperGrafx                                 | Beetle SuperGrafx                 | Beetle PCE,<br>PCE.emu **(Standalone)** | No           | Single archive or ROM file           |
 | supervision           | Watara Supervision                             | Potator                           |                                   | No           | Single archive or ROM file           |
 | supracan              | Funtech Super A'Can                            | _Placeholder_                     |                                   |              |                                      |
-| switch                | Nintendo Switch                                | Yuzu **(Standalone)**             |                                   | Yes          |                                      |
+| switch                | Nintendo Switch                                | Yuzu **(Standalone)**             | Yuzu EA **(Standalone)**,<br>Skyline **(Standalone)** | Yes          |                                      |
 | symbian               | Symbian                                        | EKA2L1 **(Standalone)**           |                                   | Yes          | See the specific _Symbian and Nokia N-Gage_ section in the User guide |
 | tanodragon            | Tano Dragon                                    | _Placeholder_                     |                                   |              |                                      |
 | tg16                  | NEC TurboGrafx-16                              | Beetle PCE                        | Beetle PCE FAST,<br>PCE.emu **(Standalone)** | No           | Single archive or ROM file           |
@@ -517,7 +538,7 @@ The **@** symbol indicates that the emulator is _deprecated_ and will be removed
 | vpinball              | Visual Pinball                                 | _Placeholder_                     |                                   |              |                                      |
 | vsmile                | VTech V.Smile                                  | _Placeholder_                     |                                   |              |                                      |
 | wasm4                 | WASM-4 Fantasy Console                         | WASM-4                            |                                   | No           | Single .wasm file                    |
-| wii                   | Nintendo Wii                                   | Dolphin                           | Dolphin **(Standalone)**          | No           |                                      |
+| wii                   | Nintendo Wii                                   | Dolphin                           | Dolphin **(Standalone)**,<br>Dolphin MMJR **(Standalone)**,<br>Dolphin MMJR2 **(Standalone)** | No           |                                      |
 | wiiu                  | Nintendo Wii U                                 | _Placeholder_                     |                                   |              |                                      |
 | windows               | Microsoft Windows                              | _Placeholder_                     |                                   |              |                                      |
 | windows3x             | Microsoft Windows 3.x                          | DOSBox-Pure                       |                                   | No           |                                      |
