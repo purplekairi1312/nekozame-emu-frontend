@@ -1,4 +1,4 @@
-<!-- Generated from MAME driver file mame0275.xml -->
+<!-- Generated from MAME driver file mame0277.xml -->
 <game>
 	<mamename>005</mamename>
 	<realname>005</realname>
@@ -698,6 +698,14 @@
 <game>
 	<mamename>64streetja</mamename>
 	<realname>64th. Street: A Detective Story (Japan, set 2)</realname>
+</game>
+<game>
+	<mamename>6578cjz1</mamename>
+	<realname>Chaoji Zhishi Da Fuweng 1</realname>
+</game>
+<game>
+	<mamename>6578cjz2</mamename>
+	<realname>Chaoji Zhishi Da Fuweng 2</realname>
 </game>
 <game>
 	<mamename>68ksbc</mamename>
@@ -4444,6 +4452,14 @@
 	<realname>Anpanman: Let's Go! Ikunou Drive (Japan)</realname>
 </game>
 <game>
+	<mamename>anpanm15</mamename>
+	<realname>Anpanman: Minnade! Ikunou Mat (Japan)</realname>
+</game>
+<game>
+	<mamename>anpanm19</mamename>
+	<realname>Anpanman: Sports Ikunou Mat (Japan)</realname>
+</game>
+<game>
 	<mamename>anpanman</mamename>
 	<realname>Soreike! Anpanman Popcorn Koujou (Rev B)</realname>
 </game>
@@ -5182,6 +5198,10 @@
 <game>
 	<mamename>arcade10</mamename>
 	<realname>Mini Arcade Console (Arcade 10-in-1)</realname>
+</game>
+<game>
+	<mamename>arcade3d</mamename>
+	<realname>Millennium Arcade 3D 15-in-1</realname>
 </game>
 <game>
 	<mamename>arcadecl</mamename>
@@ -7716,6 +7736,10 @@
 	<realname>Le Bagnard (Itisa, Spain, older)</realname>
 </game>
 <game>
+	<mamename>baibians</mamename>
+	<realname>Baibian Shuangkou</realname>
+</game>
+<game>
 	<mamename>baile</mamename>
 	<realname>Baile 2005 (V3.2 2005-01-12)</realname>
 </game>
@@ -7852,6 +7876,10 @@
 	<realname>BanBam</realname>
 </game>
 <game>
+	<mamename>bancook</mamename>
+	<realname>Ojamajo Doremi no TV de Magical Cooking (Japan)</realname>
+</game>
+<game>
 	<mamename>banctec</mamename>
 	<realname>BancTec ESeries Panel</realname>
 </game>
@@ -7910,6 +7938,10 @@
 <game>
 	<mamename>bankshot</mamename>
 	<realname>Bank Shot: Electronic Pool</realname>
+</game>
+<game>
+	<mamename>banmrid</mamename>
+	<realname>Kamen Rider Ryuki: Survival Fight (Japan)</realname>
 </game>
 <game>
 	<mamename>baoqingt</mamename>
@@ -8306,6 +8338,10 @@
 <game>
 	<mamename>bazookabr</mamename>
 	<realname>Bazooka (Brazil)</realname>
+</game>
+<game>
+	<mamename>bb6578</mamename>
+	<realname>TV Games Baseball (SH6578 hardware)</realname>
 </game>
 <game>
 	<mamename>bb_21up</mamename>
@@ -9612,6 +9648,10 @@
 	<realname>Bioplaything Cop (ver. 1.0.1823, checksum cd960fc9, prototype)</realname>
 </game>
 <game>
+	<mamename>biorhthm</mamename>
+	<realname>Biorhythm</realname>
+</game>
+<game>
 	<mamename>bioship</mamename>
 	<realname>Bio-ship Paladin</realname>
 </game>
@@ -10154,6 +10194,10 @@
 <game>
 	<mamename>blmbycaru</mamename>
 	<realname>Blomby Car (Version 1P0, not encrypted)</realname>
+</game>
+<game>
+	<mamename>blnctry</mamename>
+	<realname>Balance Try (Japan, ver 1.00)</realname>
 </game>
 <game>
 	<mamename>block</mamename>
@@ -11300,6 +11344,10 @@
 	<realname>Brain Baffler</realname>
 </game>
 <game>
+	<mamename>brainbox2</mamename>
+	<realname>Brain Box II (Set 114)</realname>
+</game>
+<game>
 	<mamename>braiplus</mamename>
 	<realname>BraiLab Plus</realname>
 </game>
@@ -11493,7 +11541,7 @@
 </game>
 <game>
 	<mamename>bronx</mamename>
-	<realname>Bronx</realname>
+	<realname>Bronx (bootleg of Cycle Shooting)</realname>
 </game>
 <game>
 	<mamename>brooklyn</mamename>
@@ -12696,6 +12744,10 @@
 	<realname>Cadash (Spain, rev 1)</realname>
 </game>
 <game>
+	<mamename>cadashso</mamename>
+	<realname>Cadash (Spain)</realname>
+</game>
+<game>
 	<mamename>cadashu</mamename>
 	<realname>Cadash (US, rev 2)</realname>
 </game>
@@ -12798,6 +12850,10 @@
 <game>
 	<mamename>cameltryu</mamename>
 	<realname>Cameltry (US, YM2610)</realname>
+</game>
+<game>
+	<mamename>camirf1</mamename>
+	<realname>CAMIR-F1</realname>
 </game>
 <game>
 	<mamename>camlight</mamename>
@@ -13832,6 +13888,10 @@
 	<realname>Crazzy Clownz (Version 1.0)</realname>
 </game>
 <game>
+	<mamename>ccly</mamename>
+	<realname>Chong Chong Leyuan (V100CN)</realname>
+</game>
+<game>
 	<mamename>ccmk1</mamename>
 	<realname>Chess Champion: MK I</realname>
 </game>
@@ -14232,6 +14292,10 @@
 	<realname>Credit Poker (ver.30c, standard)</realname>
 </game>
 <game>
+	<mamename>cgip30e</mamename>
+	<realname>Credit Poker (ver.30e, Extra Bonus)</realname>
+</game>
+<game>
 	<mamename>cgold</mamename>
 	<realname>Caribbean Gold (3VXEC449, US)</realname>
 </game>
@@ -14609,11 +14673,11 @@
 </game>
 <game>
 	<mamename>chessmst</mamename>
-	<realname>Chess-Master (set 1)</realname>
+	<realname>Chess-Master (model G-5003-501)</realname>
 </game>
 <game>
 	<mamename>chessmsta</mamename>
-	<realname>Chess-Master (set 2)</realname>
+	<realname>Chess-Master (model G-5003-500)</realname>
 </game>
 <game>
 	<mamename>chessmstdm</mamename>
@@ -14756,15 +14820,15 @@
 	<realname>Champion League (v220I, Poker)</realname>
 </game>
 <game>
-	<mamename>chleagul</mamename>
+	<mamename>chleaguel</mamename>
 	<realname>Champion League (v220I, Lattine)</realname>
 </game>
 <game>
-	<mamename>chleagxa</mamename>
+	<mamename>chleaguexa</mamename>
 	<realname>Champion League (v220I, dual program, set 1)</realname>
 </game>
 <game>
-	<mamename>chleagxb</mamename>
+	<mamename>chleaguexb</mamename>
 	<realname>Champion League (v220I, dual program, set 2)</realname>
 </game>
 <game>
@@ -15036,6 +15100,10 @@
 	<realname>Chaoji Dou Dizhu (V219CN)</realname>
 </game>
 <game>
+	<mamename>cjddz213cn</mamename>
+	<realname>Chaoji Dou Dizhu (V213CN)</realname>
+</game>
+<game>
 	<mamename>cjddz215cn</mamename>
 	<realname>Chaoji Dou Dizhu (V215CN)</realname>
 </game>
@@ -15050,6 +15118,18 @@
 <game>
 	<mamename>cjddzp</mamename>
 	<realname>Chaoji Dou Dizhu Jiaqiang Ban (S300CN)</realname>
+</game>
+<game>
+	<mamename>cjddzps</mamename>
+	<realname>Chaoji Dou Dizhu Jiaqiang Ban (S300CN) / unknown second set</realname>
+</game>
+<game>
+	<mamename>cjddzs</mamename>
+	<realname>Chaoji Dou Dizhu (V219CN) / Chaoji Dou Dizhu Jianan Ban (V302CN)</realname>
+</game>
+<game>
+	<mamename>cjddzsa</mamename>
+	<realname>Chaoji Dou Dizhu (V219CN) / Chaoji Dou Dizhu Jianan Ban (V405CN)</realname>
 </game>
 <game>
 	<mamename>cjddzsp</mamename>
@@ -15072,12 +15152,40 @@
 	<realname>Chao Ji Da Heng 2 (V215CN)</realname>
 </game>
 <game>
+	<mamename>cjdh2d</mamename>
+	<realname>Chao Ji Da Heng 2 (V311CN, alternate GFX ROMs)</realname>
+</game>
+<game>
+	<mamename>cjdh6th</mamename>
+	<realname>Chaoji Daheng 6th</realname>
+</game>
+<game>
+	<mamename>cjdlz</mamename>
+	<realname>Chaoji Da Lianzhuang (Version 1.1)</realname>
+</game>
+<game>
+	<mamename>cjdn</mamename>
+	<realname>Chao Ji Dou Niu (V305CN)</realname>
+</game>
+<game>
 	<mamename>cjffruit</mamename>
 	<realname>Funny Fruit (Ver. 1.13)</realname>
 </game>
 <game>
+	<mamename>cjlddz</mamename>
+	<realname>Chao Ji Laizi Dou Dizhu (V109CN)</realname>
+</game>
+<game>
+	<mamename>cjmx</mamename>
+	<realname>Chaoji Mingxing</realname>
+</game>
+<game>
 	<mamename>cjplus</mamename>
 	<realname>New! Cherry Plus (Ver. 3.10)</realname>
+</game>
+<game>
+	<mamename>cjsjh</mamename>
+	<realname>Chao Ji Sai Jin Hua (V201CN)</realname>
 </game>
 <game>
 	<mamename>cjslh</mamename>
@@ -16008,6 +16116,10 @@
 	<realname>ColecoVision (PAL)</realname>
 </game>
 <game>
+	<mamename>colision</mamename>
+	<realname>Colision (bootleg of Head On)</realname>
+</game>
+<game>
 	<mamename>colmns97</mamename>
 	<realname>Columns '97 (JET 961209 V1.000)</realname>
 </game>
@@ -16029,7 +16141,7 @@
 </game>
 <game>
 	<mamename>colt</mamename>
-	<realname>Colt</realname>
+	<realname>Colt (bootleg of N.Y. Captor)</realname>
 </game>
 <game>
 	<mamename>columbia</mamename>
@@ -17176,6 +17288,10 @@
 	<realname>CPS1 Multi Game</realname>
 </game>
 <game>
+	<mamename>cps2000</mamename>
+	<realname>CPS-2000</realname>
+</game>
+<game>
 	<mamename>cps3boot</mamename>
 	<realname>CPS3 Multi-game bootleg for HD6417095 type SH2 (V4)</realname>
 </game>
@@ -17512,6 +17628,14 @@
 	<realname>Croupier II (Playmark Roulette v.03.09)</realname>
 </game>
 <game>
+	<mamename>crownpkr</mamename>
+	<realname>Crown Poker (ver. 1.20)</realname>
+</game>
+<game>
+	<mamename>crsauruss</mamename>
+	<realname>Cranesaurus Single</realname>
+</game>
+<game>
 	<mamename>crsbingo</mamename>
 	<realname>Poker Carnival</realname>
 </game>
@@ -17570,6 +17694,10 @@
 <game>
 	<mamename>cruisin</mamename>
 	<realname>Cruisin</realname>
+</game>
+<game>
+	<mamename>cruisin5</mamename>
+	<realname>Cruisin 5: Cruise Back</realname>
 </game>
 <game>
 	<mamename>crush</mamename>
@@ -17637,7 +17765,11 @@
 </game>
 <game>
 	<mamename>crusnexod</mamename>
-	<realname>Cruis'n Exotica (version 1.0)</realname>
+	<realname>Cruis'n Exotica (version 1.0, build 8764)</realname>
+</game>
+<game>
+	<mamename>crusnexoe</mamename>
+	<realname>Cruis'n Exotica (version 1.0, build 8643)</realname>
 </game>
 <game>
 	<mamename>crusnusa</mamename>
@@ -17749,7 +17881,7 @@
 </game>
 <game>
 	<mamename>crzclass</mamename>
-	<realname>Zhaoji Fengdou</realname>
+	<realname>Chaoji Fengdou</realname>
 </game>
 <game>
 	<mamename>crzcross</mamename>
@@ -17850,10 +17982,6 @@
 <game>
 	<mamename>crzyddz</mamename>
 	<realname>Crazy Dou Di Zhu</realname>
-</game>
-<game>
-	<mamename>crzyddz2</mamename>
-	<realname>Crazy Dou Di Zhu II</realname>
 </game>
 <game>
 	<mamename>crzytaxi</mamename>
@@ -18162,6 +18290,10 @@
 <game>
 	<mamename>csret</mamename>
 	<realname>Choy Sun Returns (20212211, NSW/ACT)</realname>
+</game>
+<game>
+	<mamename>css11501sk9</mamename>
+	<realname>CSS11501S-K9</realname>
 </game>
 <game>
 	<mamename>cstlevna</mamename>
@@ -18960,6 +19092,10 @@
 	<realname>Kyukyoku Sentai Dadandarn (ver JAA)</realname>
 </game>
 <game>
+	<mamename>dafuwng3</mamename>
+	<realname>Da Fu Weng III (V130LI)</realname>
+</game>
+<game>
 	<mamename>dagenta6</mamename>
 	<realname>Double Agent (0152082, US)</realname>
 </game>
@@ -19524,6 +19660,14 @@
 	<realname>Diamond Bridge Computer</realname>
 </game>
 <game>
+	<mamename>dbsha</mamename>
+	<realname>Da Bai Sha</realname>
+</game>
+<game>
+	<mamename>dbshahb</mamename>
+	<realname>Da Bai Sha (H.B.)</realname>
+</game>
+<game>
 	<mamename>dbz</mamename>
 	<realname>Dragon Ball Z (rev B)</realname>
 </game>
@@ -19726,6 +19870,34 @@
 <game>
 	<mamename>ddealer</mamename>
 	<realname>Double Dealer</realname>
+</game>
+<game>
+	<mamename>ddellf96</mamename>
+	<realname>Double Joker Poker Dellfern 1996</realname>
+</game>
+<game>
+	<mamename>ddellf97</mamename>
+	<realname>Dellfern V18 (77's, 99's &amp; Suits, 1 Credit)</realname>
+</game>
+<game>
+	<mamename>ddellf97a</mamename>
+	<realname>Dellfern V18 (77's, 99's &amp; Suits, 10 Credits)</realname>
+</game>
+<game>
+	<mamename>ddellf97b</mamename>
+	<realname>Dellfern V18 (Joker Poker, raise bet, 2p/10p)</realname>
+</game>
+<game>
+	<mamename>ddellf97c</mamename>
+	<realname>Dellfern V18 (£6 Jackpot Bank Poker)</realname>
+</game>
+<game>
+	<mamename>ddellf97d</mamename>
+	<realname>Dellfern V18 (Joker Poker / Jack Plus)</realname>
+</game>
+<game>
+	<mamename>ddellf97e</mamename>
+	<realname>Dellfern V18 (Amusement Poker)</realname>
 </game>
 <game>
 	<mamename>ddenlovj</mamename>
@@ -20305,7 +20477,7 @@
 </game>
 <game>
 	<mamename>ddz</mamename>
-	<realname>Dou Di Zhu</realname>
+	<realname>Dou Dizhu</realname>
 </game>
 <game>
 	<mamename>deadang</mamename>
@@ -20410,6 +20582,10 @@
 <game>
 	<mamename>dectalk</mamename>
 	<realname>DECtalk DTC-01</realname>
+</game>
+<game>
+	<mamename>deecoseal</mamename>
+	<realname>Deeco SealTouch ST3220</realname>
 </game>
 <game>
 	<mamename>deepfrz</mamename>
@@ -20777,7 +20953,11 @@
 </game>
 <game>
 	<mamename>df_djpkr</mamename>
-	<realname>Double Joker Poker (45%-75% payout)</realname>
+	<realname>Double Joker Poker / Jacks Plus (45%-75% payout)</realname>
+</game>
+<game>
+	<mamename>df_djpkra</mamename>
+	<realname>Double Joker Poker / Jacks Plus (45%-75% payout, alt)</realname>
 </game>
 <game>
 	<mamename>dfeverg</mamename>
@@ -21844,6 +22024,10 @@
 	<realname>Demon Front V1.1 / Moyu Zhanxian V1.1 (68k label V107KR, ROM M107KR 11/03/03) (ARM label V106KR, ROM 10/16/03 S106KR) (JAMMA PCB)</realname>
 </game>
 <game>
+	<mamename>dmnslayg</mamename>
+	<realname>Demon Slayer: Kimetsu no Yaiba Zenshuuchuu Pad (green ver.) (Japan)</realname>
+</game>
+<game>
 	<mamename>dmodrbcc</mamename>
 	<realname>Demolition Derby (Chicago Coin)</realname>
 </game>
@@ -22061,7 +22245,7 @@
 </game>
 <game>
 	<mamename>dogosoke</mamename>
-	<realname>Dogou Souken</realname>
+	<realname>Dogou Souken (Japan)</realname>
 </game>
 <game>
 	<mamename>dogpatch</mamename>
@@ -22321,7 +22505,7 @@
 </game>
 <game>
 	<mamename>doraphon</mamename>
-	<realname>Dora the Explorer - Dora TV Explorer Phone / Boots's Special Day (US)</realname>
+	<realname>Dora the Explorer - Dora TV Explorer Phone / Boots's Special Day (US/UK)</realname>
 </game>
 <game>
 	<mamename>doraphonf</mamename>
@@ -22469,19 +22653,15 @@
 </game>
 <game>
 	<mamename>dphla</mamename>
-	<realname>Draw Poker HI-LO (Alt)</realname>
+	<realname>Joker Poker (Kramer, alt)</realname>
 </game>
 <game>
 	<mamename>dphljp</mamename>
 	<realname>Draw Poker HI-LO (Japanese)</realname>
 </game>
 <game>
-	<mamename>dphlunka</mamename>
-	<realname>Draw Poker HI-LO (unknown, rev 1)</realname>
-</game>
-<game>
 	<mamename>dphlunkb</mamename>
-	<realname>Draw Poker HI-LO (unknown, rev 2)</realname>
+	<realname>Unknown Draw Poker HI-LO</realname>
 </game>
 <game>
 	<mamename>dplay</mamename>
@@ -23080,12 +23260,12 @@
 	<realname>Drum Super Star</realname>
 </game>
 <game>
-	<mamename>drw80pk2</mamename>
-	<realname>Draw 80 Poker - Minn</realname>
+	<mamename>drw80pkr</mamename>
+	<realname>Draw 80 Poker (Minn)</realname>
 </game>
 <game>
-	<mamename>drw80pkr</mamename>
-	<realname>Draw 80 Poker</realname>
+	<mamename>drw80wld</mamename>
+	<realname>Wild 1 (Quick Change Kit)</realname>
 </game>
 <game>
 	<mamename>drwrt100</mamename>
@@ -30412,6 +30592,10 @@
 	<realname>Evolution Soccer</realname>
 </game>
 <game>
+	<mamename>ewalk2tv</mamename>
+	<realname>Kenshinkeikaku TV (for e-walkeylife2) (Japan)</realname>
+</game>
+<game>
 	<mamename>ewf</mamename>
 	<realname>Earth Wind Fire</realname>
 </game>
@@ -31245,7 +31429,7 @@
 </game>
 <game>
 	<mamename>fastdrwp</mamename>
-	<realname>Fast Draw (poker conversion kit)?</realname>
+	<realname>Fast Draw (poker conversion kit)</realname>
 </game>
 <game>
 	<mamename>fastfort</mamename>
@@ -31574,6 +31758,10 @@
 <game>
 	<mamename>fc100</mamename>
 	<realname>FC-100</realname>
+</game>
+<game>
+	<mamename>fccomp88</mamename>
+	<realname>FC Compact 88-in-1 (CC-SFFC-WT) (Japan)</realname>
 </game>
 <game>
 	<mamename>fcnudge</mamename>
@@ -32002,6 +32190,10 @@
 <game>
 	<mamename>fenix</mamename>
 	<realname>Fenix (Orio bootleg of Phoenix)</realname>
+</game>
+<game>
+	<mamename>fenixexpl</mamename>
+	<realname>Fenix (Explomatic, Spanish bootleg of Phoenix)</realname>
 </game>
 <game>
 	<mamename>fenixn</mamename>
@@ -32918,6 +33110,10 @@
 <game>
 	<mamename>fk1</mamename>
 	<realname>FK-1</realname>
+</game>
+<game>
+	<mamename>fkddz2</mamename>
+	<realname>Fengkuang Dou Dizhu II</realname>
 </game>
 <game>
 	<mamename>fl100</mamename>
@@ -36193,7 +36389,7 @@
 </game>
 <game>
 	<mamename>gchgchmp</mamename>
-	<realname>Gachaga Champ (GE877 VER. JAB)</realname>
+	<realname>Gacha Gachamp (GE877 VER. JAB)</realname>
 </game>
 <game>
 	<mamename>gcjp</mamename>
@@ -37346,6 +37542,10 @@
 <game>
 	<mamename>gngbl</mamename>
 	<realname>Ghosts'n Goblins (bootleg with Cross)</realname>
+</game>
+<game>
+	<mamename>gngbla</mamename>
+	<realname>Ghosts'n Goblins (bootleg)</realname>
 </game>
 <game>
 	<mamename>gngblita</mamename>
@@ -39229,11 +39429,15 @@
 </game>
 <game>
 	<mamename>gtipoker</mamename>
-	<realname>GTI Poker</realname>
+	<realname>GTI Double or Nothing Draw Poker</realname>
 </game>
 <game>
 	<mamename>gtipokra</mamename>
-	<realname>GTI Poker? (SMS hardware)</realname>
+	<realname>GTI Poker (SMS hardware)</realname>
+</game>
+<game>
+	<mamename>gtipokrb</mamename>
+	<realname>GTI Double or Nothing Draw Poker (Cleco)</realname>
 </game>
 <game>
 	<mamename>gtmr</mamename>
@@ -41652,6 +41856,10 @@
 	<realname>Harlem Globetrotters On Tour</realname>
 </game>
 <game>
+	<mamename>hgly</mamename>
+	<realname>Huang Guan Le Yuan (990726 CRG1.1)</realname>
+</game>
+<game>
 	<mamename>hgokbang</mamename>
 	<realname>Hanafuda Hana Gokou Bangaihen (Japan)</realname>
 </game>
@@ -41800,6 +42008,10 @@
 	<realname>Hi Lice (V102FA)</realname>
 </game>
 <game>
+	<mamename>hilokimb</mamename>
+	<realname>Kimble Double HI-LO (Z80 version, unencrypted)</realname>
+</game>
+<game>
 	<mamename>himesiki</mamename>
 	<realname>Himeshikibu (Japan)</realname>
 </game>
@@ -41818,6 +42030,10 @@
 <game>
 	<mamename>hippodrm</mamename>
 	<realname>Hippodrome (US)</realname>
+</game>
+<game>
+	<mamename>hippofr</mamename>
+	<realname>Hippo: et la formidable aventure des lettres (France)</realname>
 </game>
 <game>
 	<mamename>hirol_fr</mamename>
@@ -41938,6 +42154,10 @@
 <game>
 	<mamename>hkc8800a</mamename>
 	<realname>HKC 8800A</realname>
+</game>
+<game>
+	<mamename>hkuranai</mamename>
+	<realname>Hello Kitty Koi no Shugoshin Uranai</realname>
 </game>
 <game>
 	<mamename>hldspin1</mamename>
@@ -42170,6 +42390,10 @@
 <game>
 	<mamename>honeypot</mamename>
 	<realname>Honey Pot (03J00241, NSW/ACT)</realname>
+</game>
+<game>
+	<mamename>hongmayi</mamename>
+	<realname>Hong Mayi</realname>
 </game>
 <game>
 	<mamename>honktonk</mamename>
@@ -42808,6 +43032,10 @@
 	<realname>Happy Pierrot</realname>
 </game>
 <game>
+	<mamename>hplanet</mamename>
+	<realname>Happy Planet</realname>
+</game>
+<game>
 	<mamename>hpolym84</mamename>
 	<realname>Hyper Olympic '84</realname>
 </game>
@@ -42864,6 +43092,10 @@
 	<realname>Hard Times (set 2)</realname>
 </game>
 <game>
+	<mamename>hrtantny</mamename>
+	<realname>Heart of Antony (0252526, US)</realname>
+</game>
+<game>
 	<mamename>hrtthrob</mamename>
 	<realname>Heart Throb (01J02866, Venezuela)</realname>
 </game>
@@ -42914,6 +43146,10 @@
 <game>
 	<mamename>hshavoc</mamename>
 	<realname>High Seas Havoc</realname>
+</game>
+<game>
+	<mamename>hsheng2</mamename>
+	<realname>Hua Shen II (v120DI)</realname>
 </game>
 <game>
 	<mamename>hshot_p8</mamename>
@@ -43012,12 +43248,28 @@
 	<realname>Hot Tip (L-1)</realname>
 </game>
 <game>
+	<mamename>huahuas2</mamename>
+	<realname>Huahua Shijie II (v100FI, set 1)</realname>
+</game>
+<game>
+	<mamename>huahuas2a</mamename>
+	<realname>Huahua Shijie II (v100FI, set 2)</realname>
+</game>
+<game>
+	<mamename>huahuas5</mamename>
+	<realname>Huahua Shijie 5 / Feixing Shijie (V107CN)</realname>
+</game>
+<game>
 	<mamename>huhimage</mamename>
 	<realname>Heat Up Hockey Image (Ver.1.003R)</realname>
 </game>
 <game>
 	<mamename>hulk</mamename>
 	<realname>The Incredible Hulk</realname>
+</game>
+<game>
+	<mamename>huluw2</mamename>
+	<realname>Hu Lu Wang II (v100KI)</realname>
 </game>
 <game>
 	<mamename>humlan</mamename>
@@ -43669,7 +43921,11 @@
 </game>
 <game>
 	<mamename>ichiban</mamename>
-	<realname>Ichi Ban Jyan</realname>
+	<realname>Ichi Ban Jyan (Ver 3.05)</realname>
+</game>
+<game>
+	<mamename>ichiban235</mamename>
+	<realname>Ichi Ban Jyan (Ver 2.35)</realname>
 </game>
 <game>
 	<mamename>ichir</mamename>
@@ -51188,6 +51444,10 @@
 	<realname>Janken Man Kattara Ageru</realname>
 </game>
 <game>
+	<mamename>jankmg2</mamename>
+	<realname>Janken Man Ganso 2</realname>
+</game>
+<game>
 	<mamename>janoh</mamename>
 	<realname>Jan Oh (set 1)</realname>
 </game>
@@ -51492,12 +51752,32 @@
 	<realname>Jingi Storm - The Arcade (Japan) (GDL-0037)</realname>
 </game>
 <game>
+	<mamename>jinhuang</mamename>
+	<realname>Jin Huang Guan</realname>
+</game>
+<game>
 	<mamename>jinhulu2</mamename>
-	<realname>Jin Hu Lu 2 (v412GS)</realname>
+	<realname>Jin Hu Lu II (v412GS)</realname>
+</game>
+<game>
+	<mamename>jinhulu2100gi</mamename>
+	<realname>Jin Hu Lu II (v100GI)</realname>
+</game>
+<game>
+	<mamename>jinhulu2101is</mamename>
+	<realname>Jin Hu Lu II (v101IS)</realname>
+</game>
+<game>
+	<mamename>jinhulu2120gi</mamename>
+	<realname>Jin Hu Lu II (v120GI)</realname>
 </game>
 <game>
 	<mamename>jinpaish</mamename>
 	<realname>Jinpai Suoha - Show Hand (Chinese version 2004-09-22)</realname>
+</game>
+<game>
+	<mamename>jinsanse</mamename>
+	<realname>Jin Sanse</realname>
 </game>
 <game>
 	<mamename>jitsupro</mamename>
@@ -52092,6 +52372,14 @@
 	<realname>Joker Poker (Coinmaster, Amusement Only)</realname>
 </game>
 <game>
+	<mamename>jpddz</mamename>
+	<realname>Jipin Dou Dizhu (set 1)</realname>
+</game>
+<game>
+	<mamename>jpddza</mamename>
+	<realname>Jipin Dou Dizhu (set 2)</realname>
+</game>
+<game>
 	<mamename>jpinball</mamename>
 	<realname>Pin Ball</realname>
 </game>
@@ -52540,6 +52828,10 @@
 	<realname>Jyangokushi: Haoh no Saihai (Japan 990527)</realname>
 </game>
 <game>
+	<mamename>jzst</mamename>
+	<realname>Jue Zhan Shanghai Tan</realname>
+</game>
+<game>
 	<mamename>jzth</mamename>
 	<realname>Juezhan Tianhuang</realname>
 </game>
@@ -52646,6 +52938,10 @@
 <game>
 	<mamename>kaguya2f</mamename>
 	<realname>Mahjong Kaguyahime Sono2 Fukkokuban (Japan 010808)</realname>
+</game>
+<game>
+	<mamename>kaimenhu</mamename>
+	<realname>Kaimen Hu</realname>
 </game>
 <game>
 	<mamename>kaiserkn</mamename>
@@ -52830,6 +53126,14 @@
 <game>
 	<mamename>kas89</mamename>
 	<realname>Kasino '89</realname>
+</game>
+<game>
+	<mamename>katochan</mamename>
+	<realname>Nihonzenkoku-katochan-no-kurukuru-ressya-de-Pe! (Ver.1.00, 2004/10/24)</realname>
+</game>
+<game>
+	<mamename>katori</mamename>
+	<realname>Katori Attack (Japan, ver 1.03)</realname>
 </game>
 <game>
 	<mamename>kattobas</mamename>
@@ -53352,6 +53656,10 @@
 	<realname>K.G. Bird (4VXFC5341, New Zealand, 10c)</realname>
 </game>
 <game>
+	<mamename>kghmytda</mamename>
+	<realname>Keroro Gunsou - Hacha Mecha Yakyu Taikai de Arimasu!!</realname>
+</game>
+<game>
 	<mamename>kgradius</mamename>
 	<realname>Gradius (handheld)</realname>
 </game>
@@ -53505,7 +53813,7 @@
 </game>
 <game>
 	<mamename>kimblz80</mamename>
-	<realname>Kimble Double HI-LO (z80 version)</realname>
+	<realname>Kimble Double HI-LO (Z80 version, encrypted)</realname>
 </game>
 <game>
 	<mamename>kingball</mamename>
@@ -53598,6 +53906,10 @@
 <game>
 	<mamename>kingyoch</mamename>
 	<realname>Yataimura Kingyosukui (4-player, China, Ver 1.000)</realname>
+</game>
+<game>
+	<mamename>kingyosu</mamename>
+	<realname>Dokidoki Kingyo Sukui</realname>
 </game>
 <game>
 	<mamename>kinniku</mamename>
@@ -53976,6 +54288,10 @@
 	<realname>The King of Fighters '96 (NGM-214)</realname>
 </game>
 <game>
+	<mamename>kof96a</mamename>
+	<realname>The King of Fighters '96 (bug fix revision)</realname>
+</game>
+<game>
 	<mamename>kof96h</mamename>
 	<realname>The King of Fighters '96 (NGH-214)</realname>
 </game>
@@ -54312,6 +54628,10 @@
 	<realname>Speed Up / Kkotbinyeo (Korea)</realname>
 </game>
 <game>
+	<mamename>kotekita</mamename>
+	<realname>Kotekitai Slot</realname>
+</game>
+<game>
 	<mamename>kothello</mamename>
 	<realname>Kyuukyoku no Othello</realname>
 </game>
@@ -54452,6 +54772,10 @@
 	<realname>Knights of Valour - The Seven Spirits</realname>
 </game>
 <game>
+	<mamename>kovgsyx</mamename>
+	<realname>Gaishi Xingxiong Tebie Ban (bootleg of Knights of Valour Super Heroes Plus, V302CN, Dec 29 2010 16:31:32)</realname>
+</game>
+<game>
 	<mamename>kovlsjb</mamename>
 	<realname>Luanshi Jie Ba (bootleg of Knights of Valour Super Heroes Plus, ver. 200CN, set 1)</realname>
 </game>
@@ -54478,10 +54802,6 @@
 <game>
 	<mamename>kovqhsgs</mamename>
 	<realname>Quanhuang Sanguo Tebie Ban (bootleg of Knights of Valour Super Heroes, V303CN, Nov 21 2008 19:03:49)</realname>
-</game>
-<game>
-	<mamename>kovqhsgs302</mamename>
-	<realname>Quanhuang Sanguo Tebie Ban (bootleg of Knights of Valour Super Heroes, V302CN, Dec 29 2010 16:31:32)</realname>
 </game>
 <game>
 	<mamename>kovsgqyz</mamename>
@@ -54570,6 +54890,26 @@
 <game>
 	<mamename>kramermc</mamename>
 	<realname>Kramer MC</realname>
+</game>
+<game>
+	<mamename>krampcb2</mamename>
+	<realname>Draw Poker HI-LO (bootleg, set 1)</realname>
+</game>
+<game>
+	<mamename>krampcb3</mamename>
+	<realname>unknown Kramer Poker (pcb3, encrypted)</realname>
+</game>
+<game>
+	<mamename>krampcb4</mamename>
+	<realname>unknown Kramer Poker (pcb4, encrypted)</realname>
+</game>
+<game>
+	<mamename>krampcb5</mamename>
+	<realname>Draw Poker HI-LO (bootleg, set 2)</realname>
+</game>
+<game>
+	<mamename>krampcb6</mamename>
+	<realname>unknown Kramer Poker (pcb6, encrypted)</realname>
 </game>
 <game>
 	<mamename>krista2</mamename>
@@ -55500,12 +55840,20 @@
 	<realname>Leapster Explorer</realname>
 </game>
 <game>
+	<mamename>leapland</mamename>
+	<realname>LeapLand Adventures (UK)</realname>
+</game>
+<game>
 	<mamename>leappad</mamename>
 	<realname>LeapPad</realname>
 </game>
 <game>
 	<mamename>leappadmic</mamename>
 	<realname>LeapPad Plus Microphone</realname>
+</game>
+<game>
+	<mamename>leappawp</mamename>
+	<realname>PAW Patrol: To The Rescue! (UK)</realname>
 </game>
 <game>
 	<mamename>leapster</mamename>
@@ -55960,6 +56308,10 @@
 	<realname>Lung Fu Bong II (Hong Kong, V185H)</realname>
 </game>
 <game>
+	<mamename>lhb3</mamename>
+	<realname>Long Hu Bang III: Cuo Pai Gaoshou (China, V242C)</realname>
+</game>
+<game>
 	<mamename>lhbv33c</mamename>
 	<realname>Long Hu Bang (China, V033C)</realname>
 </game>
@@ -56026,6 +56378,14 @@
 <game>
 	<mamename>lhzbgqb</mamename>
 	<realname>Long Hu Zheng Ba Gao Qing Ban (V105CN)</realname>
+</game>
+<game>
+	<mamename>lianhp2</mamename>
+	<realname>Lian Huan Pao - ATT II</realname>
+</game>
+<game>
+	<mamename>lianhp3</mamename>
+	<realname>Lian Huan Pao - ATT III</realname>
 </game>
 <game>
 	<mamename>liberate</mamename>
@@ -57049,7 +57409,7 @@
 </game>
 <game>
 	<mamename>luckybar</mamename>
-	<realname>Lucky Bar (W-4 with mc68705 MCU)</realname>
+	<realname>Lucky Bar (W-4 with MC68705 MCU)</realname>
 </game>
 <game>
 	<mamename>luckyclo</mamename>
@@ -57361,7 +57721,7 @@
 </game>
 <game>
 	<mamename>lxcmcyba</mamename>
-	<realname>Compact Cyber Arcade - Barbie</realname>
+	<realname>Compact Cyber Arcade - Barbie (JL2365BB)</realname>
 </game>
 <game>
 	<mamename>lxcmcycr</mamename>
@@ -57398,6 +57758,10 @@
 <game>
 	<mamename>lxnoddy</mamename>
 	<realname>Noddy's TV Console</realname>
+</game>
+<game>
+	<mamename>lxpcsp</mamename>
+	<realname>Power Console - Marvel Spider-Man</realname>
 </game>
 <game>
 	<mamename>lxspidaj</mamename>
@@ -88253,7 +88617,7 @@
 </game>
 <game>
 	<mamename>mainline</mamename>
-	<realname>Mainline Double Joker Poker</realname>
+	<realname>Mainline Double Joker Poker / Jacks Plus)</realname>
 </game>
 <game>
 	<mamename>mainsnk</mamename>
@@ -88430,6 +88794,10 @@
 <game>
 	<mamename>mandingaeg</mamename>
 	<realname>Mandinga (Electrogame S.A. bootleg of Amidar)</realname>
+</game>
+<game>
+	<mamename>mandingag</mamename>
+	<realname>Mandinga (bootleg of Amidar)</realname>
 </game>
 <game>
 	<mamename>mandingarf</mamename>
@@ -88880,8 +89248,20 @@
 	<realname>My Arcade Tetris (DGUNL-7083, Pixel Pocket, with 10 bonus games)</realname>
 </game>
 <game>
+	<mamename>matet100</mamename>
+	<realname>My Arcade Tetris (DGUNL-7027, Pico Player, with 100+ bonus games)</realname>
+</game>
+<game>
+	<mamename>matet220</mamename>
+	<realname>My Arcade Tetris (DGUNL-7030, Gamer V, with 220 bonus games)</realname>
+</game>
+<game>
 	<mamename>matet300</mamename>
 	<realname>My Arcade Tetris (DGUNL-7029, Go Gamer, with 300 bonus games)</realname>
+</game>
+<game>
+	<mamename>matetsl</mamename>
+	<realname>My Arcade Tetris (Slurpee)</realname>
 </game>
 <game>
 	<mamename>mathmagi</mamename>
@@ -89901,7 +90281,7 @@
 </game>
 <game>
 	<mamename>megat</mamename>
-	<realname>Pit Boss Megatouch (9234-20-01 R0A)</realname>
+	<realname>Pit Boss Megatouch (9235-00-01 R0A)</realname>
 </game>
 <game>
 	<mamename>megat2</mamename>
@@ -90056,6 +90436,10 @@
 	<realname>Megatouch 7 Encore Edition (9255-90-01 R00, Standard version)</realname>
 </game>
 <game>
+	<mamename>megata</mamename>
+	<realname>Pit Boss Megatouch (9234-20-01 R0A)</realname>
+</game>
+<game>
 	<mamename>megatack</mamename>
 	<realname>Megatack (set 1)</realname>
 </game>
@@ -90166,6 +90550,10 @@
 <game>
 	<mamename>menghong</mamename>
 	<realname>Meng Hong Lou</realname>
+</game>
+<game>
+	<mamename>menghonga</mamename>
+	<realname>Meng Hong Lou (earlier)</realname>
 </game>
 <game>
 	<mamename>mentor16</mamename>
@@ -90764,6 +91152,10 @@
 	<realname>Manguan Caishen (China, V106CS)</realname>
 </game>
 <game>
+	<mamename>mgcsb</mamename>
+	<realname>Manguan Caishen (China, V110C)</realname>
+</game>
+<game>
 	<mamename>mgdh</mamename>
 	<realname>Manguan Daheng (Taiwan, V125T1)</realname>
 </game>
@@ -90874,6 +91266,10 @@
 <game>
 	<mamename>mice2_z80</mamename>
 	<realname>MICE-II Z80 (Rev-F)</realname>
+</game>
+<game>
+	<mamename>mice3s68k</mamename>
+	<realname>MICE-IIIS 68000</realname>
 </game>
 <game>
 	<mamename>mice_6502</mamename>
@@ -91604,6 +92000,14 @@
 	<realname>Mahjong Electron Base (parts 2 &amp; 3, Japan set 2)</realname>
 </game>
 <game>
+	<mamename>mjelct3b</mamename>
+	<realname>Mahjong Electron Base (parts 2 &amp; 3, Japan set 3)</realname>
+</game>
+<game>
+	<mamename>mjelct3bl</mamename>
+	<realname>Mahjong Electron Base (parts 2 &amp; 3, Japan bootleg)</realname>
+</game>
+<game>
 	<mamename>mjelctrb</mamename>
 	<realname>Mahjong Electron Base (parts 2 &amp; 4, Japan bootleg)</realname>
 </game>
@@ -91736,8 +92140,16 @@
 	<realname>Mahjong The Mysterious Universe (Japan, D85)</realname>
 </game>
 <game>
+	<mamename>mjmyunivh</mamename>
+	<realname>Maa Zoek Lung Hing Fu Dai (Hong Kong, D106T)</realname>
+</game>
+<game>
 	<mamename>mjmywrld</mamename>
 	<realname>Mahjong The Mysterious World (Japan, set 2)</realname>
+</game>
+<game>
+	<mamename>mjmywrldt</mamename>
+	<realname>Maque Caihui Ying (Taiwan, ver 2.20)</realname>
 </game>
 <game>
 	<mamename>mjnanpaa</mamename>
@@ -91769,11 +92181,15 @@
 </game>
 <game>
 	<mamename>mjreach</mamename>
-	<realname>Mahjong Reach (Ver. 1.00)</realname>
+	<realname>Mahjong Reach (Ver. 1.00, set 1)</realname>
 </game>
 <game>
 	<mamename>mjreach1</mamename>
 	<realname>Mahjong Reach Ippatsu (Japan)</realname>
+</game>
+<game>
+	<mamename>mjreacha</mamename>
+	<realname>Mahjong Reach (Ver. 1.00, set 2)</realname>
 </game>
 <game>
 	<mamename>mjreachbl</mamename>
@@ -93737,6 +94153,10 @@
 </game>
 <game>
 	<mamename>mrwoo</mamename>
+	<realname>Mr Woo (30215311, NSW/ACT)</realname>
+</game>
+<game>
+	<mamename>mrwoou</mamename>
 	<realname>Mr Woo (0252599, US)</realname>
 </game>
 <game>
@@ -94584,6 +95004,10 @@
 	<realname>Martial Champion (ver UAD)</realname>
 </game>
 <game>
+	<mamename>mtonic2</mamename>
+	<realname>Magical Tonic Part 2</realname>
+</game>
+<game>
 	<mamename>mtouchxl</mamename>
 	<realname>MegaTouch XL (Version R1, prototype?)</realname>
 </game>
@@ -94713,6 +95137,10 @@
 </game>
 <game>
 	<mamename>multchmp</mamename>
+	<realname>Multi Champ (World, ver. 9.6)</realname>
+</game>
+<game>
+	<mamename>multchmp25</mamename>
 	<realname>Multi Champ (World, ver. 2.5)</realname>
 </game>
 <game>
@@ -95032,6 +95460,18 @@
 	<realname>World Cup (Maygay, MV1 Video)</realname>
 </game>
 <game>
+	<mamename>mv3100m10</mamename>
+	<realname>MicroVAX 3100 Model 10</realname>
+</game>
+<game>
+	<mamename>mv3400</mamename>
+	<realname>MicroVAX 3400</realname>
+</game>
+<game>
+	<mamename>mv3500</mamename>
+	<realname>MicroVAX 3500</realname>
+</game>
+<game>
 	<mamename>mv4in1</mamename>
 	<realname>Mini Vegas 4in1</realname>
 </game>
@@ -95222,6 +95662,14 @@
 <game>
 	<mamename>my1stddr</mamename>
 	<realname>My First Dance Dance Revolution (US)</realname>
+</game>
+<game>
+	<mamename>myaasa</mamename>
+	<realname>My Arcade All Star Arena - Pocket Player (307-in-1)</realname>
+</game>
+<game>
+	<mamename>myaass</mamename>
+	<realname>My Arcade All Star Stadium - Pocket Player (307-in-1)</realname>
 </game>
 <game>
 	<mamename>myac220</mamename>
@@ -96260,6 +96708,10 @@
 	<realname>M8 Game Selectable Working Product Display (US, set 3)</realname>
 </game>
 <game>
+	<mamename>nesvt270</mamename>
+	<realname>unknown VT3xx based 270-in-1 (BL-867 PCB03)</realname>
+</game>
+<game>
 	<mamename>netchu02b</mamename>
 	<realname>Netchuu Pro Yakyuu 2002 (NPY1 Ver. B)</realname>
 </game>
@@ -97120,6 +97572,14 @@
 	<realname>No Man's Land (Gottlieb)</realname>
 </game>
 <game>
+	<mamename>nor6007a</mamename>
+	<realname>Noraut Poker (6007 32k)</realname>
+</game>
+<game>
+	<mamename>nor6007b</mamename>
+	<realname>Noraut Poker (6007 64k)</realname>
+</game>
+<game>
 	<mamename>noraut3a</mamename>
 	<realname>Noraut Jacks Plus / Joker Poker (V3.010a)</realname>
 </game>
@@ -97140,8 +97600,16 @@
 	<realname>Noraut Joker Poker (alt)</realname>
 </game>
 <game>
+	<mamename>norautn1a</mamename>
+	<realname>Noraut Joker Poker (N1A)</realname>
+</game>
+<game>
 	<mamename>norautp</mamename>
 	<realname>Noraut Poker</realname>
+</game>
+<game>
+	<mamename>norautpb</mamename>
+	<realname>Joker Poker 2000 (£15, Winbank)</realname>
 </game>
 <game>
 	<mamename>norautpl</mamename>
@@ -97150,6 +97618,10 @@
 <game>
 	<mamename>norautpn</mamename>
 	<realname>Noraut Deluxe Poker (bootleg)</realname>
+</game>
+<game>
+	<mamename>norautpt</mamename>
+	<realname>Noraut Joker Poker (text hack)</realname>
 </game>
 <game>
 	<mamename>norautra</mamename>
@@ -97333,7 +97805,7 @@
 </game>
 <game>
 	<mamename>nratechu</mamename>
-	<realname>Neratte Chu</realname>
+	<realname>Neratte Chu (ver. 1.10)</realname>
 </game>
 <game>
 	<mamename>ns5652</mamename>
@@ -97568,7 +98040,7 @@
 	<realname>Number Dieci (Poker)</realname>
 </game>
 <game>
-	<mamename>numbr10l</mamename>
+	<mamename>number10l</mamename>
 	<realname>Number Dieci (Lattine)</realname>
 </game>
 <game>
@@ -98136,6 +98608,10 @@
 	<realname>Shimura Ken no Bakatono-sama Ooedomatsuri</realname>
 </game>
 <game>
+	<mamename>omdisv22</mamename>
+	<realname>Oldsmobile Driver Information System (version 2.2 CH)</realname>
+</game>
+<game>
 	<mamename>omega</mamename>
 	<realname>Omega</realname>
 </game>
@@ -98330,6 +98806,10 @@
 <game>
 	<mamename>optigersm</mamename>
 	<realname>Operation Tiger Second Mission (Ver 2.02 J)</realname>
+</game>
+<game>
+	<mamename>optomaxv</mamename>
+	<realname>Optomax V</realname>
 </game>
 <game>
 	<mamename>opwolf</mamename>
@@ -99248,6 +99728,10 @@
 	<realname>Paint Roller (bootleg of Crush Roller)</realname>
 </game>
 <game>
+	<mamename>paipail3</mamename>
+	<realname>Pai Pai Le 3</realname>
+</game>
+<game>
 	<mamename>pairlove</mamename>
 	<realname>Pairs Love</realname>
 </game>
@@ -99550,6 +100034,10 @@
 <game>
 	<mamename>para2dx</mamename>
 	<realname>Paradise 2 Deluxe</realname>
+</game>
+<game>
+	<mamename>paraca</mamename>
+	<realname>Paracaidista</realname>
 </game>
 <game>
 	<mamename>paradar</mamename>
@@ -100308,6 +100796,10 @@
 	<realname>PC-9801US</realname>
 </game>
 <game>
+	<mamename>pc9801uv2</mamename>
+	<realname>PC-9801UV2</realname>
+</game>
+<game>
 	<mamename>pc9801ux</mamename>
 	<realname>PC-9801UX</realname>
 </game>
@@ -100340,10 +100832,6 @@
 	<realname>PC-9821Cx3 (98MULTi CanBe)</realname>
 </game>
 <game>
-	<mamename>pc9821ne</mamename>
-	<realname>PC-9821Ne (98NOTE)</realname>
-</game>
-<game>
 	<mamename>pc9821nr15</mamename>
 	<realname>PC-9821Nr15 (98NOTE Lavie)</realname>
 </game>
@@ -100366,14 +100854,6 @@
 <game>
 	<mamename>pc9821ra333</mamename>
 	<realname>PC-9821Ra333 (98MATE R)</realname>
-</game>
-<game>
-	<mamename>pc9821v13</mamename>
-	<realname>PC-9821V13 (98MATE VALUESTAR)</realname>
-</game>
-<game>
-	<mamename>pc9821v20</mamename>
-	<realname>PC-9821V20 (98MATE VALUESTAR)</realname>
 </game>
 <game>
 	<mamename>pc9821xa16</mamename>
@@ -103208,6 +103688,10 @@
 	<realname>Peter Pack Rat</realname>
 </game>
 <game>
+	<mamename>petitlot</mamename>
+	<realname>Petit Lot (ver. 4.1)</realname>
+</game>
+<game>
 	<mamename>petshop</mamename>
 	<realname>Pet Shop (0100731V, NSW/ACT)</realname>
 </game>
@@ -105269,7 +105753,7 @@
 </game>
 <game>
 	<mamename>pkii_dm</mamename>
-	<realname>unknown poker game PKII/DM</realname>
+	<realname>Draw Poker HI-LO (PKII/DM)</realname>
 </game>
 <game>
 	<mamename>pkladies</mamename>
@@ -105934,6 +106418,18 @@
 <game>
 	<mamename>pokonyan</mamename>
 	<realname>Pokonyan! Balloon (Japan 940322)</realname>
+</game>
+<game>
+	<mamename>pokplus</mamename>
+	<realname>Poker Plus 6 Cards (set 1)</realname>
+</game>
+<game>
+	<mamename>pokplusa</mamename>
+	<realname>Poker Plus 6 Cards (set 2)</realname>
+</game>
+<game>
+	<mamename>pokplusb</mamename>
+	<realname>Poker Plus 6 Cards (set 3)</realname>
 </game>
 <game>
 	<mamename>pokrdice</mamename>
@@ -106846,6 +107342,10 @@
 <game>
 	<mamename>powernin</mamename>
 	<realname>Power Ninja Action Challenge</realname>
+</game>
+<game>
+	<mamename>powerpack</mamename>
+	<realname>Powerpack In-Circuit Emulator PP-SW+ PIII</realname>
 </game>
 <game>
 	<mamename>powerstk</mamename>
@@ -107992,6 +108492,10 @@
 	<realname>Organiser II CM</realname>
 </game>
 <game>
+	<mamename>psioncmm</mamename>
+	<realname>Organiser II CM Multilingual</realname>
+</game>
+<game>
 	<mamename>psionhc100</mamename>
 	<realname>HC 100</realname>
 </game>
@@ -108009,7 +108513,7 @@
 </game>
 <game>
 	<mamename>psionlam</mamename>
-	<realname>Organiser II LAM</realname>
+	<realname>Organiser II LA Multilingual</realname>
 </game>
 <game>
 	<mamename>psionlz</mamename>
@@ -108020,20 +108524,28 @@
 	<realname>Organiser II LZ64</realname>
 </game>
 <game>
-	<mamename>psionlz64s</mamename>
-	<realname>Organiser II LZ64S</realname>
+	<mamename>psionp200</mamename>
+	<realname>Organiser II POS 200</realname>
 </game>
 <game>
-	<mamename>psionp200</mamename>
-	<realname>Organiser II P200</realname>
+	<mamename>psionp200a</mamename>
+	<realname>Organiser II Alpha POS 200</realname>
+</game>
+<game>
+	<mamename>psionp250</mamename>
+	<realname>Organiser II P 250</realname>
 </game>
 <game>
 	<mamename>psionp350</mamename>
-	<realname>Organiser II P350</realname>
+	<realname>Organiser II P 350</realname>
+</game>
+<game>
+	<mamename>psionp432</mamename>
+	<realname>Organiser II P 432</realname>
 </game>
 <game>
 	<mamename>psionp464</mamename>
-	<realname>Organiser II P464</realname>
+	<realname>Organiser II P 464</realname>
 </game>
 <game>
 	<mamename>psionwa</mamename>
@@ -108869,7 +109381,7 @@
 </game>
 <game>
 	<mamename>pv9234</mamename>
-	<realname>PowerVu D9234</realname>
+	<realname>PowerVu D9234 Business Satellite Receiver</realname>
 </game>
 <game>
 	<mamename>pve500</mamename>
@@ -109186,6 +109698,10 @@
 <game>
 	<mamename>qi900</mamename>
 	<realname>Apricot Qi 900 (Scorpion Motherboard)</realname>
+</game>
+<game>
+	<mamename>qiji6</mamename>
+	<realname>Qiji 6 (V118CN)</realname>
 </game>
 <game>
 	<mamename>qiwang</mamename>
@@ -109576,6 +110092,10 @@
 	<realname>Queen Bee (SA-101-HARD)</realname>
 </game>
 <game>
+	<mamename>queenbn</mamename>
+	<realname>Nuwang Feng New / Queen Bee New (China, Ver. 1.10)</realname>
+</game>
+<game>
 	<mamename>queenotg</mamename>
 	<realname>Queen of the Games</realname>
 </game>
@@ -109870,6 +110390,10 @@
 <game>
 	<mamename>qy70</mamename>
 	<realname>QY70 Music Sequencer</realname>
+</game>
+<game>
+	<mamename>qyjdzjp</mamename>
+	<realname>Que You Ji - Dian Zi Ji Pan Jiaqiang Ban (v201)</realname>
 </game>
 <game>
 	<mamename>qzchikyu</mamename>
@@ -111312,6 +111836,10 @@
 	<realname>Rail Chase 2 (Revision A)</realname>
 </game>
 <game>
+	<mamename>rchase2a</mamename>
+	<realname>Rail Chase 2</realname>
+</game>
+<game>
 	<mamename>rchasej</mamename>
 	<realname>Rail Chase (Japan)</realname>
 </game>
@@ -111981,7 +112509,7 @@
 </game>
 <game>
 	<mamename>renju</mamename>
-	<realname>Renju Kizoku - Kira Kira Gomoku Narabe</realname>
+	<realname>Renju Kizoku - Kira Kira Gomoku Narabe (ver. 1.0)</realname>
 </game>
 <game>
 	<mamename>replica1</mamename>
@@ -112624,6 +113152,10 @@
 	<realname>Riviera Hi-Score (2131-08, U5-2D)</realname>
 </game>
 <game>
+	<mamename>rizstals</mamename>
+	<realname>RizSta Live Studio</realname>
+</game>
+<game>
 	<mamename>rjammer</mamename>
 	<realname>Roller Jammer</realname>
 </game>
@@ -113217,23 +113749,23 @@
 </game>
 <game>
 	<mamename>rohga</mamename>
-	<realname>Rohga Armor Force (Asia/Europe v5.0)</realname>
+	<realname>Rohga: Armor Force (Asia/Europe v5.0)</realname>
 </game>
 <game>
 	<mamename>rohga1</mamename>
-	<realname>Rohga Armor Force (Asia/Europe v3.0 set 1)</realname>
+	<realname>Rohga: Armor Force (Asia/Europe v3.0 set 1)</realname>
 </game>
 <game>
 	<mamename>rohga2</mamename>
-	<realname>Rohga Armor Force (Asia/Europe v3.0 set 2)</realname>
+	<realname>Rohga: Armor Force (Asia/Europe v3.0 set 2)</realname>
 </game>
 <game>
 	<mamename>rohgah</mamename>
-	<realname>Rohga Armor Force (Hong Kong v3.0)</realname>
+	<realname>Rohga: Armor Force (Hong Kong v3.0)</realname>
 </game>
 <game>
 	<mamename>rohgau</mamename>
-	<realname>Rohga Armor Force (US v1.0)</realname>
+	<realname>Rohga: Armor Force (US v1.0)</realname>
 </game>
 <game>
 	<mamename>roishtar</mamename>
@@ -114616,6 +115148,10 @@
 	<realname>Samurai (Japan)</realname>
 </game>
 <game>
+	<mamename>sandayi</mamename>
+	<realname>San Da Yi</realname>
+</game>
+<game>
 	<mamename>sandor</mamename>
 	<realname>Puzzle &amp; Action: Sando-R (J 951114 V1.000)</realname>
 </game>
@@ -114661,7 +115197,11 @@
 </game>
 <game>
 	<mamename>sanxpet</mamename>
-	<realname>Sumikko Gurashi - Sumikko Sagashi</realname>
+	<realname>Sumikko Gurashi - Sumikko Sagashi (Japan)</realname>
+</game>
+<game>
+	<mamename>sanxpeta</mamename>
+	<realname>Sumikko Gurashi - Sumikko Mikke DX (Japan)</realname>
 </game>
 <game>
 	<mamename>sapi1</mamename>
@@ -137764,6 +138304,10 @@
 	<realname>Super Earth Invasion (set 2)</realname>
 </game>
 <game>
+	<mamename>searthinc</mamename>
+	<realname>Super Earth Invasion (Centromatic, Spanish)</realname>
+</game>
+<game>
 	<mamename>seawitch</mamename>
 	<realname>Seawitch</realname>
 </game>
@@ -137794,6 +138338,10 @@
 <game>
 	<mamename>seawolft</mamename>
 	<realname>Sea Wolf (Tecfri)</realname>
+</game>
+<game>
+	<mamename>secoinsa20</mamename>
+	<realname>Serie 20</realname>
 </game>
 <game>
 	<mamename>secolove</mamename>
@@ -138170,6 +138718,10 @@
 <game>
 	<mamename>sexyparoa</mamename>
 	<realname>Sexy Parodius (ver AAA)</realname>
+</game>
+<game>
+	<mamename>sexyparoebl</mamename>
+	<realname>Sexy Parodius (ver EAA, bootleg)</realname>
 </game>
 <game>
 	<mamename>sf</mamename>
@@ -138826,6 +139378,14 @@
 <game>
 	<mamename>sfiii3n</mamename>
 	<realname>Street Fighter III 3rd Strike: Fight for the Future (Japan 990608, NO CD)</realname>
+</game>
+<game>
+	<mamename>sfiii3na</mamename>
+	<realname>Street Fighter III 3rd Strike: Fight for the Future (Asia 990608, NO CD)</realname>
+</game>
+<game>
+	<mamename>sfiii3nar1</mamename>
+	<realname>Street Fighter III 3rd Strike: Fight for the Future (Asia 990512, NO CD)</realname>
 </game>
 <game>
 	<mamename>sfiii3nr1</mamename>
@@ -139512,6 +140072,10 @@
 	<realname>Space Harrier (8751 315-5163)</realname>
 </game>
 <game>
+	<mamename>shatekds</mamename>
+	<realname>Shatekids</realname>
+</game>
+<game>
 	<mamename>shateki</mamename>
 	<realname>Yataimura Shateki (1-player, Japan, Ver 1.000)</realname>
 </game>
@@ -140126,6 +140690,10 @@
 <game>
 	<mamename>siena</mamename>
 	<realname>Siena</realname>
+</game>
+<game>
+	<mamename>siena_fr</mamename>
+	<realname>Siena (French)</realname>
 </game>
 <game>
 	<mamename>sigma21</mamename>
@@ -140874,6 +141442,10 @@
 <game>
 	<mamename>slepachi</mamename>
 	<realname>Slot Elepachi</realname>
+</game>
+<game>
+	<mamename>sleyuan2</mamename>
+	<realname>Shuiguo Leyuan II (V150UI)</realname>
 </game>
 <game>
 	<mamename>slicer</mamename>
@@ -141878,6 +142450,10 @@
 <game>
 	<mamename>socrkinga</mamename>
 	<realname>Soccer Kings (alternate set)</realname>
+</game>
+<game>
+	<mamename>socrkingb</mamename>
+	<realname>Soccer Kings (alternate set 2)</realname>
 </game>
 <game>
 	<mamename>socrkingg</mamename>
@@ -145004,6 +145580,10 @@
 	<realname>Speed Master (Ver. V1.0, Apr 28 2004)</realname>
 </game>
 <game>
+	<mamename>speedrac</mamename>
+	<realname>Speed Race (Taito)</realname>
+</game>
+<game>
 	<mamename>speedrcr</mamename>
 	<realname>Speed Racer</realname>
 </game>
@@ -145944,6 +146524,14 @@
 	<realname>Mahjong Seiryu Densetsu (Japan, NM502)</realname>
 </game>
 <game>
+	<mamename>ss2000</mamename>
+	<realname>Super Shanghai 2000 (standard. green board)</realname>
+</game>
+<game>
+	<mamename>ss2000a</mamename>
+	<realname>Super Shanghai 2000 - Wrestle Fiesta (30% bonus, red board)</realname>
+</game>
+<game>
 	<mamename>ss2001</mamename>
 	<realname>Super Shanghai 2001</realname>
 </game>
@@ -146622,6 +147210,14 @@
 <game>
 	<mamename>sstar97</mamename>
 	<realname>Super Star 97 / Ming Xing 97 (version V153B)</realname>
+</game>
+<game>
+	<mamename>sstar97a</mamename>
+	<realname>Super Star 97 / Ming Xing 97 (version V168A)</realname>
+</game>
+<game>
+	<mamename>sstar97jb</mamename>
+	<realname>Super Star 97 / Ming Xing 97 Jianan Ban</realname>
 </game>
 <game>
 	<mamename>sstarbtl</mamename>
@@ -148584,6 +149180,10 @@
 	<realname>Super TV-PC - Hello Kitty (Japan)</realname>
 </game>
 <game>
+	<mamename>suprtvpcln</mamename>
+	<realname>Super TV-PC - Link (Japan)</realname>
+</game>
+<game>
 	<mamename>supst834</mamename>
 	<realname>Super Stars (v834, encrypted)</realname>
 </game>
@@ -148622,6 +149222,10 @@
 <game>
 	<mamename>sureshot</mamename>
 	<realname>Sure Shot</realname>
+</game>
+<game>
+	<mamename>sureshoto</mamename>
+	<realname>Sure Shot (older, dphl hardware)</realname>
 </game>
 <game>
 	<mamename>surfnsaf</mamename>
@@ -149960,6 +150564,10 @@
 	<realname>Tattoo Assassins (Asia prototype, Mar 14 1995)</realname>
 </game>
 <game>
+	<mamename>tattasso</mamename>
+	<realname>Tattoo Assassins (US prototype, Mar 14 1995, older sound)</realname>
+</game>
+<game>
 	<mamename>taturtf</mamename>
 	<realname>Teenage Mutant Ninja Turtles - Turtle Fighter (Tiny Arcade)</realname>
 </game>
@@ -150150,6 +150758,10 @@
 <game>
 	<mamename>tcobra2u</mamename>
 	<realname>Twin Cobra II (Ver 2.1A 1995/11/30)</realname>
+</game>
+<game>
+	<mamename>tct2p</mamename>
+	<realname>Tarzan Chuang Tianguan 2 Jiaqiang Ban (V306CN)</realname>
 </game>
 <game>
 	<mamename>td4ipaio</mamename>
@@ -150914,6 +151526,10 @@
 <game>
 	<mamename>test420</mamename>
 	<realname>T420 test suite</realname>
+</game>
+<game>
+	<mamename>testlove</mamename>
+	<realname>Love Power</realname>
 </game>
 <game>
 	<mamename>tetfight</mamename>
@@ -152253,7 +152869,7 @@
 </game>
 <game>
 	<mamename>tisland</mamename>
-	<realname>Treasure Island</realname>
+	<realname>Treasure Island (Data East)</realname>
 </game>
 <game>
 	<mamename>tisr16</mamename>
@@ -152973,7 +153589,11 @@
 </game>
 <game>
 	<mamename>toffy</mamename>
-	<realname>Toffy</realname>
+	<realname>Toffy (encrypted)</realname>
+</game>
+<game>
+	<mamename>toffya</mamename>
+	<realname>Toffy (unencrypted)</realname>
 </game>
 <game>
 	<mamename>togenkyo</mamename>
@@ -153182,6 +153802,14 @@
 <game>
 	<mamename>tomy_400</mamename>
 	<realname>The Who's Tommy Pinball Wizard (USA 4.00, display A4.00)</realname>
+</game>
+<game>
+	<mamename>tomycar</mamename>
+	<realname>Boku wa Tomica Driver - Hataraku Norimono Daishuugou! (Japan)</realname>
+</game>
+<game>
+	<mamename>tomyegg</mamename>
+	<realname>Kiratto Pri-Chan - PritamaGO: Misty Purple (Japan)</realname>
 </game>
 <game>
 	<mamename>tondemo</mamename>
@@ -153777,7 +154405,15 @@
 </game>
 <game>
 	<mamename>tpoker2</mamename>
-	<realname>Turbo Poker 2</realname>
+	<realname>Turbo Poker 2 (set 1)</realname>
+</game>
+<game>
+	<mamename>tpoker2a</mamename>
+	<realname>Turbo Poker 2 (set 2)</realname>
+</game>
+<game>
+	<mamename>tpoker2b</mamename>
+	<realname>Turbo Poker 2 (set 3)</realname>
 </game>
 <game>
 	<mamename>tpp311</mamename>
@@ -153997,7 +154633,7 @@
 </game>
 <game>
 	<mamename>tripfev</mamename>
-	<realname>Triple Fever (V108US)</realname>
+	<realname>Triple Fever (V110US)</realname>
 </game>
 <game>
 	<mamename>tripfev105us</mamename>
@@ -154006,6 +154642,10 @@
 <game>
 	<mamename>tripfev107us</mamename>
 	<realname>Triple Fever (V107US)</realname>
+</game>
+<game>
+	<mamename>tripfev108us</mamename>
+	<realname>Triple Fever (V108US)</realname>
 </game>
 <game>
 	<mamename>tripjack</mamename>
@@ -154912,6 +155552,10 @@
 	<realname>T.T Mahjong</realname>
 </game>
 <game>
+	<mamename>ttrail</mamename>
+	<realname>Treasure Trail (JPM)</realname>
+</game>
+<game>
 	<mamename>ttransf2</mamename>
 	<realname>Transformers: Generation 2 (Tiger)</realname>
 </game>
@@ -155006,6 +155650,10 @@
 <game>
 	<mamename>tumbleb2</mamename>
 	<realname>Tumble Pop (bootleg with PIC)</realname>
+</game>
+<game>
+	<mamename>tumblebed</mamename>
+	<realname>Tumble Pop (Electronic Devices bootleg)</realname>
 </game>
 <game>
 	<mamename>tumblep</mamename>
@@ -155134,6 +155782,14 @@
 <game>
 	<mamename>turkhunt</mamename>
 	<realname>Turkey Hunting USA V1.00</realname>
+</game>
+<game>
+	<mamename>turnierd</mamename>
+	<realname>Turnier Dart</realname>
+</game>
+<game>
+	<mamename>turnierda</mamename>
+	<realname>Turnier Dart (HB8-97)</realname>
 </game>
 <game>
 	<mamename>turpin</mamename>
@@ -156080,6 +156736,10 @@
 	<realname>unknown Banpresto medal game</realname>
 </game>
 <game>
+	<mamename>unkbubsc</mamename>
+	<realname>unknown bubble soccer game</realname>
+</game>
+<game>
 	<mamename>unkch1</mamename>
 	<realname>New Cherry Gold '99 (bootleg of Super Cherry Master) (set 1)</realname>
 </game>
@@ -156146,10 +156806,6 @@
 <game>
 	<mamename>unkkonmd</mamename>
 	<realname>unknown Konami medal game (game code GS662)</realname>
-</game>
-<game>
-	<mamename>unkljfpk</mamename>
-	<realname>unknown LJF Corporation poker game</realname>
 </game>
 <game>
 	<mamename>unkpacg</mamename>
@@ -156358,6 +157014,14 @@
 <game>
 	<mamename>uts20</mamename>
 	<realname>UTS-20</realname>
+</game>
+<game>
+	<mamename>uvax1</mamename>
+	<realname>MicroVAX I</realname>
+</game>
+<game>
+	<mamename>uvax2</mamename>
+	<realname>MicroVAX II</realname>
 </game>
 <game>
 	<mamename>uvw1200</mamename>
@@ -159517,7 +160181,7 @@
 </game>
 <game>
 	<mamename>vpoker</mamename>
-	<realname>Videotronics Draw Poker</realname>
+	<realname>Challenger Draw Poker</realname>
 </game>
 <game>
 	<mamename>vpool</mamename>
@@ -160921,27 +161585,27 @@
 </game>
 <game>
 	<mamename>wgp</mamename>
-	<realname>World Grand Prix (World)</realname>
+	<realname>WGP: Real Race Feeling (World)</realname>
 </game>
 <game>
 	<mamename>wgp2</mamename>
-	<realname>World Grand Prix 2 (Japan)</realname>
+	<realname>WGP 2: Real Race Feeling (Japan)</realname>
 </game>
 <game>
 	<mamename>wgpj</mamename>
-	<realname>World Grand Prix (Japan)</realname>
+	<realname>WGP: Real Race Feeling (Japan)</realname>
 </game>
 <game>
 	<mamename>wgpjoy</mamename>
-	<realname>World Grand Prix (joystick version) (Japan, set 1)</realname>
+	<realname>WGP: Real Race Feeling (joystick version) (Japan, set 1)</realname>
 </game>
 <game>
 	<mamename>wgpjoya</mamename>
-	<realname>World Grand Prix (joystick version) (Japan, set 2)</realname>
+	<realname>WGP: Real Race Feeling (joystick version) (Japan, set 2)</realname>
 </game>
 <game>
 	<mamename>wgpu</mamename>
-	<realname>World Grand Prix (US)</realname>
+	<realname>WGP: Real Race Feeling (US)</realname>
 </game>
 <game>
 	<mamename>wh1</mamename>
@@ -161150,6 +161814,10 @@
 <game>
 	<mamename>winbingoa</mamename>
 	<realname>Win Win Bingo (Ver. GM.05.1, May 11 2006)</realname>
+</game>
+<game>
+	<mamename>winbnk88</mamename>
+	<realname>Winbank Joker Poker</realname>
 </game>
 <game>
 	<mamename>windheat</mamename>
@@ -161386,6 +162054,10 @@
 <game>
 	<mamename>wizdfire</mamename>
 	<realname>Wizard Fire (Over Sea v2.1)</realname>
+</game>
+<game>
+	<mamename>wizdfirea</mamename>
+	<realname>Wizard Fire (Over Sea v1.0)</realname>
 </game>
 <game>
 	<mamename>wizdfireu</mamename>
@@ -161636,6 +162308,10 @@
 	<realname>Wonder League Star - Sok-Magicball Fighting (Korea)</realname>
 </game>
 <game>
+	<mamename>wlzb</mamename>
+	<realname>Wu Lin Zhengba</realname>
+</game>
+<game>
 	<mamename>wmatch</mamename>
 	<realname>Water Match (315-5064)</realname>
 </game>
@@ -161825,7 +162501,7 @@
 </game>
 <game>
 	<mamename>wolffang</mamename>
-	<realname>Wolf Fang -Kuhga 2001- (Japan)</realname>
+	<realname>Wolf Fang: Kuuga 2001 (Japan)</realname>
 </game>
 <game>
 	<mamename>wolfman</mamename>
@@ -161866,6 +162542,10 @@
 <game>
 	<mamename>woodpeck</mamename>
 	<realname>Woodpecker (set 1)</realname>
+</game>
+<game>
+	<mamename>wordlnch</mamename>
+	<realname>Word Launch (UK)</realname>
 </game>
 <game>
 	<mamename>worldadv</mamename>
@@ -161910,6 +162590,10 @@
 <game>
 	<mamename>wpc250</mamename>
 	<realname>PC-250/16</realname>
+</game>
+<game>
+	<mamename>wpddz</mamename>
+	<realname>Wang Pai Dou Dizhou</realname>
 </game>
 <game>
 	<mamename>wpksoc</mamename>
@@ -162576,6 +163260,10 @@
 	<realname>Winner's Wheel - Magical Spot</realname>
 </game>
 <game>
+	<mamename>wwshin</mamename>
+	<realname>Waku Waku Shinkansen (J 971031 V0.002)</realname>
+</game>
+<game>
 	<mamename>wxstar4k</mamename>
 	<realname>WeatherSTAR 4000</realname>
 </game>
@@ -162885,7 +163573,7 @@
 </game>
 <game>
 	<mamename>xfilesk</mamename>
-	<realname>The X-Files (Censored, Korea)</realname>
+	<realname>The X-Files (censored, Korea)</realname>
 </game>
 <game>
 	<mamename>xfilesp</mamename>
@@ -163220,12 +163908,32 @@
 	<realname>Xiaoyao Dou Dizhu</realname>
 </game>
 <game>
+	<mamename>xyddzhh</mamename>
+	<realname>Xingyun Dou Dizhu</realname>
+</game>
+<game>
 	<mamename>xymg</mamename>
-	<realname>Xingyun Man Guan (China, V651C)</realname>
+	<realname>Xingyun Manguan (China, V651C, set 1)</realname>
+</game>
+<game>
+	<mamename>xymga</mamename>
+	<realname>Xingyun Manguan (China, V651C, set 2)</realname>
 </game>
 <game>
 	<mamename>xyonix</mamename>
 	<realname>Xyonix</realname>
+</game>
+<game>
+	<mamename>xypdk</mamename>
+	<realname>Xingyun Pao De Kuai (V106CN)</realname>
+</game>
+<game>
+	<mamename>xypmd</mamename>
+	<realname>Xingyun Paomadi Super (V401CN)</realname>
+</game>
+<game>
+	<mamename>xypmda</mamename>
+	<realname>Xingyun Paomadi (unknown ver)</realname>
 </game>
 <game>
 	<mamename>y301xl</mamename>
@@ -163876,6 +164584,10 @@
 	<realname>Mobile Suit Z-Gundam: A.E.U.G. vs Titans DX (ZDX1 Ver. A)</realname>
 </game>
 <game>
+	<mamename>zhonggmj</mamename>
+	<realname>Zhongguo Majiang</realname>
+</game>
+<game>
 	<mamename>zhongguo</mamename>
 	<realname>Zhongguo Chu Da D (V102C)</realname>
 </game>
@@ -164154,6 +164866,10 @@
 <game>
 	<mamename>zt8802</mamename>
 	<realname>ZT-8802 SBC</realname>
+</game>
+<game>
+	<mamename>zuanshiw</mamename>
+	<realname>Zuanshi Wutai (V110II)</realname>
 </game>
 <game>
 	<mamename>zudugo</mamename>
