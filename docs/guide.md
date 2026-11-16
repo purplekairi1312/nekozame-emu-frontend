@@ -38,18 +38,23 @@ roms/
     └── Beatmania (Europe).chd
 ```
 
-- the folder names are ES-DE's system names (`megadrive`, `megadrivejp`, `genesis`, `psx`...)
-- games with more than one disc: the discs and an `.m3u` playlist listing them, in a folder named after the game. the folder shows as one game
-- it works best when you keep several versions of games: full sets, games from different regions, translations, hacks
+the folder names are ES-DE's system names (`megadrive`, `megadrivejp`, `genesis`, `psx`...)
+
+games with more than one disc: the discs and an `.m3u` playlist listing them, in a folder named after the game. the folder shows as one game
+
+it works best when you keep several versions of games: full sets, games from different regions, translations, hacks
 
 if your files have names like `sonic.bin` or `game1.iso`, it's not for you: use scraped names instead (`"names": "scraped"` in `~/.config/nekozame/emulation.json`, and turn "scrape actual game names" back on in the scraper settings).
 
 ### good to know
 
-- the name shown is the file name without its extension, brackets and all
-- the region is the first bracket that names regions, like `(Japan)` or `(USA, Europe)`
-- hidden files (starting with a dot, like the `._` files macos leaves on network shares) are skipped
-- renaming a file makes it a new game: its art, favorites and play time stay with the old name, so it's better to rename before scraping or adding games to steam
+the name shown is the file name without its extension, brackets and all
+
+the region is the first bracket that names regions, like `(Japan)` or `(USA, Europe)`
+
+hidden files (starting with a dot, like the `._` files macos leaves on network shares) are skipped
+
+renaming a file makes it a new game: its art, favorites and play time stay with the old name, so it's better to rename before scraping or adding games to steam
 
 ## region flags
 
@@ -79,11 +84,15 @@ a family stays together under its first release. nekozame-emu writes the order t
 
 each system is a page like from a 90s japanese game magazine. nekozame-emu prints the pages on your machine, from public-domain NOAA photos and your games' screenshots.
 
-- on each page: a text about the console (english, or japanese in ui settings → theme language), its maker, release date and how many games you have, screenshots, and its name on the spine
-- above the text: a shark or ray painted by Kawahara Keiga (1820s), a photo of the console, or both (`"drawings"` in nekozame-emu's settings)
-- color schemes (ui settings → color scheme): nekozame, lilac, sakura, ocean, sunset
-- layouts (ui settings → theme variant): game list, cover grid, review page, filmstrip, contents. each one comes with screenshot, title screen, cover, 3D box, disc or cartridge, or video
-- menu colors (ui settings → menu color scheme): nekozame and nekozame light
+on each page: a text about the console (english, or japanese in ui settings → theme language), its maker, release date and how many games you have, screenshots, and its name on the spine
+
+above the text: a shark or ray painted by Kawahara Keiga (1820s), a photo of the console, or both (`"drawings"` in nekozame-emu's settings)
+
+color schemes (ui settings → color scheme): nekozame, lilac, sakura, ocean, sunset
+
+layouts (ui settings → theme variant): game list, cover grid, review page, filmstrip, contents. each one comes with screenshot, title screen, cover, 3D box, disc or cartridge, or video
+
+menu colors (ui settings → menu color scheme): nekozame and nekozame light
 
 after adding games, `nekozame-emu esde on --again` prints the pages again with the new counts and screenshots.
 
@@ -91,8 +100,9 @@ after adding games, `nekozame-emu esde on --again` prints the pages again with t
 
 each system's first emulator is nekozame's launcher (`nekozame-emu launch`):
 
-- saves sync before the game starts and after it ends (nekozame-saves)
-- disc games (ps1, saturn, pc engine cd, ps2, psp) get read into memory before starting, so reading from a network share doesn't interrupt them
+saves sync before the game starts and after it ends (nekozame-saves)
+
+disc games (ps1, saturn, pc engine cd, ps2, psp) get read into memory before starting, so reading from a network share doesn't interrupt them
 
 ES-DE's other emulators are still there per game (the game's options → alternative emulator).
 
@@ -106,8 +116,9 @@ the ports system lists the ports, decomps and recomps installed on that machine 
 
 ## music and the screensaver
 
-- music: "dolphin sanctuary" by purplekairi1312 plays while you browse and pauses during games and the screensaver (`"music": false` turns it off). © 2026 purplekairi1312, all rights reserved; it comes with nekozame os, not this repo
-- the screensaver is a slideshow of screenshots. the video one can freeze the frontend on a network share, so it's not used
+music: "dolphin sanctuary" by purplekairi1312 plays while you browse and pauses during games and the screensaver (`"music": false` turns it off). © 2026 purplekairi1312, all rights reserved; it comes with nekozame os, not this repo
+
+the screensaver is a slideshow of screenshots. the video one can freeze the frontend on a network share, so it's not used
 
 ## where things are
 

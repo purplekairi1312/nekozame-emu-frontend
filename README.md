@@ -8,19 +8,9 @@ nekozame's emulation frontend, a fork of [ES-DE](https://es-de.org) with nekozam
 
 it's built around your file names. whatever you name a file is what shows, and scraping won't rename it. the region in the name (`(Japan)`, `(USA, Europe)`) is where the game's flags come from.
 
-in the frontend itself:
+the frontend itself adds region flags per game (from the file name), nekozame and nekozame light menu colors (nekozame by default), and nekozame's loading screen and icon. ES-DE's update check is off.
 
-- region flags per game, from the file name
-- nekozame and nekozame light menu colors (nekozame by default)
-- nekozame's loading screen and icon
-- ES-DE's update check is off
-
-on nekozame os, nekozame-emu also sets up:
-
-- the nekozame theme
-- systems ordered by maker and year, with each console's regions together
-- launching through nekozame-emu, so saves sync
-- 3D boxes made from your covers, a ports system, and music
+on nekozame os, nekozame-emu also sets up the nekozame theme, the systems ordered by maker and year with each console's regions together, launching through nekozame-emu so saves sync, 3D boxes made from your covers, a ports system, and music.
 
 how it all works: [docs/guide.md](docs/guide.md)
 
