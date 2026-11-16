@@ -17,19 +17,21 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 - nekozame and nekozame light menu colors, and nekozame's loading screen and icon.
 - ES-DE's update check is off, since nekozame-emu keeps it updated.
 
-The theme, system order, launching, boxes, ports and music are set up by nekozame os (`nekozame-emu esde on`). On other systems you get the rest.
+The theme, system order, launching, boxes, ports and music are set up by `nekozame-emu esde on`. nekozame-emu comes with nekozame os, and also runs on any other Linux from a clone of nekozame-os ([how](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md#without-nekozame-os)).
 
 How it all works: [docs/guide.md](docs/guide.md).
 
 ## Install
 
-On nekozame os:
+With nekozame-emu (on nekozame os, or any Linux with a clone of nekozame-os):
 
 ```sh
 nekozame-emu esde on
 ```
 
-On other Linux systems, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-frontend_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It keeps its settings in `~/ES-DE`, like ES-DE.
+It downloads the right AppImage, sets everything up and keeps it updated.
+
+Without it, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-frontend_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It keeps its settings in `~/ES-DE`, like ES-DE.
 
 ## Region flags in themes
 
