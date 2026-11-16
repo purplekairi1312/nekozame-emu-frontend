@@ -2,7 +2,7 @@
 
 <p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck: a 90s Japanese game magazine page with the headline 深く、青く。あの夏の海へ, the Mega Drive and a painted bullhead shark on a pink sky, a column of game screenshots, a reef shark photo below, and the system's name running down a pink spine"></p>
 
-The frontend of [nekozame os](https://github.com/purplekairi1312/nekozame-os)'s emulation: browse your whole game library, from a NAS or wherever it lives, in nekozame's magazine theme. Built on [ES-DE](https://es-de.org) 3.5.0.
+The frontend of [nekozame os](https://github.com/purplekairi1312/nekozame-os)'s emulation: your whole game library, from a NAS or wherever it lives, as the pages of a 90s Japanese game magazine sunk into a summer sea. Each console is a spread under deep blue water, with its own story, sharks painted two hundred years ago, and the screens of your own games. 深く、青く。 Built on [ES-DE](https://es-de.org) 3.5.0.
 
 What's different from ES-DE:
 
