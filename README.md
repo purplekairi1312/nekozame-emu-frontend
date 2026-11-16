@@ -13,7 +13,7 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 - Games launch through nekozame-emu, so saves sync between machines.
 - 3D boxes made from your covers.
 - A Ports system for ports, decomps and recomps.
-- Music while browsing.
+- Music while browsing: "dolphin sanctuary" by purplekairi1312 ([more below](#the-music)).
 - nekozame and nekozame light menu colors, and nekozame's loading screen and icon.
 - ES-DE's update check is off, since nekozame-emu keeps it updated.
 
@@ -32,6 +32,16 @@ nekozame-emu esde on
 It downloads the right AppImage, sets everything up and keeps it updated.
 
 Without it, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-frontend_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It keeps its settings in `~/ES-DE`, like ES-DE.
+
+## The music
+
+While you browse, you hear "dolphin sanctuary" by [purplekairi1312](https://passedrecordings.bandcamp.com/track/dolphin-sanctuary), an ocean-themed ambient track released by Passed Recordings on [Passed Oceans](https://ampwall.com/a/passedrecordings/album/passed-oceans).
+
+> inspired by the watery sounds of videogames such as Ecco the Dolphin: Defender of the Future, Treasures of the Deep, or Diver's Dream, and using only KORG gear, the KORG Wavestate, and KORG Prophecy for the synth lead solo, i wanted to bring back the specific feelings of wonder i had as a child playing those beautiful underwater themed games, but reinterpreted through my own personal style.
+
+- Buy it on [Bandcamp](https://passedrecordings.bandcamp.com/track/dolphin-sanctuary) or [Ampwall](https://ampwall.com/a/passedrecordings/album/passed-oceans), or listen on [YouTube](https://www.youtube.com/watch?v=-QDAa7hzcGU&t=7730s).
+- It pauses during games and the screensaver. `"music": false` in nekozame-emu's settings turns it off.
+- © 2026 purplekairi1312, all rights reserved. It comes with nekozame os, not with this repo, and isn't under its license.
 
 ## Region flags in themes
 
