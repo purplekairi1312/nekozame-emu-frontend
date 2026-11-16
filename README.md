@@ -7,7 +7,8 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 ## What's different
 
 - Your file names are the game names. Scraping doesn't rename them, so the versions of a game (regions, revisions, translations, hacks) don't all end up with the same name.
-- Region flags for each game, read from the file name, like `(Japan)` or `(USA, Europe)`.
+- Region flags for each game, read from the file name, like `(Japan)` or `(USA, Europe)`: in the game's details and before its name in the list.
+- Scraping with ScreenScraper uses each game's own region from its file name, so the Japanese version gets the Japanese box and the European one the European box. Games without a region tag use the region set in the scraper's settings.
 - The nekozame theme: each system is a page in the style of an ocean-themed 90s Japanese magazine.
 - Systems sorted by maker and year, with each console's regions together.
 - Games launch through nekozame-emu, so saves sync between machines.
@@ -59,6 +60,14 @@ Two extra values for an `image` element's `imageType`:
     <maxSize>0.04 0.034</maxSize>
     <imageType>flag</imageType>
 </image>
+```
+
+And for a `textlist`, the flags before each game's name:
+
+```xml
+<textlist name="gamelist">
+    <regionFlags>true</regionFlags>
+</textlist>
 ```
 
 Regions without a flag of their own (World, Asia, Scandinavia, Latin America) show none. Everything else works as in ES-DE's [theme documentation](https://gitlab.com/es-de/emulationstation-de/-/blob/master/THEMES.md).

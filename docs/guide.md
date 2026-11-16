@@ -53,9 +53,16 @@ If your files have names like `sonic.bin` or `game1.iso`, use scraped names inst
 - Hidden files (starting with a dot, like the `._` files macOS leaves on network shares) are skipped.
 - Renaming a file makes it a new game. Its art, favorites and play time stay with the old name, so rename before scraping or adding games to Steam.
 
+## Scraping by region
+
+With ScreenScraper, each game is scraped in its own region, read from its file name: `(Japan)` gets the Japanese box, title and release date, `(Europe)` the European ones. For `(USA, Europe)` the first region counts.
+
+- A game without a region tag, or with one ScreenScraper doesn't have, uses the region in the scraper's settings (Scraper → Other settings → Region).
+- "Region from each game's file name", in the same menu, turns it off: every game then uses the region setting.
+
 ## Region flags
 
-- Shown in the corner of the game's data box: one flag for `(Japan)`, two for `(USA, Europe)`.
+- Shown in the corner of the game's data box, and before each game's name in the list: one flag for `(Japan)`, two for `(USA, Europe)`.
 - Known regions: Japan, USA, Europe, Korea, Brazil, Australia, Canada, China, Taiwan, Hong Kong, the European countries, Russia, Mexico and India.
 - `(World)`, `(Asia)`, `(Scandinavia)` and `(Latin America)` don't get a flag.
 - The flags are public domain, from Wikimedia Commons. Themes can place them with the `flag` and `flag2` image types (see the [README](../README.md)).
