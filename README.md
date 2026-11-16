@@ -8,18 +8,16 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 
 - Your file names are the game names. Scraping doesn't rename them, so the versions of a game (regions, revisions, translations, hacks) don't all end up with the same name.
 - Region flags for each game, read from the file name, like `(Japan)` or `(USA, Europe)`.
-- nekozame and nekozame light menu colors.
-- nekozame's loading screen and icon.
-- ES-DE's update check is off, since nekozame-emu updates it.
-
-On nekozame os, nekozame-emu also sets up:
-
-- The nekozame theme.
+- The nekozame theme: each system is a page in the style of a 90s Japanese game magazine.
 - Systems sorted by maker and year, with each console's regions together.
-- Launching through nekozame-emu, so saves sync.
+- Games launch through nekozame-emu, so saves sync between machines.
 - 3D boxes made from your covers.
 - A Ports system for ports, decomps and recomps.
 - Music while browsing.
+- nekozame and nekozame light menu colors, and nekozame's loading screen and icon.
+- ES-DE's update check is off, since nekozame-emu keeps it updated.
+
+The theme, system order, launching, boxes, ports and music are set up by nekozame os (`nekozame-emu esde on`). On other systems you get the rest.
 
 How it all works: [docs/guide.md](docs/guide.md).
 
