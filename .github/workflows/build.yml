@@ -8,6 +8,9 @@ on:
     tags: ["v*"]
   workflow_dispatch:
 
+permissions:
+  contents: write  # to publish the release
+
 jobs:
   appimage:
     runs-on: ubuntu-22.04
