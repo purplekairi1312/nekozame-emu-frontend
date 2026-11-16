@@ -1,14 +1,17 @@
 # nekozame-emu-frontend
 
-<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck: a 90s Japanese game magazine page with the headline 深く、青く。あの夏の海へ, the Mega Drive and a painted bullhead shark on a pink sky, a column of game screenshots, a reef shark photo below, and the system's name running down a pink spine"></p>
+<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's magazine theme"></p>
 
-The frontend of [nekozame os](https://github.com/purplekairi1312/nekozame-os)'s emulation: your whole game library, from a NAS or wherever it lives, as the pages of a 90s Japanese game magazine sunk into a summer sea. Each console is a spread under deep blue water, with its own story, sharks painted two hundred years ago, and the screens of your own games. 深く、青く。 Built on [ES-DE](https://es-de.org) 3.5.0.
+nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozame's theme and new functions. It's what `nekozame-emu esde on` installs on [nekozame os](https://github.com/purplekairi1312/nekozame-os).
 
-What's different from ES-DE:
+## What's different from ES-DE
 
-- **nekozame's menu colors**: *nekozame* (violet-gray, orchid and lilac) and *nekozame light* (soft white and pastel pink), from [nekozame-theme](https://github.com/purplekairi1312/nekozame-theme)'s palette, beside ES-DE's own. nekozame is the default
-- **Region flags**: each game's regions are read from its file name the way No-Intro and Redump write them, `(Japan)` or `(USA, Europe)`, and themes can show their flags
-- Made to be set up by `nekozame-emu`: your file names kept as the game names, nekozame's launcher (with save sync) first for every system, the magazine theme printed from your own library, quiet music while you browse
+- Two more menu color schemes, nekozame and nekozame light, from [nekozame-theme](https://github.com/purplekairi1312/nekozame-theme)'s palette. nekozame is the default.
+- Region flags: a game's regions are read from its file name the way No-Intro and Redump write them, `(Japan)` or `(USA, Europe)`, and themes can show their flags.
+- nekozame's loading screen and icon.
+- ES-DE's own update check is off; nekozame-emu updates it from this repo's releases.
+
+The nekozame theme, the system order, the 3D boxes and the rest are set up by nekozame-emu. nekozame os's [emulation guide](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md) explains all of it.
 
 ## Install
 
@@ -18,11 +21,9 @@ On nekozame os:
 nekozame-emu esde on
 ```
 
-It downloads the newest release, sets everything up, and puts it in Steam and your apps menu. The [emulation guide](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md) explains the whole setup.
+On other Linux systems, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-frontend_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It uses `~/ES-DE` for its settings, like ES-DE.
 
-Anywhere else on Linux: download `nekozame-emu-frontend_x64.AppImage` (or `_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It reads and writes `~/ES-DE`, like ES-DE.
-
-## For theme authors
+## Region flags in themes
 
 Two extra values for an `image` element's `imageType`:
 
@@ -40,16 +41,12 @@ Two extra values for an `image` element's `imageType`:
 </image>
 ```
 
-Regions without one flag of their own (World, Asia, Scandinavia, Latin America) show none. Everything else works as in ES-DE: see [THEMES.md](THEMES.md).
+Regions without a flag of their own (World, Asia, Scandinavia, Latin America) show none. Everything else works as in ES-DE's [theme documentation](https://gitlab.com/es-de/emulationstation-de/-/blob/master/THEMES.md).
 
 ## Building
 
-GitHub builds both AppImages with ES-DE's own scripts on every push, and publishes them on a tag. To build one yourself, see [INSTALL.md](INSTALL.md) (`tools/create_AppImage_SteamDeck.sh` or `tools/create_AppImage.sh`).
-
-## Credits
-
-[ES-DE](https://es-de.org) is by Leon Styhre and Northwestern Software, under the MIT license ([LICENSE-ES-DE](LICENSE-ES-DE)); its own readme is [README-ES-DE.md](README-ES-DE.md), and [USERGUIDE.md](USERGUIDE.md) covers everything it does. The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
+GitHub builds both AppImages on every push with `tools/create_AppImage_SteamDeck.sh` and `tools/create_AppImage.sh`, and publishes them when a version is tagged.
 
 ## License
 
-GPL-3.0-or-later ([LICENSE](LICENSE)). It's built on ES-DE's code, which keeps its own MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)).
+GPL-3.0-or-later ([LICENSE](LICENSE)). ES-DE's code keeps its MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)); the libraries' licenses are in [licenses](licenses), and [CREDITS.md](CREDITS.md) is ES-DE's list of the people behind it. The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).

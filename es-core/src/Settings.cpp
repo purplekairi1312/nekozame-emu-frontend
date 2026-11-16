@@ -281,7 +281,7 @@ void Settings::setDefaults()
     mStringMap["KeyboardQuitShortcut"] = {"AltF4", "AltF4"};
 #endif
     mStringMap["SaveGamelistsMode"] = {"always", "always"};
-    mStringMap["ApplicationUpdaterFrequency"] = {"always", "always"};
+    mStringMap["ApplicationUpdaterFrequency"] = {"never", "never"};  // nekozame-emu updates it
     mStringMap["ApplicationUpdaterDownloadDirectory"] = {"", ""};
 #if !defined(__ANDROID__)
     mBoolMap["ApplicationUpdaterPrereleases"] = {false, false};

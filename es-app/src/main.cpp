@@ -716,7 +716,7 @@ int main(int argc, char* argv[])
     Log::init();
     Log::open();
     {
-        const std::string applicationName {"ES-DE"};
+        const std::string applicationName {"nekozame-emu-frontend"};
 #if defined(__ANDROID__)
         LOG(LogInfo) << applicationName << " " << PROGRAM_VERSION_STRING << "-"
                      << ANDROID_VERSION_CODE << " (r" << PROGRAM_RELEASE_NUMBER << "), built "
