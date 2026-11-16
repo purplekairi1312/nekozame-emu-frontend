@@ -229,6 +229,27 @@ void screenscraper_generate_scraper_requests(const ScraperSearchParams& params,
         path = ssConfig.getGameSearchUrl(params.nameOverride, params.md5Hash, params.fileSize);
     }
 
+    // The game's region from its file name, like "(Japan)" or "(USA, Europe)": its art,
+    // name and release date are taken from that region first, so each version of a game
+    // gets its own box. Regions ScreenScraper doesn't know fall back to ScraperRegion.
+    std::string region;
+    if (Settings::getInstance()->getBool("ScraperRegionFromFilename")) {
+        static const std::map<std::string, std::string> ssRegions {
+            {"jp", "jp"}, {"us", "us"}, {"eu", "eu"}, {"world", "wor"}, {"kr", "kr"},
+            {"br", "br"}, {"au", "au"}, {"ca", "ca"}, {"cn", "cn"},     {"tw", "tw"},
+            {"fr", "fr"}, {"de", "de"}, {"es", "sp"}, {"it", "it"},     {"nl", "nl"},
+            {"se", "se"}, {"gb", "uk"}, {"ru", "ru"}, {"pt", "pt"},     {"dk", "dk"},
+            {"fi", "fi"}, {"no", "no"}, {"pl", "pl"}, {"gr", "gr"},     {"asia", "asi"},
+            {"latam", "ame"}};
+        for (const std::string& code : params.game->getRegionCodes()) {
+            const auto ss = ssRegions.find(code);
+            if (ss != ssRegions.cend()) {
+                region = ss->second;
+                break;
+            }
+        }
+    }
+
     auto& platforms = params.system->getPlatformIds();
     std::vector<unsigned short> p_ids;
 
@@ -244,7 +265,7 @@ void screenscraper_generate_scraper_requests(const ScraperSearchParams& params,
                             << getPlatformName(*platformIt) << "\", search will be inaccurate";
             // Add the scrape request without a platform/system ID.
             requests.push(
-                std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(requests, results, path)));
+                std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(requests, results, path, region)));
         }
     }
 
@@ -252,7 +273,7 @@ void screenscraper_generate_scraper_requests(const ScraperSearchParams& params,
         LOG(LogWarning) << "ScreenScraper: No platform defined, search will be inaccurate";
         // Add the scrape request without a platform/system ID.
         requests.push(
-            std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(requests, results, path)));
+            std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(requests, results, path, region)));
     }
 
     // Sort the platform IDs and remove duplicates.
@@ -263,7 +284,7 @@ void screenscraper_generate_scraper_requests(const ScraperSearchParams& params,
     for (auto platform = p_ids.cbegin(); platform != p_ids.cend(); ++platform) {
         requests.push(std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(
             requests, results,
-            path + "&systemeid=" + HttpReq::urlEncode(std::to_string(*platform)))));
+            path + "&systemeid=" + HttpReq::urlEncode(std::to_string(*platform)), region)));
     }
 }
 
@@ -406,8 +427,9 @@ void ScreenScraperRequest::processGame(const pugi::xml_document& xmldoc,
         result.scraperRequestAllowance = scraperRequestAllowance;
         result.gameID = game.attribute("id").as_string();
 
-        std::string region {
-            Utils::String::toLower(Settings::getInstance()->getString("ScraperRegion"))};
+        std::string region {mRegion != "" ? mRegion :
+                                            Utils::String::toLower(
+                                                Settings::getInstance()->getString("ScraperRegion"))};
         std::string language {
             Utils::String::toLower(Settings::getInstance()->getString("ScraperLanguage"))};
 

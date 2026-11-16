@@ -856,6 +856,27 @@ void GuiScraperMenu::openOtherOptions()
             ->setOpacity(DISABLED_OPACITY);
     }
 
+    // The region from each game's file name ("(Japan)", "(USA, Europe)"), REGION when it has none.
+    auto scraperRegionFromFilename = std::make_shared<SwitchComponent>();
+    scraperRegionFromFilename->setState(
+        Settings::getInstance()->getBool("ScraperRegionFromFilename"));
+    s->addWithLabel(_("REGION FROM EACH GAME'S FILE NAME"), scraperRegionFromFilename);
+    s->addSaveFunc([scraperRegionFromFilename, s] {
+        if (scraperRegionFromFilename->getState() !=
+            Settings::getInstance()->getBool("ScraperRegionFromFilename")) {
+            Settings::getInstance()->setBool("ScraperRegionFromFilename",
+                                             scraperRegionFromFilename->getState());
+            s->setNeedsSaving();
+        }
+    });
+    if (Settings::getInstance()->getString("Scraper") == "thegamesdb") {
+        scraperRegionFromFilename->setEnabled(false);
+        scraperRegionFromFilename->setOpacity(DISABLED_OPACITY);
+        scraperRegionFromFilename->getParent()
+            ->getChild(scraperRegionFromFilename->getChildIndex() - 1)
+            ->setOpacity(DISABLED_OPACITY);
+    }
+
     // Scraper language.
     auto scraperLanguage =
         std::make_shared<OptionListComponent<std::string>>(_("PREFERRED LANGUAGE"), false);

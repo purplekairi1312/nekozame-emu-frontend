@@ -417,7 +417,7 @@ const std::string FileData::getPhysicalMediaPath() const
     return getMediafilePath("physicalmedia");
 }
 
-const std::string FileData::getRegionFlagPath(const unsigned int index) const
+const std::vector<std::string> FileData::getRegionCodes() const
 {
     // The regions are read from the file name the way No-Intro and Redump write them, as
     // the first parenthesis naming regions, such as "(Japan)" or "(USA, Europe)".
@@ -444,17 +444,22 @@ const std::string FileData::getRegionFlagPath(const unsigned int index) const
             if (region != regions.cend())
                 codes.emplace_back(region->second);
         }
-        if (!codes.empty()) {
-            if (index >= codes.size())
-                return "";
-            // Looked up without failing: a region with no flag of its own (World, Asia...) has
-            // no file, and a missing resource otherwise shuts the application down.
-            const std::string flag {":/flags/" + codes[index] + ".svg"};
-            return ResourceManager::getInstance().getResourcePath(flag, false) != "" ? flag : "";
-        }
+        if (!codes.empty())
+            return codes;
         start = end;
     }
-    return "";
+    return {};
+}
+
+const std::string FileData::getRegionFlagPath(const unsigned int index) const
+{
+    const std::vector<std::string> codes {getRegionCodes()};
+    if (index >= codes.size())
+        return "";
+    // Looked up without failing: a region with no flag of its own (World, Asia...) has
+    // no file, and a missing resource otherwise shuts the application down.
+    const std::string flag {":/flags/" + codes[index] + ".svg"};
+    return ResourceManager::getInstance().getResourcePath(flag, false) != "" ? flag : "";
 }
 
 const std::string FileData::getMiximagePath() const

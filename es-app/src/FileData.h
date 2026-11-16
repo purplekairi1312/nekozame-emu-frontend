@@ -92,6 +92,8 @@ public:
     const std::string getPhysicalMediaPath() const;
     // The flag of a region in the game's file name, the first (0) or the second (1).
     const std::string getRegionFlagPath(const unsigned int index) const;
+    // The regions in the file name, like "(USA, Europe)": {"us", "eu"}.
+    const std::vector<std::string> getRegionCodes() const;
     const std::string getMiximagePath() const;
     const std::string getScreenshotPath() const;
     const std::string getTitleScreenPath() const;

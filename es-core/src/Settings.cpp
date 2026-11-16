@@ -159,6 +159,7 @@ void Settings::setDefaults()
     mBoolMap["ScraperConvertUnderscores"] = {true, true};
     mBoolMap["ScraperAutomaticRemoveDots"] = {true, true};
     mBoolMap["ScraperRegionFallback"] = {true, true};
+    mBoolMap["ScraperRegionFromFilename"] = {true, true};
 
     // UI settings.
     mStringMap["Theme"] = {"linear-es-de", "linear-es-de"};

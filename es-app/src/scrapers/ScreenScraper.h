@@ -27,9 +27,11 @@ class ScreenScraperRequest : public ScraperHttpRequest
 public:
     ScreenScraperRequest(std::queue<std::unique_ptr<ScraperRequest>>& requestsWrite,
                          std::vector<ScraperSearchResult>& resultsWrite,
-                         const std::string& url)
+                         const std::string& url,
+                         const std::string& region = "")
         : ScraperHttpRequest(resultsWrite, url)
         , mRequestQueue(&requestsWrite)
+        , mRegion(region)
     {
     }
 
@@ -111,6 +113,9 @@ protected:
                      const std::string& region);
 
     std::queue<std::unique_ptr<ScraperRequest>>* mRequestQueue;
+    // The game's own region, from its file name (ScreenScraper's code), or empty for the
+    // ScraperRegion setting.
+    std::string mRegion;
 };
 
 #endif // ES_APP_SCRAPERS_SCREEN_SCRAPER_H
