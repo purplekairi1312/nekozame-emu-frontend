@@ -35,7 +35,7 @@ Without it, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-fron
 
 ## The music
 
-While you browse, you hear "dolphin sanctuary" by [purplekairi1312](https://passedrecordings.bandcamp.com/track/dolphin-sanctuary), an ocean-themed ambient track released by Passed Recordings on [Passed Oceans](https://ampwall.com/a/passedrecordings/album/passed-oceans).
+While you browse, you hear "dolphin sanctuary" by [purplekairi1312](https://passedrecordings.bandcamp.com/track/dolphin-sanctuary), an ocean-themed ambient track released by [Passed Recordings](https://passedrecordings.co.uk/) on [Passed Oceans](https://passedrecordings.bandcamp.com/album/passed-oceans).
 
 > inspired by the watery sounds of videogames such as Ecco the Dolphin: Defender of the Future, Treasures of the Deep, or Diver's Dream, and using only KORG gear, the KORG Wavestate, and KORG Prophecy for the synth lead solo, i wanted to bring back the specific feelings of wonder i had as a child playing those beautiful underwater themed games, but reinterpreted through my own personal style.
 
