@@ -766,6 +766,8 @@ void GuiMenu::openUIOptions()
     auto menuColorScheme =
         std::make_shared<OptionListComponent<std::string>>(_("MENU COLOR SCHEME"), false);
     const std::string selectedMenuColor {Settings::getInstance()->getString("MenuColorScheme")};
+    menuColorScheme->add(_("NEKOZAME"), "nekozame", selectedMenuColor == "nekozame");
+    menuColorScheme->add(_("NEKOZAME LIGHT"), "nekozamelight", selectedMenuColor == "nekozamelight");
     menuColorScheme->add(_("DARK"), "dark", selectedMenuColor == "dark");
     menuColorScheme->add(_("DARK AND RED"), "darkred", selectedMenuColor == "darkred");
     menuColorScheme->add(_("LIGHT"), "light", selectedMenuColor == "light");

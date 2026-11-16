@@ -496,7 +496,7 @@ void GuiGameImporter::selectorWindow()
                   << mTargetSystemDir << "\"";
 
 #if defined(__ANDROID__)
-    const bool darkColorScheme {Settings::getInstance()->getString("MenuColorScheme") != "light"};
+    const bool darkColorScheme {!Settings::getInstance()->menuColorSchemeIsLight()};
 #endif
 
     for (std::string& file : inputFileList) {

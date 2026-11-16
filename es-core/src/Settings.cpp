@@ -174,7 +174,7 @@ void Settings::setDefaults()
     mStringMap["StartupView"] = {"system", "system"};
     mStringMap["SystemsSorting"] = {"default", "default"};
     mStringMap["DefaultSortOrder"] = {"name, ascending", "name, ascending"};
-    mStringMap["MenuColorScheme"] = {"dark", "dark"};
+    mStringMap["MenuColorScheme"] = {"nekozame", "nekozame"};
     mStringMap["MenuOpeningEffect"] = {"scale-up", "scale-up"};
     mStringMap["LaunchScreenDuration"] = {"normal", "normal"};
     mStringMap["UIMode"] = {"full", "full"};
@@ -531,3 +531,9 @@ SETTINGS_GETSET(bool, mBoolMap, getBool, getDefaultBool, setBool)
 SETTINGS_GETSET(int, mIntMap, getInt, getDefaultInt, setInt)
 SETTINGS_GETSET(float, mFloatMap, getFloat, getDefaultFloat, setFloat)
 SETTINGS_GETSET(const std::string&, mStringMap, getString, getDefaultString, setString)
+
+bool Settings::menuColorSchemeIsLight()
+{
+    const std::string& scheme {getString("MenuColorScheme")};
+    return scheme == "light" || scheme == "nekozamelight";
+}

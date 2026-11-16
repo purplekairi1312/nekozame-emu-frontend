@@ -70,7 +70,82 @@ ViewController* ViewController::getInstance()
 
 void ViewController::setMenuColors()
 {
-    if (Settings::getInstance()->getString("MenuColorScheme") == "light") {
+    // nekozame's schemes use the colors of nekozame-theme's palette.
+    if (Settings::getInstance()->getString("MenuColorScheme") == "nekozame") {
+        mMenuColorFrame = 0x4F4562FF;
+        mMenuColorFrameLaunchScreen = 0x433A55FF;
+        mMenuColorFrameBusyComponent = 0x433A55FF;
+        mMenuColorPanelDimmed = 0x00000024;
+
+        mMenuColorTitle = 0xFFC0E5FF;
+        mMenuColorPrimary = 0xE8DEF5FF;
+        mMenuColorSecondary = 0xD8CDECFF;
+        mMenuColorTertiary = 0xF1E6FFFF;
+        mMenuColorRed = 0xFF8FB0FF;
+        mMenuColorGreen = 0xC8F7DCFF;
+        mMenuColorBlue = 0xB8E4FFFF;
+
+        mMenuColorSelector = 0x8A76A8FF;
+        mMenuColorSeparators = 0x685C7FFF;
+        mMenuColorBusyComponent = 0xFFC0E5FF;
+        mMenuColorScrollIndicators = 0xB3A7CBFF;
+        mMenuColorPopupText = 0xE8DEF5FF;
+
+        mMenuColorButtonFocused = 0x8A76A8FF;
+        mMenuColorButtonTextFocused = 0xFFFFFFFF;
+        mMenuColorButtonTextUnfocused = 0xD8CDECFF;
+        mMenuColorButtonFlatFocused = 0x8A76A8FF;
+        mMenuColorButtonFlatUnfocused = 0x685C7FFF;
+
+        mMenuColorKeyboardModifier = 0xFFC0E5FF;
+        mMenuColorKeyboardCursorFocused = 0xFFD4EEFF;
+        mMenuColorKeyboardCursorUnfocused = 0x7C6A9AFF;
+        mMenuColorKeyboardText = 0xE8DEF500;
+        mMenuColorTextInputFrameFocused = 0x433A55FF;
+        mMenuColorTextInputFrameUnfocused = 0x5A4F6EFF;
+
+        mMenuColorSliderKnobDisabled = 0x685C7FFF;
+        mMenuColorDateTimeEditMarker = 0xFFFFFF22;
+        mMenuColorDetectDeviceHeld = 0xB3A7CB00;
+    }
+    else if (Settings::getInstance()->getString("MenuColorScheme") == "nekozamelight") {
+        mMenuColorFrame = 0xFFF4FAFF;
+        mMenuColorFrameLaunchScreen = 0xFFE6F4FF;
+        mMenuColorFrameBusyComponent = 0xFFF4FAFF;
+        mMenuColorPanelDimmed = 0x00000009;
+
+        mMenuColorTitle = 0x5A4F6EFF;
+        mMenuColorPrimary = 0x685C7FFF;
+        mMenuColorSecondary = 0x7C6A9AFF;
+        mMenuColorTertiary = 0x5A4F6EFF;
+        mMenuColorRed = 0xB8436BFF;
+        mMenuColorGreen = 0x3F8F62FF;
+        mMenuColorBlue = 0x4A6FA8FF;
+
+        mMenuColorSelector = 0xFFD4EEFF;
+        mMenuColorSeparators = 0xE3CCFFFF;
+        mMenuColorBusyComponent = 0xA094B8FF;
+        mMenuColorScrollIndicators = 0x8A76A8FF;
+        mMenuColorPopupText = 0x433A55FF;
+
+        mMenuColorButtonFocused = 0x8A76A8FF;
+        mMenuColorButtonTextFocused = 0xFFFFFFFF;
+        mMenuColorButtonTextUnfocused = 0x685C7FFF;
+        mMenuColorButtonFlatFocused = 0x8A76A8FF;
+        mMenuColorButtonFlatUnfocused = 0xF1E6FFFF;
+
+        mMenuColorKeyboardModifier = 0xD96A9AFF;
+        mMenuColorKeyboardCursorFocused = 0x685C7FFF;
+        mMenuColorKeyboardCursorUnfocused = 0xD8CDECFF;
+        mMenuColorKeyboardText = 0x685C7F00;
+        mMenuColorTextInputFrameFocused = 0xFFFFFFFF;
+        mMenuColorTextInputFrameUnfocused = 0xFFFFFFFF;
+
+        mMenuColorSliderKnobDisabled = 0xD8CDECFF;
+        mMenuColorDateTimeEditMarker = 0x00000022;
+        mMenuColorDetectDeviceHeld = 0x433A5500;
+    }
+    else if (Settings::getInstance()->getString("MenuColorScheme") == "light") {
         mMenuColorFrame = 0xEFEFEFFF;
         mMenuColorFrameLaunchScreen = 0xDFDFDFFF;
         mMenuColorFrameBusyComponent = 0xF5F5F5FF;

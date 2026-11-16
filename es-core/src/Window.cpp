@@ -595,7 +595,7 @@ void Window::render()
                     backgroundParameters.blurStrength = 1.75f;
 
                     // Also dim the background slightly.
-                    if (Settings::getInstance()->getString("MenuColorScheme") == "light")
+                    if (Settings::getInstance()->menuColorSchemeIsLight())
                         backgroundParameters.dimming = 0.60f;
                     else
                         backgroundParameters.dimming = 0.80f;
@@ -607,7 +607,7 @@ void Window::render()
                 }
                 else {
                     // Dim the background slightly.
-                    if (Settings::getInstance()->getString("MenuColorScheme") == "light")
+                    if (Settings::getInstance()->menuColorSchemeIsLight())
                         backgroundParameters.dimming = 0.60f;
                     else
                         backgroundParameters.dimming = 0.80f;

@@ -39,6 +39,9 @@ public:
     bool setFloat(const std::string& name, float value);
     bool setString(const std::string& name, const std::string& value);
 
+    // Whether the menu color scheme is a light one (light or nekozamelight).
+    bool menuColorSchemeIsLight();
+
 private:
     Settings();
 

@@ -257,7 +257,7 @@ void ComponentList::render(const glm::mat4& parentTrans)
     // Move camera the scroll distance.
     trans = glm::translate(trans, glm::vec3 {0.0f, -mCameraOffset, 0.0f});
 
-    const bool darkColorScheme {Settings::getInstance()->getString("MenuColorScheme") != "light"};
+    const bool darkColorScheme {!Settings::getInstance()->menuColorSchemeIsLight()};
 
     // Draw selector bar if we're using the dark color scheme.
     if (mFocused && mOpacity == 1.0f && darkColorScheme) {
