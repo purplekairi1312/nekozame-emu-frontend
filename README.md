@@ -6,12 +6,23 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 
 ## What's different from ES-DE
 
+It's built around your file names: the name you give a file is the name shown, the scraper never replaces it, and the region in it (`(Japan)`, `(USA, Europe)`) decides the game's flags.
+
+In the frontend itself:
+
+- Region flags for each game, read from its file name the way No-Intro and Redump write them; themes can show them.
 - Two more menu color schemes, nekozame and nekozame light, from [nekozame-theme](https://github.com/purplekairi1312/nekozame-theme)'s palette. nekozame is the default.
-- Region flags: a game's regions are read from its file name the way No-Intro and Redump write them, `(Japan)` or `(USA, Europe)`, and themes can show their flags.
 - nekozame's loading screen and icon.
 - ES-DE's own update check is off; nekozame-emu updates it from this repo's releases.
 
-The nekozame theme, the system order, the 3D boxes and the rest are set up by nekozame-emu. nekozame os's [emulation guide](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md) explains all of it.
+Set up by nekozame-emu on nekozame os:
+
+- The nekozame theme: every system a page from a 90s Japanese game magazine, printed from your own library, in five color schemes and five layouts.
+- Systems ordered by maker and year, a console's regional versions together (Mega Drive | Japan, Genesis | North America, Mega Drive | Europe).
+- Games launched through nekozame-emu: saves synced before and after, disc games read into memory first.
+- 3D boxes made from your covers, a Ports system for ports, decomps and recomps, and music while you browse.
+
+[docs/guide.md](docs/guide.md) explains how all of it works.
 
 ## Install
 
