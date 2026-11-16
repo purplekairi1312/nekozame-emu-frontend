@@ -1,2 +1,3 @@
 README.md nekozame-emu-frontend
 docs/guide.md Guide
+docs/credits.md Credits

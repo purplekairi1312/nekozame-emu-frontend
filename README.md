@@ -72,11 +72,13 @@ GitHub builds both AppImages on every push with `tools/create_AppImage_SteamDeck
 - Photos of the sea: [NOAA](https://www.noaa.gov/), its [Photo Library](https://www.flickr.com/photos/noaaphotolib/) and [National Marine Sanctuaries](https://sanctuaries.noaa.gov/), and the US National Park Service. Public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
 - The sharks and rays: painted by Kawahara Keiga (川原慶賀) for Philipp Franz von Siebold, 1823-1829. Scans from the [Naturalis Biodiversity Center](https://www.naturalis.nl/), public domain. The paper of the spines is from one of his sheets.
 - Photos of the consoles: [Evan-Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos), via Wikimedia Commons. Public domain, apart from a few under CC BY-SA 3.0.
+- Patent drawings of the consoles: from US patents, public domain.
 - Flags: Wikimedia Commons, public domain.
+- Fonts: Noto Sans and Noto Sans CJK JP by Google, SIL Open Font License.
 - Music: "dolphin sanctuary" by purplekairi1312, released by [Passed Recordings](https://passedrecordings.co.uk/).
 - ES-DE: Leon Styhre, Northwestern Software and everyone in [CREDITS.md](CREDITS.md).
 
-Each image's source and license: [photos/CREDITS.txt](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/photos/CREDITS.txt), [the theme's CREDITS.txt](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/nekozame/core/CREDITS.txt) and [resources/flags/CREDITS.txt](resources/flags/CREDITS.txt).
+Every image and drawing, one by one, with its source and license: [Credits](docs/credits.md).
 
 ## License
 
@@ -84,7 +86,6 @@ Each image's source and license: [photos/CREDITS.txt](https://github.com/purplek
 - The libraries, fonts, sounds and ES-DE's own themes keep their licenses, in [licenses](licenses). [CREDITS.md](CREDITS.md) is ES-DE's list of the people who made it.
 - nekozame's loading screen and icon: © 2026 purplekairi1312, [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ([LICENSE-ART](LICENSE-ART)).
 - The flags: public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
-- The screenshot at the top: the nekozame theme with a NOAA photo and a painting by Kawahara Keiga (both public domain), a photo of the Mega Drive by Evan-Amos (public domain), and screenshots of Mega Drive games (© their publishers).
 
 The theme and the music aren't in this repo. They come with nekozame os:
 
