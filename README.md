@@ -17,13 +17,13 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 - nekozame and nekozame light menu colors, and nekozame's loading screen and icon.
 - ES-DE's update check is off, since nekozame-emu keeps it updated.
 
-The theme, system order, launching, boxes, ports and music are set up by `nekozame-emu esde on`. nekozame-emu comes with nekozame os, and also runs on any other Linux from a clone of nekozame-os ([how](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md#without-nekozame-os)).
+The theme, system order, launching, boxes, ports and music are set up by `nekozame-emu esde on`. nekozame-emu comes with nekozame os. On any other Linux, you can download it with git and run it from there ([how](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md#without-nekozame-os)).
 
 How it all works: [docs/guide.md](docs/guide.md).
 
 ## Install
 
-With nekozame-emu (on nekozame os, or any Linux with a clone of nekozame-os):
+With nekozame-emu (on nekozame os, or on any Linux after downloading it):
 
 ```sh
 nekozame-emu esde on
