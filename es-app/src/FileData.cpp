@@ -447,8 +447,10 @@ const std::string FileData::getRegionFlagPath(const unsigned int index) const
         if (!codes.empty()) {
             if (index >= codes.size())
                 return "";
+            // Looked up without failing: a region with no flag of its own (World, Asia...) has
+            // no file, and a missing resource otherwise shuts the application down.
             const std::string flag {":/flags/" + codes[index] + ".svg"};
-            return ResourceManager::getInstance().fileExists(flag) ? flag : "";
+            return ResourceManager::getInstance().getResourcePath(flag, false) != "" ? flag : "";
         }
         start = end;
     }
