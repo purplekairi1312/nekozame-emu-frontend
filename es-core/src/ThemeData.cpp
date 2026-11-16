@@ -329,6 +329,7 @@ std::map<std::string, std::map<std::string, ThemeData::ElementPropertyType>>
        {"lineSpacing", FLOAT},
        {"indicators", STRING},
        {"collectionIndicators", STRING},
+       {"regionFlags", BOOLEAN},
        {"systemNameSuffix", BOOLEAN},
        {"letterCaseSystemNameSuffix", STRING},
        {"fadeAbovePrimary", BOOLEAN},

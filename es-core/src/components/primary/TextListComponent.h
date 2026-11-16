@@ -12,6 +12,7 @@
 #include "Log.h"
 #include "Sound.h"
 #include "components/IList.h"
+#include "components/ImageComponent.h"
 #include "components/TextComponent.h"
 #include "components/primary/PrimaryComponent.h"
 
@@ -23,6 +24,9 @@ enum class TextListEntryType {
 struct TextListData {
     TextListEntryType entryType;
     std::shared_ptr<TextComponent> entryName;
+    // The game's region flags before its name (regionFlags), made the first time it's drawn.
+    std::vector<std::shared_ptr<ImageComponent>> flags;
+    bool flagsMade {false};
 };
 
 template <typename T>
@@ -154,6 +158,7 @@ private:
     bool mSystemNameSuffix;
     LetterCase mLetterCaseSystemNameSuffix;
     bool mFadeAbovePrimary;
+    bool mRegionFlags;
 };
 
 template <typename T>
@@ -195,6 +200,7 @@ TextListComponent<T>::TextListComponent()
     , mSystemNameSuffix {true}
     , mLetterCaseSystemNameSuffix {LetterCase::UPPERCASE}
     , mFadeAbovePrimary {false}
+    , mRegionFlags {false}
 {
 }
 
@@ -421,6 +427,28 @@ template <typename T> void TextListComponent<T>::render(const glm::mat4& parentT
                 break;
         }
 
+        // The game's region flags before its name, read from its file name ("(Japan)",
+        // "(USA, Europe)"): the name and its highlight move over to make room.
+        float flagsWidth {0.0f};
+        if constexpr (std::is_same_v<T, FileData*>) {
+            if (mRegionFlags) {
+                if (!entry.data.flagsMade) {
+                    entry.data.flagsMade = true;
+                    for (unsigned int f {0}; f < 2; ++f) {
+                        const std::string path {entry.object->getRegionFlagPath(f)};
+                        if (path.empty())
+                            continue;
+                        auto flag = std::make_shared<ImageComponent>(false, false);
+                        flag->setMaxSize(mFont->getSize() * 1.1f, mFont->getSize() * 0.66f);
+                        flag->setImage(path);
+                        entry.data.flags.emplace_back(flag);
+                    }
+                }
+                for (auto& flag : entry.data.flags)
+                    flagsWidth += flag->getSize().x + mFont->getSize() * 0.3f;
+            }
+        }
+
         // Render text.
         glm::mat4 drawTrans {trans};
 
@@ -436,8 +464,8 @@ template <typename T> void TextListComponent<T>::render(const glm::mat4& parentT
             }
 
             mRenderer->drawRect(0.0f, mSelectorVerticalOffset,
-                                entry.data.entryName->getSize().x + mSelectedBackgroundMargins.x +
-                                    mSelectedBackgroundMargins.y,
+                                flagsWidth + entry.data.entryName->getSize().x +
+                                    mSelectedBackgroundMargins.x + mSelectedBackgroundMargins.y,
                                 mSelectorHeight, backgroundColor, backgroundColor, false, 1.0f,
                                 1.0f, Renderer::BlendFactor::SRC_ALPHA,
                                 Renderer::BlendFactor::ONE_MINUS_SRC_ALPHA,
@@ -449,6 +477,16 @@ template <typename T> void TextListComponent<T>::render(const glm::mat4& parentT
                                           0.0f, 0.0f});
                 mRenderer->setMatrix(drawTrans);
             }
+        }
+
+        if (flagsWidth > 0.0f) {
+            float x {0.0f};
+            for (auto& flag : entry.data.flags) {
+                flag->setPosition(x, (mFont->getSize() * 1.5f - flag->getSize().y) / 2.0f, 0.0f);
+                flag->render(drawTrans);
+                x += flag->getSize().x + mFont->getSize() * 0.3f;
+            }
+            drawTrans = glm::translate(drawTrans, glm::vec3 {flagsWidth, 0.0f, 0.0f});
         }
 
         entry.data.entryName->render(drawTrans);
@@ -699,6 +737,9 @@ void TextListComponent<T>::applyTheme(const std::shared_ptr<ThemeData>& theme,
                             << "\"";
         }
     }
+
+    if (mGamelistView && elem->has("regionFlags"))
+        mRegionFlags = elem->get<bool>("regionFlags");
 
     if (mGamelistView && elem->has("systemNameSuffix"))
         mSystemNameSuffix = elem->get<bool>("systemNameSuffix");
