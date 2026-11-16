@@ -2,27 +2,24 @@
 
 <p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's magazine theme"></p>
 
-nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozame's theme and new functions. It's what `nekozame-emu esde on` installs on [nekozame os](https://github.com/purplekairi1312/nekozame-os).
+nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozame's theme and new functions. `nekozame-emu esde on` installs it on [nekozame os](https://github.com/purplekairi1312/nekozame-os).
 
 ## What's different from ES-DE
 
-It's built around your file names: the name you give a file is the name shown, the scraper never replaces it, and the region in it (`(Japan)`, `(USA, Europe)`) decides the game's flags.
-
-In the frontend itself:
-
-- Region flags for each game, read from its file name the way No-Intro and Redump write them; themes can show them.
-- Two more menu color schemes, nekozame and nekozame light, from [nekozame-theme](https://github.com/purplekairi1312/nekozame-theme)'s palette. nekozame is the default.
+- Games are named by their file names. The scraper doesn't rename them.
+- Region flags, read from the file name (`(Japan)`, `(USA, Europe)`).
+- nekozame and nekozame light menu colors (nekozame is the default).
 - nekozame's loading screen and icon.
-- ES-DE's own update check is off; nekozame-emu updates it from this repo's releases.
+- ES-DE's update check is off by default.
 
-Set up by nekozame-emu on nekozame os:
+On nekozame os, nekozame-emu also sets up:
 
-- The nekozame theme: every system a page from a 90s Japanese game magazine, printed from your own library, in five color schemes and five layouts.
-- Systems ordered by maker and year, a console's regional versions together (Mega Drive | Japan, Genesis | North America, Mega Drive | Europe).
-- Games launched through nekozame-emu: saves synced before and after, disc games read into memory first.
-- 3D boxes made from your covers, a Ports system for ports, decomps and recomps, and music while you browse.
+- The nekozame theme.
+- Systems ordered by maker and year, with regional versions together.
+- Launching through nekozame-emu, which syncs saves.
+- 3D boxes made from covers, a Ports system, and music.
 
-[docs/guide.md](docs/guide.md) explains how all of it works.
+How it works: [docs/guide.md](docs/guide.md).
 
 ## Install
 
