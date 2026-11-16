@@ -69,7 +69,13 @@ GitHub builds both AppImages on every push with `tools/create_AppImage_SteamDeck
 
 ## License
 
-- GPL-3.0-or-later ([LICENSE](LICENSE)).
-- ES-DE's code keeps its MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)).
-- The libraries' licenses are in [licenses](licenses), and [CREDITS.md](CREDITS.md) is ES-DE's list of the people who made it.
-- The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
+- The code: GPL-3.0-or-later ([LICENSE](LICENSE)). ES-DE's code keeps its MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)).
+- The libraries, fonts, sounds and ES-DE's own themes keep their licenses, in [licenses](licenses). [CREDITS.md](CREDITS.md) is ES-DE's list of the people who made it.
+- nekozame's loading screen and icon: © 2026 purplekairi1312, [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ([LICENSE-ART](LICENSE-ART)).
+- The flags: public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
+- The screenshot at the top: the nekozame theme with a NOAA photo and a painting by Kawahara Keiga (both public domain), a photo of the Mega Drive by Evan-Amos (public domain), and screenshots of Mega Drive games (© their publishers).
+
+The theme and the music aren't in this repo. They come with nekozame os:
+
+- The theme: GPL-3.0-or-later. Its photos are public domain (NOAA, Kawahara Keiga's paintings from the Naturalis Biodiversity Center, most of Evan-Amos's console photos); a few console photos are CC BY-SA 3.0. Each one is listed with its source and license in [photos/CREDITS.txt](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/photos/CREDITS.txt).
+- The music, "dolphin sanctuary": © 2026 purplekairi1312, all rights reserved. It isn't under the GPL. It may only be played as part of nekozame; copying it out, unscrambling it or sharing it isn't allowed without written permission ([its license](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/music/LICENSE)).
