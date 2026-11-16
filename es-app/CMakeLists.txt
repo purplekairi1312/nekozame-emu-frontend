@@ -305,7 +305,7 @@ elseif(NOT ANDROID AND NOT IOS)
         install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/assets/es-de.6.gz
             DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man6)
     endif()
-    install(FILES ${CMAKE_SOURCE_DIR}/LICENSE
+    install(FILES ${CMAKE_SOURCE_DIR}/LICENSE ${CMAKE_SOURCE_DIR}/LICENSE-ES-DE
         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/es-de)
     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/assets/org.es_de.frontend.desktop
         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

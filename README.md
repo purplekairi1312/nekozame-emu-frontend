@@ -48,8 +48,8 @@ GitHub builds both AppImages with ES-DE's own scripts on every push, and publish
 
 ## Credits
 
-[ES-DE](https://es-de.org) is by Leon Styhre and Northwestern Software, MIT licensed; its own readme is [README-ES-DE.md](README-ES-DE.md), and [USERGUIDE.md](USERGUIDE.md) covers everything it does. The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
+[ES-DE](https://es-de.org) is by Leon Styhre and Northwestern Software, under the MIT license ([LICENSE-ES-DE](LICENSE-ES-DE)); its own readme is [README-ES-DE.md](README-ES-DE.md), and [USERGUIDE.md](USERGUIDE.md) covers everything it does. The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
 
 ## License
 
-MIT, like ES-DE ([LICENSE](LICENSE)).
+GPL-3.0-or-later ([LICENSE](LICENSE)). It's built on ES-DE's code, which keeps its own MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)).
