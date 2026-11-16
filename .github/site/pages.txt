@@ -1,0 +1,2 @@
+README.md nekozame-emu-frontend
+docs/guide.md Guide
