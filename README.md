@@ -1,96 +1,55 @@
-# ES-DE Frontend
+# nekozame-emu-frontend
 
-ES-DE (EmulationStation Desktop Edition) is a frontend for browsing and launching games from your multi-platform collection.
+<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck: a 90s Japanese game magazine page with the headline 深く、青く。あの夏の海へ, the Mega Drive and a painted bullhead shark on a pink sky, a column of game screenshots, a reef shark photo below, and the system's name running down a pink spine"></p>
 
-It's officially supported on Android, Linux, macOS, Windows and Haiku. There is also an unofficial ES-DE package in the FreeBSD ports collection.
+The frontend of [nekozame os](https://github.com/purplekairi1312/nekozame-os)'s emulation: browse your whole game library, from a NAS or wherever it lives, in nekozame's magazine theme. Built on [ES-DE](https://es-de.org) 3.5.0.
 
-Website:\
-https://es-de.org
+What's different from ES-DE:
 
-Patreon:\
-https://www.patreon.com/es_de
+- **nekozame's menu colors**: *nekozame* (violet-gray, orchid and lilac) and *nekozame light* (soft white and pastel pink), from [nekozame-theme](https://github.com/purplekairi1312/nekozame-theme)'s palette, beside ES-DE's own. nekozame is the default
+- **Region flags**: each game's regions are read from its file name the way No-Intro and Redump write them, `(Japan)` or `(USA, Europe)`, and themes can show their flags
+- Made to be set up by `nekozame-emu`: your file names kept as the game names, nekozame's launcher (with save sync) first for every system, the magazine theme printed from your own library, quiet music while you browse
 
-YouTube:\
-https://www.youtube.com/@ES-DE_Frontend
+## Install
 
-Discord:\
-https://discord.gg/42jqqNcHf9
+On nekozame os:
 
-Reddit:\
-https://www.reddit.com/r/ESDE_Frontend
+```sh
+nekozame-emu esde on
+```
 
-X/Twitter:\
-https://x.com/ES_DE_Frontend
+It downloads the newest release, sets everything up, and puts it in Steam and your apps menu. The [emulation guide](https://github.com/purplekairi1312/nekozame-os/blob/main/docs/emulation.md) explains the whole setup.
 
-Bluesky:\
-https://bsky.app/profile/es-de.org
+Anywhere else on Linux: download `nekozame-emu-frontend_x64.AppImage` (or `_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It reads and writes `~/ES-DE`, like ES-DE.
 
-The goal of this project is to create a high quality frontend that is easy to use, requires minimal setup and configuration, looks nice, and is available across a wide range of operating systems.
+## For theme authors
 
-It comes preconfigured for use with a large selection of emulators, game engines, game managers and gaming services and it can also run locally installed games and applications. It's fully customizable, so you can easily expand it with support for additional systems and applications.
+Two extra values for an `image` element's `imageType`:
 
-You can find the complete list of supported game systems in the [User guide](USERGUIDE.md#supported-game-systems) and in the [Android](ANDROID.md#supported-game-systems), [Linux on AArch64](LINUX-AARCH64.md#supported-game-systems) and [Haiku](HAIKU.md#supported-game-systems) documentation.
+| `imageType` | Shows |
+|---|---|
+| `flag` | The flag of the first region in the game's file name |
+| `flag2` | The flag of the second, for games like `(USA, Europe)` |
 
-There are many high-quality themes that can be installed using the built-in theme downloader. You can also find the web version of the themes list here: \
-https://gitlab.com/es-de/themes/themes-list
+```xml
+<image name="flag">
+    <pos>0.9 0.8</pos>
+    <origin>1 1</origin>
+    <maxSize>0.04 0.034</maxSize>
+    <imageType>flag</imageType>
+</image>
+```
 
-## Download
+Regions without one flag of their own (World, Asia, Scandinavia, Latin America) show none. Everything else works as in ES-DE: see [THEMES.md](THEMES.md).
 
-Visit https://es-de.org to download the latest ES-DE release.
+## Building
 
-The Android port of ES-DE is a paid app, which you can get on [Patreon](https://www.patreon.com/es_de), the [Samsung Galaxy Store](https://galaxystore.samsung.com/detail/org.es_de.frontend.galaxy) and [Huawei AppGallery](https://appgallery.huawei.com/#/app/C111315115).
+GitHub builds both AppImages with ES-DE's own scripts on every push, and publishes them on a tag. To build one yourself, see [INSTALL.md](INSTALL.md) (`tools/create_AppImage_SteamDeck.sh` or `tools/create_AppImage.sh`).
 
-## Additional information
+## Credits
 
-[FAQ.md](FAQ.md) -  Frequently Asked Questions
+[ES-DE](https://es-de.org) is by Leon Styhre and Northwestern Software, MIT licensed; its own readme is [README-ES-DE.md](README-ES-DE.md), and [USERGUIDE.md](USERGUIDE.md) covers everything it does. The flags are public domain, from Wikimedia Commons ([resources/flags/CREDITS.txt](resources/flags/CREDITS.txt)).
 
-[FAQ-ANDROID.md](FAQ-ANDROID.md) -  Frequently Asked Questions specifically for Android
+## License
 
-[USERGUIDE.md](USERGUIDE.md) / [USERGUIDE-DEV.md](USERGUIDE-DEV.md) - Comprehensive guide and reference for all application settings
-
-[ANDROID.md](ANDROID.md) / [ANDROID-DEV.md](ANDROID-DEV.md) - Documentation specifically for Android
-
-[LINUX-AARCH64.md](LINUX-AARCH64.md) / [LINUX-AARCH64-DEV.md](LINUX-AARCH64-DEV.md) - Documentation specifically for Linux on AArch64/ARM64
-
-[HAIKU.md](HAIKU.md) - Documentation specifically for Haiku
-
-[INSTALL.md](INSTALL.md) / [INSTALL-DEV.md](INSTALL-DEV.md) - Building from source code and advanced configuration topics
-
-[THEMES.md](THEMES.md) / [THEMES-DEV.md](THEMES-DEV.md) - Guide and reference for theme development
-
-[CHANGELOG.md](CHANGELOG.md) - Detailed list of changes for all past releases and the in-development version
-
-[ROADMAP.md](ROADMAP.md) - List of major features planned to be added in the future
-
-[CREDITS.md](CREDITS.md) - An attempt to credit the individuals and projects which made ES-DE possible
-
-## Some feature highlights
-
-Here are some highlights, displayed using the default Linear theme.
-
-![alt text](images/es-de_system_view.png "ES-DE System View")
-_The **System view**, which is the default starting point for the application, it's here that you browse through your game systems._
-
-![alt text](images/es-de_gamelist_view.png "ES-DE Gamelist View")
-_The **Gamelist view**, it's here that you browse the actual games per system._
-
-![alt text](images/es-de_folder_support.png "ES-DE Folder Support")
-_Another example of the gamelist view, displaying advanced folder support. You can scrape folders for game info and game media, sort folders as you would files, mark them as favorites etc._
-
-![alt text](images/es-de_custom_collections.png "ES-DE Custom Collections")
-_Games can be grouped into your own custom collections, in this example they're defined as genres._
-
-![alt text](images/es-de_scraper_running.png "ES-DE Scraper Running")
-_This is a view of the built-in scraper which downloads game info and game media from either [screenscraper.fr](https://screenscraper.fr) or [thegamesdb.net](https://thegamesdb.net). It's possible to scrape a single game, or to run the multi-scraper which can scrape a complete game system or even your entire collection._
-
-![alt text](images/es-de_scraper_settings.png "ES-DE Scraper Settings")
-_There are many settings for the scraper including options to define which type of info and media to download. The above screenshot shows only a portion of these settings._
-
-![alt text](images/es-de_metadata_editor.png "ES-DE Metadata Editor")
-_In addition to the scraper there is a fully-featured metadata editor that can be used to modify information on a per-game basis._
-
-![alt text](images/es-de_screensaver.png "ES-DE Screensaver")
-_There are four built-in screensavers, including a slideshow and a video screensaver that display random games from your collection._
-
-![alt text](images/es-de_ui_theme_support.png "ES-DE Theme Support")
-_ES-DE is fully themeable, in case you prefer another look than what the default theme Linear offers. The screenshot above shows the Slate theme that is bundled with the application for the desktop ports._
+MIT, like ES-DE ([LICENSE](LICENSE)).
