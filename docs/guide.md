@@ -82,7 +82,7 @@ Sega
 
 ## The nekozame theme
 
-Each system is a page in the style of a 90s Japanese game magazine. nekozame-emu prints the pages on your machine, from public-domain NOAA photos and your games' screenshots.
+Each system is a page in the style of an ocean-themed 90s Japanese magazine. nekozame-emu prints the pages on your machine, from public-domain NOAA photos and your games' screenshots.
 
 - Each page: a text about the console (English, or Japanese in UI Settings → Theme language), its maker, release date and number of games, screenshots, and its name on the spine.
 - Above the text: a shark or ray painted by Kawahara Keiga (1820s), a photo of the console, or both (`"drawings"` in nekozame-emu's settings).
@@ -103,7 +103,8 @@ ES-DE's other emulators are still available per game (the game's options → Alt
 
 ## 3D boxes
 
-- `nekozame-emu boxes` makes a 3D box from the cover, for each game that doesn't have one.
+- Each game with a cover gets a 3D box made from it.
+- They're made on their own: after `nekozame-emu art`, and within 10 minutes of scraping new covers. `nekozame-emu boxes` makes them right away.
 - The case follows the system: cardboard, clamshell, jewel case or keep case.
 - Scraped boxes stay as they are.
 - They show in the "3D box" layouts.

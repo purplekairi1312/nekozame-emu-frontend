@@ -1,6 +1,6 @@
 # nekozame-emu-frontend
 
-<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's magazine theme"></p>
+<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's ocean magazine theme"></p>
 
 nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozame's theme and new functions. On [nekozame os](https://github.com/purplekairi1312/nekozame-os), `nekozame-emu esde on` installs it.
 
@@ -8,7 +8,7 @@ nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozam
 
 - Your file names are the game names. Scraping doesn't rename them, so the versions of a game (regions, revisions, translations, hacks) don't all end up with the same name.
 - Region flags for each game, read from the file name, like `(Japan)` or `(USA, Europe)`.
-- The nekozame theme: each system is a page in the style of a 90s Japanese game magazine.
+- The nekozame theme: each system is a page in the style of an ocean-themed 90s Japanese magazine.
 - Systems sorted by maker and year, with each console's regions together.
 - Games launch through nekozame-emu, so saves sync between machines.
 - 3D boxes made from your covers.
