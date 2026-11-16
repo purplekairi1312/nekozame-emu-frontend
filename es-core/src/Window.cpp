@@ -131,7 +131,7 @@ bool Window::init(bool resized)
     mProgressBarRectangles.clear();
 
     // The user can customize the progress bar color in es_settings.xml.
-    unsigned int progressBarColor {0x79010FFF};
+    unsigned int progressBarColor {0xFFC0E5FF};
     const std::string progressBarColorSetting {
         Utils::String::trim(Settings::getInstance()->getString("SplashScreenProgressBarColor"))};
 
@@ -159,13 +159,12 @@ bool Window::init(bool resized)
     if (resized)
         Font::updateFontSizes();
 
-    if (mRenderer->getIsVerticalOrientation())
-        mSplash->setResize(mRenderer->getScreenWidth() * 0.8f, 0.0f);
-    else
-        mSplash->setResize(0.0f, glm::clamp(mRenderer->getScreenHeight() * 0.62f, 0.0f,
-                                            mRenderer->getScreenWidth() * 0.42f));
+    // The nekozame os logo, as wide as most of the screen (it's a wide picture).
+    mSplash->setResize(mRenderer->getScreenWidth() *
+                           (mRenderer->getIsVerticalOrientation() ? 0.9f : 0.62f),
+                       0.0f);
 
-    mSplash->setImage(":/graphics/splash.svg");
+    mSplash->setImage(":/graphics/splash.png");
     mSplash->setPosition((mRenderer->getScreenWidth() - mSplash->getSize().x) / 2.0f,
                          (mRenderer->getScreenHeight() - mSplash->getSize().y) / 2.0f * 0.6f);
 
@@ -181,7 +180,7 @@ bool Window::init(bool resized)
     progressBarRect.barPosX =
         (mRenderer->getScreenWidth() / 2.0f) - (progressBarRect.barWidth / 2.0f);
     progressBarRect.barPosY = mSplashTextPositions.y + (progressBarRect.barHeight * 2.0f);
-    progressBarRect.color = 0x777777FF;
+    progressBarRect.color = 0xB3A7CBFF;
     mProgressBarRectangles.emplace_back(progressBarRect);
 
     const float borderThickness {std::ceil(2.0f * mRenderer->getScreenResolutionModifier())};
@@ -190,7 +189,7 @@ bool Window::init(bool resized)
     progressBarRect.barHeight -= borderThickness * 2.0f;
     progressBarRect.barPosX += borderThickness;
     progressBarRect.barPosY += borderThickness;
-    progressBarRect.color = 0x000000FF;
+    progressBarRect.color = 0x433A55FF;
     mProgressBarRectangles.emplace_back(progressBarRect);
 
     progressBarRect.barWidth -= borderThickness * 2.0f;
@@ -780,15 +779,15 @@ void Window::render()
 void Window::updateSplashScreenText()
 {
     mSplashTextScanning = std::make_unique<TextComponent>(_("Searching for games..."),
-                                                          Font::get(FONT_SIZE_MEDIUM), 0x777777FF);
+                                                          Font::get(FONT_SIZE_MEDIUM), 0xE8DEF5FF);
     mSplashTextPopulating = std::make_unique<TextComponent>(
-        _("Loading systems..."), Font::get(FONT_SIZE_MEDIUM), 0x777777FF);
+        _("Loading systems..."), Font::get(FONT_SIZE_MEDIUM), 0xE8DEF5FF);
     mSplashTextReloading =
-        std::make_unique<TextComponent>(_("Reloading..."), Font::get(FONT_SIZE_MEDIUM), 0x777777FF);
+        std::make_unique<TextComponent>(_("Reloading..."), Font::get(FONT_SIZE_MEDIUM), 0xE8DEF5FF);
     mSplashTextResourceCopy = std::make_unique<TextComponent>(
-        _("Copying resources..."), Font::get(FONT_SIZE_MEDIUM), 0x777777FF);
+        _("Copying resources..."), Font::get(FONT_SIZE_MEDIUM), 0xE8DEF5FF);
     mSplashTextDirCreation = std::make_unique<TextComponent>(
-        _("Creating system directories..."), Font::get(FONT_SIZE_MEDIUM), 0x777777FF);
+        _("Creating system directories..."), Font::get(FONT_SIZE_MEDIUM), 0xE8DEF5FF);
 
     mSplashTextPositions.x =
         (mRenderer->getScreenWidth() - mSplashTextScanning->getSize().x) / 2.0f;
@@ -805,7 +804,7 @@ void Window::renderSplashScreen(SplashScreenState state, float progress)
     glm::mat4 trans {mRenderer->getIdentity()};
     mRenderer->setMatrix(trans);
     mRenderer->drawRect(0.0f, 0.0f, mRenderer->getScreenWidth(), mRenderer->getScreenHeight(),
-                        0x000000FF, 0x000000FF);
+                        0x433A55FF, 0x433A55FF);
     mSplash->render(trans);
     mRenderer->setMatrix(trans);
 

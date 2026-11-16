@@ -7,6 +7,6 @@ Type=Application
 StartupNotify=true
 Hidden=false
 Categories=Game;Emulator;
-Name=ES-DE
+Name=nekozame-emu-frontend
 GenericName=Gaming Frontend
 Keywords=emulator;emulation;front-end;frontend;
