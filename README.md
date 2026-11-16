@@ -67,6 +67,17 @@ Regions without a flag of their own (World, Asia, Scandinavia, Latin America) sh
 
 GitHub builds both AppImages on every push with `tools/create_AppImage_SteamDeck.sh` and `tools/create_AppImage.sh`, and publishes them when a version is tagged.
 
+## Credits
+
+- Photos of the sea: [NOAA](https://www.noaa.gov/), its [Photo Library](https://www.flickr.com/photos/noaaphotolib/) and [National Marine Sanctuaries](https://sanctuaries.noaa.gov/), and the US National Park Service. Public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).
+- The sharks and rays: painted by Kawahara Keiga (川原慶賀) for Philipp Franz von Siebold, 1823-1829. Scans from the [Naturalis Biodiversity Center](https://www.naturalis.nl/), public domain. The paper of the spines is from one of his sheets.
+- Photos of the consoles: [Evan-Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos), via Wikimedia Commons. Public domain, apart from a few under CC BY-SA 3.0.
+- Flags: Wikimedia Commons, public domain.
+- Music: "dolphin sanctuary" by purplekairi1312, released by [Passed Recordings](https://passedrecordings.co.uk/).
+- ES-DE: Leon Styhre, Northwestern Software and everyone in [CREDITS.md](CREDITS.md).
+
+Each image's source and license: [photos/CREDITS.txt](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/photos/CREDITS.txt), [the theme's CREDITS.txt](https://github.com/purplekairi1312/nekozame-os/blob/main/system_files/usr/share/nekozame-os/es-de/nekozame/core/CREDITS.txt) and [resources/flags/CREDITS.txt](resources/flags/CREDITS.txt).
+
 ## License
 
 - The code: GPL-3.0-or-later ([LICENSE](LICENSE)). ES-DE's code keeps its MIT license and copyright notice ([LICENSE-ES-DE](LICENSE-ES-DE)).
