@@ -90,6 +90,8 @@ public:
     const std::string getFanArtPath() const;
     const std::string getMarqueePath() const;
     const std::string getPhysicalMediaPath() const;
+    // The flag of a region in the game's file name, the first (0) or the second (1).
+    const std::string getRegionFlagPath(const unsigned int index) const;
     const std::string getMiximagePath() const;
     const std::string getScreenshotPath() const;
     const std::string getTitleScreenPath() const;

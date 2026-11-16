@@ -21,6 +21,7 @@
 #include "SystemStatus.h"
 #include "UIModeController.h"
 #include "Window.h"
+#include "resources/ResourceManager.h"
 #include "utils/FileSystemUtil.h"
 #include "utils/PlatformUtil.h"
 #include "utils/TimeUtil.h"
@@ -32,6 +33,7 @@
 #endif
 
 #include <assert.h>
+#include <map>
 #include <regex>
 
 FileData::FileData(FileType type,
@@ -413,6 +415,44 @@ const std::string FileData::getPhysicalMediaPath() const
 {
     // Return path to the physical media image.
     return getMediafilePath("physicalmedia");
+}
+
+const std::string FileData::getRegionFlagPath(const unsigned int index) const
+{
+    // The regions are read from the file name the way No-Intro and Redump write them, as
+    // the first parenthesis naming regions, such as "(Japan)" or "(USA, Europe)".
+    static const std::map<std::string, std::string> regions {
+        {"Japan", "jp"},     {"USA", "us"},         {"Europe", "eu"},      {"World", "world"},
+        {"Korea", "kr"},     {"Brazil", "br"},      {"Australia", "au"},   {"Canada", "ca"},
+        {"China", "cn"},     {"Taiwan", "tw"},      {"Hong Kong", "hk"},   {"France", "fr"},
+        {"Germany", "de"},   {"Spain", "es"},       {"Italy", "it"},       {"Netherlands", "nl"},
+        {"Sweden", "se"},    {"UK", "gb"},          {"United Kingdom", "gb"}, {"Russia", "ru"},
+        {"Portugal", "pt"},  {"Denmark", "dk"},     {"Finland", "fi"},     {"Norway", "no"},
+        {"Poland", "pl"},    {"Greece", "gr"},      {"Mexico", "mx"},      {"India", "in"},
+        {"Asia", "asia"},    {"Scandinavia", "scandinavia"}, {"Latin America", "latam"}};
+
+    const std::string name {Utils::FileSystem::getStem(mPath)};
+    size_t start {0};
+    while ((start = name.find('(', start)) != std::string::npos) {
+        const size_t end {name.find(')', start)};
+        if (end == std::string::npos)
+            break;
+        std::vector<std::string> codes;
+        for (const std::string& part :
+             Utils::String::delimitedStringToVector(name.substr(start + 1, end - start - 1), ",")) {
+            const auto region = regions.find(Utils::String::trim(part));
+            if (region != regions.cend())
+                codes.emplace_back(region->second);
+        }
+        if (!codes.empty()) {
+            if (index >= codes.size())
+                return "";
+            const std::string flag {":/flags/" + codes[index] + ".svg"};
+            return ResourceManager::getInstance().fileExists(flag) ? flag : "";
+        }
+        start = end;
+    }
+    return "";
 }
 
 const std::string FileData::getMiximagePath() const

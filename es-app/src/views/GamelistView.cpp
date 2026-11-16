@@ -1326,6 +1326,13 @@ void GamelistView::setGameImage(FileData* file, GuiComponent* comp)
                 return;
             }
         }
+        else if (imageType == "flag" || imageType == "flag2") {
+            path = file->getRegionFlagPath(imageType == "flag" ? 0 : 1);
+            if (path != "") {
+                comp->setImage(path);
+                return;
+            }
+        }
     }
     // This is needed so the default image is set if no game media was found.
     if (path == "" && (comp->getThemeImageTypes().size() > 0 || comp->getDefaultImage() != "")) {

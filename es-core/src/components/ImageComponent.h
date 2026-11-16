@@ -166,7 +166,8 @@ private:
                                                                          ".gif", ".svg"};
     static inline std::vector<std::string> sSupportedImageTypes {
         "image", "miximage",  "marquee", "screenshot",    "titlescreen",
-        "cover", "backcover", "3dbox",   "physicalmedia", "fanart"};
+        "cover", "backcover", "3dbox",   "physicalmedia", "fanart",
+        "flag",  "flag2"};
 
     std::shared_ptr<TextureResource> mTexture;
     float mFadeOpacity;
