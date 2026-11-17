@@ -274,6 +274,30 @@ bool InputManager::parseEvent(const SDL_Event& event)
     bool causedEvent {false};
     int32_t axisValue {0};
 
+    // The first touch and mouse events, in the log: what gamescope and SDL hand over.
+    static int pointerEventsLogged {0};
+    if (pointerEventsLogged < 40 &&
+        (event.type == SDL_FINGERDOWN || event.type == SDL_FINGERUP ||
+         event.type == SDL_FINGERMOTION || event.type == SDL_MOUSEBUTTONDOWN ||
+         event.type == SDL_MOUSEBUTTONUP || event.type == SDL_MOUSEMOTION ||
+         event.type == SDL_MOUSEWHEEL)) {
+        ++pointerEventsLogged;
+        if (event.type >= SDL_FINGERDOWN && event.type <= SDL_FINGERMOTION)
+            LOG(LogInfo) << "Touch: finger event " << event.type << " at " << event.tfinger.x
+                         << ", " << event.tfinger.y;
+        else if (event.type == SDL_MOUSEMOTION)
+            LOG(LogInfo) << "Touch: mouse motion at " << event.motion.x << ", " << event.motion.y
+                         << " buttons " << event.motion.state << " which " << event.motion.which;
+        else if (event.type == SDL_MOUSEWHEEL)
+            LOG(LogInfo) << "Touch: mouse wheel " << event.wheel.y;
+        else
+            LOG(LogInfo) << "Touch: mouse button " << static_cast<int>(event.button.button)
+                         << (event.type == SDL_MOUSEBUTTONDOWN ? " down" : " up") << " at "
+                         << event.button.x << ", " << event.button.y << " which "
+                         << event.button.which << ", touchscreen setting "
+                         << Settings::getInstance()->getBool("InputTouchscreen");
+    }
+
     switch (event.type) {
         case SDL_CONTROLLERAXISMOTION: {
             // Whether to only accept input from the first controller.

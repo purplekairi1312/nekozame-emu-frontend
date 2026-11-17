@@ -446,9 +446,12 @@ void Window::touch(int type, float x, float y, long long finger)
         pressButton("b");
         return;
     }
-    if (!mTouchMoved && glm::length(point - mTouchStart) < height * 0.03f && peekGui() != nullptr &&
-        peekGui()->touchTap(point) == 2)
-        pressButton("a");
+    if (!mTouchMoved && glm::length(point - mTouchStart) < height * 0.03f && peekGui() != nullptr) {
+        const int tapped {peekGui()->touchTap(point)};
+        LOG(LogInfo) << "Touch: tap at " << point.x << ", " << point.y << " gave " << tapped;
+        if (tapped == 2)
+            pressButton("a");
+    }
 }
 
 void Window::textInput(const std::string& text, const bool pasting)
