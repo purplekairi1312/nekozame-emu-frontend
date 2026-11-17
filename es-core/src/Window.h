@@ -276,6 +276,8 @@ private:
     std::vector<std::pair<unsigned int, glm::vec2>> mTouchTrail; // recent points, for the fling
     glm::vec2 mFling {0.0f, 0.0f}; // entries per second, slowing down
     glm::vec2 mFlingDone {0.0f, 0.0f};
+    int mTouchAxis {0}; // the swipe's direction, once it's clear: 1 up/down, 2 sideways
+    bool mTouchSideways {false}; // sideways moves between entries (not a list's left/right)
 
     bool mBlockInput;
     bool mNormalizeNextUpdate;

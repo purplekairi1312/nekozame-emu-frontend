@@ -416,8 +416,12 @@ void Window::touch(int type, float x, float y, long long finger)
         mTouchTrail.emplace_back(SDL_GetTicks(), point);
         // one entry per entry's height of finger movement: the list follows the finger
         const glm::vec2 step {peekGui() != nullptr ? peekGui()->touchStep() : glm::vec2 {0.0f, 0.0f}};
-        mTouchStepSize = glm::vec2 {step.x > 1.0f ? step.x : width * 0.08f,
+        // with no entries side by side (a list), sideways is left/right (in a game list, the
+        // next system): only on a long, deliberate swipe
+        mTouchSideways = step.x > 1.0f;
+        mTouchStepSize = glm::vec2 {mTouchSideways ? step.x : width * 0.25f,
                                     step.y > 1.0f ? step.y : height * 0.07f};
+        mTouchAxis = 0;
         return;
     }
     if (!mTouchDown || finger != mTouchFinger)
@@ -431,13 +435,21 @@ void Window::touch(int type, float x, float y, long long finger)
         // A press of up or down for each entry the finger moves past: the list follows it.
         const float stepY {mTouchStepSize.y};
         const float stepX {mTouchStepSize.x};
-        while (std::fabs(point.y - mTouchStep.y) >= stepY) {
+        // one direction per swipe: whichever it mostly goes once it's moved a little, so an
+        // up/down swipe that drifts sideways doesn't also go left or right
+        if (mTouchAxis == 0) {
+            const glm::vec2 moved {point - mTouchStart};
+            if (glm::length(moved) < height * 0.025f)
+                return;
+            mTouchAxis = std::fabs(moved.y) >= std::fabs(moved.x) ? 1 : 2;
+        }
+        while (mTouchAxis == 1 && std::fabs(point.y - mTouchStep.y) >= stepY) {
             const bool up {point.y < mTouchStep.y};
             pressButton(up ? "down" : "up");
             mTouchStep.y += up ? -stepY : stepY;
             mTouchMoved = true;
         }
-        while (!fromLeftEdge && std::fabs(point.x - mTouchStep.x) >= stepX) {
+        while (mTouchAxis == 2 && !fromLeftEdge && std::fabs(point.x - mTouchStep.x) >= stepX) {
             const bool left {point.x < mTouchStep.x};
             pressButton(left ? "right" : "left");
             mTouchStep.x += left ? -stepX : stepX;
@@ -458,6 +470,10 @@ void Window::touch(int type, float x, float y, long long finger)
             const float seconds {(now - first->first) / 1000.0f};
             const glm::vec2 speed {(point - first->second) / seconds}; // pixels per second
             mFling = glm::vec2 {-speed.x / mTouchStepSize.x, -speed.y / mTouchStepSize.y};
+            if (mTouchAxis != 2 || !mTouchSideways)
+                mFling.x = 0.0f; // sideways only flings between entries, never across systems
+            if (mTouchAxis != 1)
+                mFling.y = 0.0f;
             mFling = glm::clamp(mFling, glm::vec2 {-40.0f}, glm::vec2 {40.0f});
             if (std::fabs(mFling.x) < 4.0f)
                 mFling.x = 0.0f;
