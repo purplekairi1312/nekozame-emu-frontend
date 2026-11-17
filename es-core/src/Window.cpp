@@ -386,6 +386,14 @@ void Window::pressButton(const std::string& name)
     input(keyboard, button);
 }
 
+void Window::scrollWheel(int amount)
+{
+    if (mBlockInput)
+        return;
+    for (int i {0}; i < std::abs(amount); ++i)
+        pressButton(amount > 0 ? "up" : "down");
+}
+
 void Window::touch(int type, float x, float y, long long finger)
 {
     if (mBlockInput)

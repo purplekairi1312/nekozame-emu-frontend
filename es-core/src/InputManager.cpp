@@ -510,6 +510,33 @@ bool InputManager::parseEvent(const SDL_Event& event)
                            static_cast<long long>(event.tfinger.fingerId));
             return true;
         }
+        // The mouse, the same way: on a Steam Deck in Game Mode, gamescope turns the
+        // touchscreen into a mouse (STEAM_TOUCH_CLICK_MODE), and on a desktop it's a mouse.
+        // A click is a tap, dragging is a swipe, the wheel scrolls. The mouse events SDL makes
+        // up from real touch (SDL_TOUCH_MOUSEID) are left out: the touch itself counts.
+        case SDL_MOUSEBUTTONDOWN:
+        case SDL_MOUSEBUTTONUP: {
+            if (!Settings::getInstance()->getBool("InputTouchscreen") ||
+                event.button.which == SDL_TOUCH_MOUSEID || event.button.button != SDL_BUTTON_LEFT)
+                return false;
+            mWindow->touch(event.type == SDL_MOUSEBUTTONDOWN ? 0 : 1, static_cast<float>(event.button.x),
+                           static_cast<float>(event.button.y), -1);
+            return true;
+        }
+        case SDL_MOUSEMOTION: {
+            if (!Settings::getInstance()->getBool("InputTouchscreen") ||
+                event.motion.which == SDL_TOUCH_MOUSEID || !(event.motion.state & SDL_BUTTON_LMASK))
+                return false;
+            mWindow->touch(2, static_cast<float>(event.motion.x), static_cast<float>(event.motion.y), -1);
+            return true;
+        }
+        case SDL_MOUSEWHEEL: {
+            if (!Settings::getInstance()->getBool("InputTouchscreen") ||
+                event.wheel.which == SDL_TOUCH_MOUSEID || event.wheel.y == 0)
+                return false;
+            mWindow->scrollWheel(event.wheel.y);
+            return true;
+        }
 #endif
         case SDL_TEXTINPUT: {
             mWindow->textInput(event.text.text);

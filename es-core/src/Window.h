@@ -103,6 +103,8 @@ public:
     // what's under it, a swipe is up/down/left/right as the finger moves, a swipe in from
     // the left edge is back.
     void touch(int type, float x, float y, long long finger);
+    // The mouse wheel: up or down, one press per notch (a negative AMOUNT is down).
+    void scrollWheel(int amount);
     void textInput(const std::string& text, const bool pasting = false);
     void logInput(InputConfig* config, Input input);
     void update(int deltaTime);
