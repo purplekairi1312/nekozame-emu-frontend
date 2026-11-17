@@ -44,6 +44,26 @@ public:
     void goToSystem(SystemData* system, bool animate);
 
     bool input(InputConfig* config, Input input) override;
+
+    // Touch: a tap on the list, grid or carousel selects the entry there; on the one already
+    // selected, it's A. The view is at the screen's origin while it's shown (the camera).
+    int touchTap(const glm::vec2& point) override
+    {
+        if (mPrimary == nullptr)
+            return 0;
+        const glm::vec4 local {glm::inverse(mPrimary->getTransform()) *
+                               glm::vec4 {point.x, point.y, 0.0f, 1.0f}};
+        if (local.x < 0.0f || local.y < 0.0f || local.x > mPrimary->getSize().x ||
+            local.y > mPrimary->getSize().y)
+            return 0;
+        const int index {mPrimary->getEntryAt(glm::vec2 {local.x, local.y})};
+        if (index < 0)
+            return 0;
+        if (index == mPrimary->getCursor())
+            return 2;
+        mPrimary->setCursorIndex(index);
+        return 1;
+    }
     void update(int deltaTime) override;
     void render(const glm::mat4& parentTrans) override;
 

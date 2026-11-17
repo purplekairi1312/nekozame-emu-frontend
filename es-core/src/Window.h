@@ -99,6 +99,10 @@ public:
     void deinit();
 
     void input(InputConfig* config, Input input);
+    // Touch: a finger down (0), up (1) or moved (2) at X, Y in screen pixels. A tap goes to
+    // what's under it, a swipe is up/down/left/right as the finger moves, a swipe in from
+    // the left edge is back.
+    void touch(int type, float x, float y, long long finger);
     void textInput(const std::string& text, const bool pasting = false);
     void logInput(InputConfig* config, Input input);
     void update(int deltaTime);
@@ -260,6 +264,12 @@ private:
     int mFrameCountElapsed;
     int mAverageDeltaTime;
     unsigned int mTimeSinceLastInput;
+    void pressButton(const std::string& name);
+    bool mTouchDown {false};
+    bool mTouchMoved {false};
+    long long mTouchFinger {0};
+    glm::vec2 mTouchStart {0.0f, 0.0f};
+    glm::vec2 mTouchStep {0.0f, 0.0f};
 
     bool mBlockInput;
     bool mNormalizeNextUpdate;

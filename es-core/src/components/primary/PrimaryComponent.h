@@ -53,6 +53,10 @@ public:
 
     // Functions used by some primary components.
     virtual void onDemandTextureLoad() {}
+    // Touch: the entry at POS (in this component's own coordinates), or -1.
+    virtual int getEntryAt(const glm::vec2& pos) { return -1; }
+    // Touch: the cursor to entry INDEX, as scrolling to it would.
+    virtual void setCursorIndex(int index) {}
     virtual void setAlignment(PrimaryAlignment align) {}
 };
 

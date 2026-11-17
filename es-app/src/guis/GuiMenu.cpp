@@ -1396,6 +1396,19 @@ void GuiMenu::openInputDeviceOptions()
         }
     });
 
+#if !defined(__ANDROID__) && !defined(__IOS__)
+    // Touchscreen: tap to select and start, swipe to scroll, swipe in from the left to go back.
+    auto inputTouchscreen = std::make_shared<SwitchComponent>();
+    inputTouchscreen->setState(Settings::getInstance()->getBool("InputTouchscreen"));
+    s->addWithLabel(_("TOUCHSCREEN INPUT"), inputTouchscreen);
+    s->addSaveFunc([inputTouchscreen, s] {
+        if (Settings::getInstance()->getBool("InputTouchscreen") != inputTouchscreen->getState()) {
+            Settings::getInstance()->setBool("InputTouchscreen", inputTouchscreen->getState());
+            s->setNeedsSaving();
+        }
+    });
+#endif
+
 #if defined(__ANDROID__) || defined(__IOS__)
     // Touch overlay size.
     auto touchOverlaySize =

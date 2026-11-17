@@ -1408,6 +1408,13 @@ void ViewController::update(int deltaTime)
     }
 }
 
+int ViewController::touchTap(const glm::vec2& point)
+{
+    if (mCurrentView == nullptr || isCameraMoving())
+        return 0;
+    return mCurrentView->touchTap(point);
+}
+
 void ViewController::render(const glm::mat4& parentTrans)
 {
     glm::mat4 trans {mCamera * parentTrans};

@@ -42,6 +42,28 @@ public:
     void onDemandTextureLoad() override;
     void calculateLayout();
     const int getColumnCount() const { return mColumns; }
+
+    int getEntryAt(const glm::vec2& pos) override
+    {
+        // The items keep their centres; render() shifts them all up as the grid scrolls.
+        const float y {pos.y + (mItemSize.y + mItemSpacing.y) * mScrollPos};
+        for (int i {0}; i < size(); ++i) {
+            if (!mEntries.at(i).data.item)
+                continue;
+            const glm::vec3 c {mEntries.at(i).data.item->getPosition()};
+            if (std::fabs(pos.x - c.x) <= (mItemSize.x + mItemSpacing.x) / 2.0f &&
+                std::fabs(y - c.y) <= (mItemSize.y + mItemSpacing.y) / 2.0f)
+                return i;
+        }
+        return -1;
+    }
+    void setCursorIndex(int index) override
+    {
+        if (index >= 0 && index < size() && index != mCursor) {
+            List::setCursor(mEntries.at(index).object);
+            NavigationSounds::getInstance().playThemeNavigationSound(SCROLLSOUND);
+        }
+    }
     const int getRowCount() const { return mRows; }
     void setScrollVelocity(int velocity) { mScrollVelocity = velocity; }
     void setSuppressTransitions(bool state) { mSuppressTransitions = state; }

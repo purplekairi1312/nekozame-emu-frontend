@@ -250,6 +250,7 @@ void Settings::setDefaults()
     mStringMap["InputTouchOverlayOpacity"] = {"normal", "normal"};
     mIntMap["InputTouchOverlayFadeTime"] = {6, 6};
     mBoolMap["InputTouchOverlay"] = {true, true};
+    mBoolMap["InputTouchscreen"] = {true, true};
 #endif
     mBoolMap["InputOnlyFirstController"] = {false, false};
     mBoolMap["InputSwapButtons"] = {false, false};

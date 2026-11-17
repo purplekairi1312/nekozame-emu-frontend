@@ -62,6 +62,31 @@ public:
 
     void setAlignment(PrimaryAlignment align) override { mAlignment = align; }
 
+    int getEntryAt(const glm::vec2& pos) override
+    {
+        // The same rows render() draws: the selected one kept in the middle when it can be.
+        const float entrySize {mFont->getSize() * mLineSpacing};
+        const float lineSpacingHeight {entrySize - mFont->getSize()};
+        const int screenCount {
+            static_cast<int>(std::floor((mSize.y + lineSpacingHeight / 2.0f) / entrySize))};
+        int startEntry {0};
+        if (size() >= screenCount) {
+            startEntry = std::max(0, mCursor - screenCount / 2);
+            if (startEntry >= size() - screenCount)
+                startEntry = size() - screenCount;
+        }
+        const int row {static_cast<int>(std::floor(pos.y / entrySize))};
+        const int index {startEntry + row};
+        return (row >= 0 && row < screenCount && index < size()) ? index : -1;
+    }
+    void setCursorIndex(int index) override
+    {
+        if (index >= 0 && index < size() && index != mCursor) {
+            List::setCursor(mEntries.at(index).object);
+            NavigationSounds::getInstance().playThemeNavigationSound(SCROLLSOUND);
+        }
+    }
+
     void setCancelTransitionsCallback(const std::function<void()>& func) override
     {
         mCancelTransitionsCallback = func;

@@ -373,6 +373,76 @@ void Window::input(InputConfig* config, Input input)
     }
 }
 
+void Window::pressButton(const std::string& name)
+{
+    // The keyboard's mapping of NAME, pressed and let go: what a controller button does.
+    InputConfig* keyboard {InputManager::getInstance().getInputConfigByDevice(DEVICE_KEYBOARD)};
+    Input button;
+    if (keyboard == nullptr || !keyboard->getInputByName(name, &button))
+        return;
+    button.value = 1;
+    input(keyboard, button);
+    button.value = 0;
+    input(keyboard, button);
+}
+
+void Window::touch(int type, float x, float y, long long finger)
+{
+    if (mBlockInput)
+        return;
+    mTimeSinceLastInput = 0;
+    const glm::vec2 point {x, y};
+    const float width {mRenderer->getScreenWidth()};
+    const float height {mRenderer->getScreenHeight()};
+
+    if (type == 0) {
+        if (mTouchDown)
+            return; // a second finger: only the first one counts
+        mTouchDown = true;
+        mTouchMoved = false;
+        mTouchFinger = finger;
+        mTouchStart = point;
+        mTouchStep = point;
+        return;
+    }
+    if (!mTouchDown || finger != mTouchFinger)
+        return;
+
+    const bool fromLeftEdge {mTouchStart.x < width * 0.04f};
+    if (type == 2) {
+        // A press of up or down for each stretch the finger moves: the list follows it.
+        const float stepY {height * 0.07f};
+        const float stepX {width * 0.08f};
+        while (std::fabs(point.y - mTouchStep.y) >= stepY) {
+            const bool up {point.y < mTouchStep.y};
+            pressButton(up ? "down" : "up");
+            mTouchStep.y += up ? -stepY : stepY;
+            mTouchMoved = true;
+        }
+        while (!fromLeftEdge && std::fabs(point.x - mTouchStep.x) >= stepX) {
+            const bool left {point.x < mTouchStep.x};
+            pressButton(left ? "right" : "left");
+            mTouchStep.x += left ? -stepX : stepX;
+            mTouchMoved = true;
+        }
+        return;
+    }
+
+    // The finger lifted.
+    mTouchDown = false;
+    if (mRenderScreensaver) {
+        stopScreensaver();
+        return;
+    }
+    if (fromLeftEdge && point.x - mTouchStart.x > width * 0.15f) {
+        pressButton("b");
+        return;
+    }
+    if (!mTouchMoved && glm::length(point - mTouchStart) < height * 0.03f && peekGui() != nullptr &&
+        peekGui()->touchTap(point) == 2)
+        pressButton("a");
+}
+
 void Window::textInput(const std::string& text, const bool pasting)
 {
     if (peekGui())

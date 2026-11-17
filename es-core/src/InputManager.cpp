@@ -498,6 +498,18 @@ bool InputManager::parseEvent(const SDL_Event& event)
                 return true;
             }
         }
+#else
+        case SDL_FINGERDOWN:
+        case SDL_FINGERUP:
+        case SDL_FINGERMOTION: {
+            if (!Settings::getInstance()->getBool("InputTouchscreen"))
+                return false;
+            mWindow->touch(event.type == SDL_FINGERDOWN ? 0 : (event.type == SDL_FINGERUP ? 1 : 2),
+                           event.tfinger.x * Renderer::getScreenWidth(),
+                           event.tfinger.y * Renderer::getScreenHeight(),
+                           static_cast<long long>(event.tfinger.fingerId));
+            return true;
+        }
 #endif
         case SDL_TEXTINPUT: {
             mWindow->textInput(event.text.text);

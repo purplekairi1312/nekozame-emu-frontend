@@ -82,6 +82,39 @@ public:
         return mLetterCaseSystemNameSuffix;
     }
 
+    int getEntryAt(const glm::vec2& pos) override
+    {
+        // How many items from the selected one, along the carousel: the items are spaced
+        // evenly around its centre (a wheel's: left or right of the middle, one at a time).
+        const int count {static_cast<int>(mEntries.size())};
+        if (count == 0)
+            return -1;
+        int steps {0};
+        if (mType == CarouselType::HORIZONTAL || mType == CarouselType::VERTICAL) {
+            const bool horizontal {mType == CarouselType::HORIZONTAL};
+            const float length {horizontal ? mSize.x : mSize.y};
+            const float item {horizontal ? mItemSize.x : mItemSize.y};
+            const float spacing {((length - (item * mMaxItemCount)) / mMaxItemCount) + item};
+            const float center {length / 2.0f +
+                                length * (horizontal ? mHorizontalOffset : mVerticalOffset)};
+            steps = static_cast<int>(std::round(((horizontal ? pos.x : pos.y) - center) / spacing));
+        }
+        else {
+            const bool horizontal {mType == CarouselType::HORIZONTAL_WHEEL};
+            const float offset {(horizontal ? pos.x - mSize.x / 2.0f : pos.y - mSize.y / 2.0f)};
+            const float item {horizontal ? mItemSize.y : mItemSize.x};
+            steps = std::fabs(offset) < item / 2.0f ? 0 : (offset < 0.0f ? -1 : 1);
+        }
+        return ((mCursor + steps) % count + count) % count;
+    }
+    void setCursorIndex(int index) override
+    {
+        if (index >= 0 && index < static_cast<int>(mEntries.size()) && index != mCursor) {
+            List::setCursor(mEntries.at(index).object);
+            NavigationSounds::getInstance().playThemeNavigationSound(SCROLLSOUND);
+        }
+    }
+
     void setCancelTransitionsCallback(const std::function<void()>& func) override
     {
         mCancelTransitionsCallback = func;

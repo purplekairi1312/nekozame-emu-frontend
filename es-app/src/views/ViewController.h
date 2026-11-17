@@ -103,6 +103,8 @@ public:
     const bool getGameLaunchTriggered() { return (mGameToLaunch != nullptr); }
 
     bool input(InputConfig* config, Input input) override;
+    // Touch: the tap goes to the view on screen (not while moving between views).
+    int touchTap(const glm::vec2& point) override;
     void update(int deltaTime) override;
     void render(const glm::mat4& parentTrans) override;
 
