@@ -79,6 +79,10 @@ public:
         const int index {startEntry + row};
         return (row >= 0 && row < screenCount && index < size()) ? index : -1;
     }
+    glm::vec2 getTouchStep() override
+    {
+        return glm::vec2 {0.0f, mFont->getSize() * mLineSpacing};
+    }
     void setCursorIndex(int index) override
     {
         if (index >= 0 && index < size() && index != mCursor) {

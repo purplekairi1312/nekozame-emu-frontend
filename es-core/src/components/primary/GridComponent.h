@@ -57,6 +57,10 @@ public:
         }
         return -1;
     }
+    glm::vec2 getTouchStep() override
+    {
+        return glm::vec2 {mItemSize.x + mItemSpacing.x, mItemSize.y + mItemSpacing.y};
+    }
     void setCursorIndex(int index) override
     {
         if (index >= 0 && index < size() && index != mCursor) {

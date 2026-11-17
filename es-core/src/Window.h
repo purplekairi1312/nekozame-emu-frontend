@@ -272,6 +272,10 @@ private:
     long long mTouchFinger {0};
     glm::vec2 mTouchStart {0.0f, 0.0f};
     glm::vec2 mTouchStep {0.0f, 0.0f};
+    glm::vec2 mTouchStepSize {0.0f, 0.0f}; // finger distance per entry, from what's on screen
+    std::vector<std::pair<unsigned int, glm::vec2>> mTouchTrail; // recent points, for the fling
+    glm::vec2 mFling {0.0f, 0.0f}; // entries per second, slowing down
+    glm::vec2 mFlingDone {0.0f, 0.0f};
 
     bool mBlockInput;
     bool mNormalizeNextUpdate;

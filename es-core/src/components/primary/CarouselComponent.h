@@ -107,6 +107,15 @@ public:
         }
         return ((mCursor + steps) % count + count) % count;
     }
+    glm::vec2 getTouchStep() override
+    {
+        // The carousel's item spacing along its direction; a wheel: one item width.
+        if (mType == CarouselType::HORIZONTAL)
+            return glm::vec2 {((mSize.x - (mItemSize.x * mMaxItemCount)) / mMaxItemCount) + mItemSize.x, 0.0f};
+        if (mType == CarouselType::VERTICAL)
+            return glm::vec2 {0.0f, ((mSize.y - (mItemSize.y * mMaxItemCount)) / mMaxItemCount) + mItemSize.y};
+        return glm::vec2 {mItemSize.x, mItemSize.y};
+    }
     void setCursorIndex(int index) override
     {
         if (index >= 0 && index < static_cast<int>(mEntries.size()) && index != mCursor) {

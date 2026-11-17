@@ -57,6 +57,8 @@ public:
     virtual int getEntryAt(const glm::vec2& pos) { return -1; }
     // Touch: the cursor to entry INDEX, as scrolling to it would.
     virtual void setCursorIndex(int index) {}
+    // Touch: the distance between entries (x, y): one entry per that much finger movement.
+    virtual glm::vec2 getTouchStep() { return glm::vec2 {0.0f, 0.0f}; }
     virtual void setAlignment(PrimaryAlignment align) {}
 };
 

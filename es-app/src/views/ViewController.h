@@ -105,6 +105,10 @@ public:
     bool input(InputConfig* config, Input input) override;
     // Touch: the tap goes to the view on screen (not while moving between views).
     int touchTap(const glm::vec2& point) override;
+    glm::vec2 touchStep() override
+    {
+        return mCurrentView == nullptr ? glm::vec2 {0.0f, 0.0f} : mCurrentView->touchStep();
+    }
     void update(int deltaTime) override;
     void render(const glm::mat4& parentTrans) override;
 

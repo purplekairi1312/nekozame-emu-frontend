@@ -64,6 +64,10 @@ public:
         mPrimary->setCursorIndex(index);
         return 1;
     }
+    glm::vec2 touchStep() override
+    {
+        return mPrimary == nullptr ? glm::vec2 {0.0f, 0.0f} : mPrimary->getTouchStep();
+    }
     void update(int deltaTime) override;
     void render(const glm::mat4& parentTrans) override;
 

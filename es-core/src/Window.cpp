@@ -411,6 +411,13 @@ void Window::touch(int type, float x, float y, long long finger)
         mTouchFinger = finger;
         mTouchStart = point;
         mTouchStep = point;
+        mFling = glm::vec2 {0.0f, 0.0f}; // a touch stops a fling, like on a phone
+        mTouchTrail.clear();
+        mTouchTrail.emplace_back(SDL_GetTicks(), point);
+        // one entry per entry's height of finger movement: the list follows the finger
+        const glm::vec2 step {peekGui() != nullptr ? peekGui()->touchStep() : glm::vec2 {0.0f, 0.0f}};
+        mTouchStepSize = glm::vec2 {step.x > 1.0f ? step.x : width * 0.08f,
+                                    step.y > 1.0f ? step.y : height * 0.07f};
         return;
     }
     if (!mTouchDown || finger != mTouchFinger)
@@ -418,9 +425,12 @@ void Window::touch(int type, float x, float y, long long finger)
 
     const bool fromLeftEdge {mTouchStart.x < width * 0.04f};
     if (type == 2) {
-        // A press of up or down for each stretch the finger moves: the list follows it.
-        const float stepY {height * 0.07f};
-        const float stepX {width * 0.08f};
+        mTouchTrail.emplace_back(SDL_GetTicks(), point);
+        if (mTouchTrail.size() > 12)
+            mTouchTrail.erase(mTouchTrail.begin());
+        // A press of up or down for each entry the finger moves past: the list follows it.
+        const float stepY {mTouchStepSize.y};
+        const float stepX {mTouchStepSize.x};
         while (std::fabs(point.y - mTouchStep.y) >= stepY) {
             const bool up {point.y < mTouchStep.y};
             pressButton(up ? "down" : "up");
@@ -436,8 +446,27 @@ void Window::touch(int type, float x, float y, long long finger)
         return;
     }
 
-    // The finger lifted.
+    // The finger lifted: moving fast, the list keeps going and slows down (a fling).
     mTouchDown = false;
+    mTouchTrail.emplace_back(SDL_GetTicks(), point);
+    if (mTouchMoved && !fromLeftEdge) {
+        const unsigned int now {mTouchTrail.back().first};
+        auto first = mTouchTrail.cbegin();
+        while (first != mTouchTrail.cend() && now - first->first > 100)
+            ++first; // the last tenth of a second
+        if (first != mTouchTrail.cend() && now > first->first) {
+            const float seconds {(now - first->first) / 1000.0f};
+            const glm::vec2 speed {(point - first->second) / seconds}; // pixels per second
+            mFling = glm::vec2 {-speed.x / mTouchStepSize.x, -speed.y / mTouchStepSize.y};
+            mFling = glm::clamp(mFling, glm::vec2 {-40.0f}, glm::vec2 {40.0f});
+            if (std::fabs(mFling.x) < 4.0f)
+                mFling.x = 0.0f;
+            if (std::fabs(mFling.y) < 4.0f)
+                mFling.y = 0.0f;
+            mFlingDone = glm::vec2 {0.0f, 0.0f};
+        }
+        return;
+    }
     if (mRenderScreensaver) {
         stopScreensaver();
         return;
@@ -476,6 +505,23 @@ void Window::logInput(InputConfig* config, Input input)
 
 void Window::update(int deltaTime)
 {
+    // A fling: entries keep going at the finger's last speed, slowing down until they stop.
+    if (mFling != glm::vec2 {0.0f, 0.0f} && !mTouchDown) {
+        const float seconds {deltaTime / 1000.0f};
+        mFlingDone += mFling * seconds;
+        while (std::fabs(mFlingDone.y) >= 1.0f) {
+            pressButton(mFlingDone.y > 0.0f ? "down" : "up");
+            mFlingDone.y -= mFlingDone.y > 0.0f ? 1.0f : -1.0f;
+        }
+        while (std::fabs(mFlingDone.x) >= 1.0f) {
+            pressButton(mFlingDone.x > 0.0f ? "right" : "left");
+            mFlingDone.x -= mFlingDone.x > 0.0f ? 1.0f : -1.0f;
+        }
+        mFling *= std::exp(-3.5f * seconds); // friction
+        if (std::fabs(mFling.x) < 1.5f && std::fabs(mFling.y) < 1.5f)
+            mFling = glm::vec2 {0.0f, 0.0f};
+    }
+
     if (mInvalidateCacheTimer > 0) {
         mInvalidateCacheTimer = glm::clamp(mInvalidateCacheTimer - deltaTime, 0, 500);
         if (mHelpComponents != nullptr) {

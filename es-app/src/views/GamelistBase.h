@@ -56,6 +56,10 @@ public:
         mPrimary->setCursorIndex(index);
         return 1;
     }
+    glm::vec2 touchStep() override
+    {
+        return mPrimary == nullptr ? glm::vec2 {0.0f, 0.0f} : mPrimary->getTouchStep();
+    }
     void enterDirectory(FileData* cursor);
 
     FileData* getNextEntry() { return mPrimary->getNext(); }
