@@ -71,6 +71,44 @@ void GuiComponent::textInput(const std::string& text, const bool pasting)
         (*it)->textInput(text, pasting);
 }
 
+int GuiComponent::touchTap(const glm::vec2& point)
+{
+    for (int i {static_cast<int>(getChildCount()) - 1}; i >= 0; --i) {
+        GuiComponent* child {getChild(i)};
+        if (child->isVisible() && child->touchContains(point)) {
+            const int tapped {child->touchTap(point)};
+            if (tapped != 0)
+                return tapped;
+        }
+    }
+    return 0;
+}
+
+glm::vec2 GuiComponent::touchStep()
+{
+    for (unsigned int i {0}; i < getChildCount(); ++i) {
+        const glm::vec2 step {getChild(i)->touchStep()};
+        if (step.x > 0.0f || step.y > 0.0f)
+            return step;
+    }
+    return glm::vec2 {0.0f, 0.0f};
+}
+
+glm::vec2 GuiComponent::touchLocal(const glm::vec2& point)
+{
+    glm::mat4 trans {getTransform()};
+    for (GuiComponent* parent {mParent}; parent != nullptr; parent = parent->getParent())
+        trans = parent->getTransform() * trans;
+    const glm::vec4 local {glm::inverse(trans) * glm::vec4 {point.x, point.y, 0.0f, 1.0f}};
+    return glm::vec2 {local.x, local.y};
+}
+
+bool GuiComponent::touchContains(const glm::vec2& point)
+{
+    const glm::vec2 local {touchLocal(point)};
+    return local.x >= 0.0f && local.y >= 0.0f && local.x <= mSize.x && local.y <= mSize.y;
+}
+
 bool GuiComponent::input(InputConfig* config, Input input)
 {
     for (unsigned int i {0}; i < getChildCount(); ++i) {

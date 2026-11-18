@@ -86,10 +86,14 @@ public:
     virtual bool input(InputConfig* config, Input input);
     // Touch: a tap at POINT (screen pixels). 0 if nothing's there, 1 if it selected
     // something, 2 if it tapped what was already selected (the same as pressing A).
-    virtual int touchTap(const glm::vec2& point) { return 0; }
+    // By default it's passed to the child under the point (menus, popups, the keyboard).
+    virtual int touchTap(const glm::vec2& point);
     // Touch: how far a finger moves (x, y, in pixels) for one entry, so the list follows the
-    // finger. 0 for the window's own guess.
-    virtual glm::vec2 touchStep() { return glm::vec2 {0.0f, 0.0f}; }
+    // finger. 0 for the window's own guess. By default the first child that knows.
+    virtual glm::vec2 touchStep();
+    // Touch: POINT (screen pixels) in this component's own coordinates, and whether it's on it.
+    glm::vec2 touchLocal(const glm::vec2& point);
+    bool touchContains(const glm::vec2& point);
 
     // Called when time passes.
     // Default implementation calls updateSelf(deltaTime) and updateChildren(deltaTime).

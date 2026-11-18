@@ -77,6 +77,9 @@ public:
     void update(int deltaTime) override;
     void render(const glm::mat4& parentTrans) override;
     std::vector<HelpPrompt> getHelpPrompts() override;
+    // Touch: a tap selects the row there; on the selected row, it's A.
+    int touchTap(const glm::vec2& point) override;
+    glm::vec2 touchStep() override { return glm::vec2 {0.0f, mRowHeight}; }
 
     void onSizeChanged() override;
     void onFocusGained() override { mFocused = true; }

@@ -88,6 +88,9 @@ public:
     void onFocusGained() override;
 
     std::vector<HelpPrompt> getHelpPrompts() override;
+    // Touch: a tap on a cell selects it (and what's under the finger inside it); on what's
+    // already selected, it's A.
+    int touchTap(const glm::vec2& point) override;
 
 private:
     class GridEntry

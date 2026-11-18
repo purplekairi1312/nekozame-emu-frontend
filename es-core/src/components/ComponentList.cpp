@@ -429,6 +429,19 @@ std::vector<HelpPrompt> ComponentList::getHelpPrompts()
     return prompts;
 }
 
+int ComponentList::touchTap(const glm::vec2& point)
+{
+    if (!touchContains(point) || mRowHeight <= 0.0f)
+        return 0;
+    const int row {static_cast<int>((touchLocal(point).y + mCameraOffset) / mRowHeight)};
+    if (row < 0 || row >= size())
+        return 0;
+    if (row == mCursor)
+        return 2;
+    moveCursor(row - mCursor);
+    return 1;
+}
+
 bool ComponentList::moveCursor(int amount)
 {
     const bool returnValue {listInput(amount)};

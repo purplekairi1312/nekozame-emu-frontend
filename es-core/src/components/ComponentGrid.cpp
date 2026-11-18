@@ -474,6 +474,26 @@ void ComponentGrid::setCursorTo(const std::shared_ptr<GuiComponent>& comp)
     assert(false);
 }
 
+int ComponentGrid::touchTap(const glm::vec2& point)
+{
+    for (auto it = mCells.crbegin(); it != mCells.crend(); ++it) {
+        const std::shared_ptr<GuiComponent>& comp {it->component};
+        if (comp == nullptr || !comp->isVisible() || !comp->touchContains(point))
+            continue;
+        if (!it->canFocus)
+            return comp->touchTap(point);
+        const bool selected {getSelectedComponent() == comp};
+        const int tapped {comp->touchTap(point)};
+        if (!selected) {
+            setCursorTo(comp);
+            return 1;
+        }
+        // a list or grid inside answers itself; a button and the like is A
+        return tapped != 0 ? tapped : 2;
+    }
+    return 0;
+}
+
 std::vector<HelpPrompt> ComponentGrid::getHelpPrompts()
 {
     std::vector<HelpPrompt> prompts;
