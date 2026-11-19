@@ -1,6 +1,6 @@
 # nekozame-emu-frontend
 
-<p align="center"><img src="nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's ocean magazine theme"></p>
+<p align="center"><img src="https://git.sr.ht/~purplekairi1312/nekozame-emu-frontend/blob/main/nekozame/preview.png" alt="The Mega Drive's page in nekozame-emu-frontend on a Steam Deck, in nekozame's ocean magazine theme"></p>
 
 nekozame's emulation frontend: a fork of [ES-DE](https://es-de.org) with nekozame's theme and new functions. On [nekozame os](https://github.com/purplekairi1312/nekozame-os), `nekozame-emu esde on` installs it.
 
