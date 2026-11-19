@@ -34,6 +34,15 @@ It downloads the right AppImage, sets everything up and keeps it updated.
 
 Without it, download `nekozame-emu-frontend_x64.AppImage` (or `nekozame-emu-frontend_x64_SteamDeck.AppImage` on a Steam Deck) from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases), make it executable and run it. It keeps its settings in `~/ES-DE`, like ES-DE.
 
+## The theme without nekozame os
+
+The theme lives in [nekozame](nekozame): its graphics, photos, music, and `nekozame-theme`, which prints each system's page on your machine from your own games. It comes inside the AppImage too (`usr/share/es-de/nekozame`).
+
+- To print it: `nekozame/nekozame-theme install`. It needs Python 3 with pygame (`python3-pygame`, or `pip install pygame-ce`), mpv for the music, and the Noto Sans and Noto Sans CJK JP fonts. It finds your games and art from ES-DE's own settings. `nekozame-theme music on` adds the music.
+- Ready-made: download `nekozame-theme-pack.zip` from the [releases](https://github.com/purplekairi1312/nekozame-emu-frontend/releases) and unzip it into `~/ES-DE/themes`. Every system's pages are already printed, without your games' screens, and the fonts come with it.
+
+Its credits: [nekozame/CREDITS.md](nekozame/CREDITS.md).
+
 ## The music
 
 While you browse, you hear "dolphin sanctuary" by [purplekairi1312](https://passedrecordings.bandcamp.com/track/dolphin-sanctuary), an ocean-themed ambient track released by [Passed Recordings](https://passedrecordings.co.uk/) on [Passed Oceans](https://passedrecordings.bandcamp.com/album/passed-oceans).

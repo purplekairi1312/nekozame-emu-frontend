@@ -323,6 +323,11 @@ elseif(NOT ANDROID AND NOT IOS)
         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/es-de/themes)
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/themes/slate-es-de
         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/es-de/themes)
+    # nekozame's theme, its page printer and its music (nekozame/nekozame-theme)
+    install(DIRECTORY ${CMAKE_SOURCE_DIR}/nekozame/
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/es-de/nekozame
+        USE_SOURCE_PERMISSIONS
+        PATTERN "preview.png" EXCLUDE)
     install(DIRECTORY ${CMAKE_SOURCE_DIR}/resources
         DESTINATION ${CMAKE_INSTALL_PREFIX}/share/es-de)
 endif()

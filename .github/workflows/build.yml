@@ -1,5 +1,6 @@
 # nekozame-emu-frontend's AppImages, built with ES-DE's own scripts: the Steam Deck one and
-# the regular x64 one. On a tag (v3.5.0-nekozame.1...) they become a release.
+# the regular x64 one; and nekozame's theme ready-made (nekozame-theme-pack.zip). On a tag
+# (v3.5.0-nekozame.1...) they become a release.
 name: build
 
 on:
@@ -52,3 +53,30 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ${{ matrix.name }}
+
+  # the ready-made theme: every system's pages, without anyone's games, and its fonts, for
+  # whoever can't print them (nekozame-theme pack); unzipped into ~/ES-DE/themes
+  theme-pack:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pygame fonts-noto-core fonts-noto-cjk fonts-noto-cjk-extra imagemagick zip
+      - name: print
+        run: |
+          python3 nekozame/nekozame-theme pack out
+          # smaller pages: every system's, three ways, in five colour schemes
+          find out/nekozame/pages -name '*.jpg' -exec mogrify -quality 85 {} +
+          (cd out && zip -qr ../nekozame-theme-pack.zip nekozame)
+          ls -la nekozame-theme-pack.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nekozame-theme-pack.zip
+          path: nekozame-theme-pack.zip
+      - name: release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: nekozame-theme-pack.zip
